@@ -1,4 +1,4 @@
-# Deli Counter - Take a Number
+# Deli Counter - Take a Numberrrr
 
 ## Objectives
 + Add elements to an array
