@@ -1,8 +1,13 @@
 var katzDeli = [];
 
-var takeANumber = function(katzDeliLine,name){
-  for(var i = 0; i<katzDeliLine.length; i++){
-    katzDeliLine.push(name)
-  }
-  console.log("Welcome, " + name + "." + " You are number " + katzDeliLine.length[i] + " in line.")
+takeANumber = function(katzDeliLine, name){
+katzDeliLine.push(name)
+return "Welcome, " + name + "." + " You are number " + katzDeliLine.length + " in line."
+}
+function nowServing(katzDeliLine, name){
+katzDeliLine.pop(name)
+  return katzDeliLine.length[katzDeliLine.length-1]
+  if(katzDeliLine===0){
+    return "There is nobody waiting to be served!"
+    }
 }
