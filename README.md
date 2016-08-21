@@ -7,7 +7,7 @@
 4. Pass an array as a function parameter
 
 ## Instructions
-
+  
 A pretty important deli needs somebody to program the "Take a Number" feature for their counter.
 
 At the beginning of the day, the deli is empty and is represented by an empty array, e.g.,
