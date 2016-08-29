@@ -7,8 +7,9 @@ function takeANumber(deli, name) {
 
 function nowServing(deli) {
   if (deli.length > 0) {
-    return "Currently serving " + deli[0]+ ".";  
-    deli.splice(0, 1);
+    var text = "Currently serving " + deli[0]+ ".";
+    deli.shift();
+    return text;  
   } else {
     return "There is nobody waiting to be served!";
   }
