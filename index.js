@@ -2,25 +2,25 @@ var katzDeliLine = [];
 
 function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
-  return(name + ", you are number " + katzDeliLine.length " in line.")
+  return(name + ", you are number " + katzDeliLine.length " in line.");
 };
 
-function nowServing() {
+function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 0) {
-    return("Currently serving " + katzDeli.shift());
+    return("Currently serving " + katzDeliLine.shift());
   } else {
     return("There is nobody waiting to be served!");
   };
 };
 
-function currentLine() {
-  var text = "The line is currently: "
+function currentLine(katzDeliLine) {
+  var lineText = '';
   if (katzDeliLine.length > 0) {
     for (var i = 0; i < katzDeliLine.length; i ++) {
-      text += i + 1 + ". " + katzDeliLine[i]);
+      lineText += " " + i + 1 + ". " + katzDeliLine[i]);
     };
-    return (text);
+    return ("The line is currently:" + lineText);
   } else {
-    return("The line is currently empty.")
+    return("The line is currently empty.");
   };
 };
