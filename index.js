@@ -27,14 +27,13 @@ For example, if `katzDeliLine` is currently `["Ada", "Grace"]`,
  */
 
  function currentLine(line) {
-   var lineNum = []
+   var lineNum = [];
+   if (line.length == 0) {
+     return "The line is currently empty.";
+   }
    for (var i = 0; i < line.length; i++) {
- 		if (line.length === 0) {
- 			return "The line is currently empty.";
- 		} else {
- 			lineNum.push((line.indexOf(line[i]) + 1) + ". " + line[i] + " ")
- 		}
+     lineNum.push(` ${i+1}. ${line[i]}`);
  	}
-   return "The line is currently:" + lineNum + " "
+   return "The line is currently:" + lineNum;
 
  }
