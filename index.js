@@ -29,8 +29,8 @@ function currentLine(katzDeliLine) {
   };
 
   for (var i = 0; i < currentLine.length; i++) {
-    var whatevz = (i + 1) + ". " + currentLine[i] + ", ";
-    str += whatevz;
+    var waiting = (i + 1) + ". " + currentLine[i] + ", ";
+    str += waiting;
   }
   return str;
 }
