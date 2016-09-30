@@ -28,9 +28,13 @@ function currentLine(katzDeliLine) {
     return "The line is currently empty.";
   };
 
-  for (var i = 0; i < currentLine.length; i++) {
+  for (var i = 0; i < currentLine.length -1; i++) {
     var waiting = (i + 1) + ". " + currentLine[i] + ", ";
     str += waiting;
+  }
+  for (var j = i; j < currentLine.length; j++) {
+    var last = (i + 1) + ". " + currentLine[i];
+    str += last;
   }
   return str;
 }
