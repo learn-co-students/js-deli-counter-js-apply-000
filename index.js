@@ -5,12 +5,15 @@ function takeANumber(katzDeliLine, newCust){
   (katzDeliLine.indexOf(newCust) + 1) + " in line.");
 }
 function nowServing(katzDeliLine){
+  var currentCust = "";
   if (katzDeliLine.length == 0){
     return "There is nobody waiting to be served!"
   }
   else{
-    return "Currently serving " + katzDeliLine[0] + ".";
+    var currentCust = katzDeliLine[0];
     katzDeliLine.shift();
+    return "Currently serving " + currentCust + ".";
+
   }
 }
 function currentLine(katzDeliLine){
