@@ -27,9 +27,14 @@ function currentLine(array){
   }
   else{
     var i=0;
+    var j=0;
     var announcement= "The line is currently: ";
-    while(array[i++]!=null){
-      announcement=announcement+ i + ". " + array[i]+ " ";
+    while(array[j++]!=null){
+      announcement+=(i+1)+". "+array[i];
+      i++;
+      if(array[j]!=null){
+        announcement+=", ";
+      }
     }
   }
   return announcement;
