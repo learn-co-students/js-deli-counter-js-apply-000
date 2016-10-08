@@ -1,5 +1,7 @@
 var katzDeli=[];
 var katzDeliLine=0;
+var otherDeli = ["Steven", "Blake", "Avi"];
+
 
 function takeANumber(array, name){
   array.unshift(name);
