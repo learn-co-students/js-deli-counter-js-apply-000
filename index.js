@@ -28,8 +28,8 @@ function currentLine(array){
   else{
     var i=0;
     var announcement= "The line is currently: ";
-    while(array[i]!=null){
-      announcement+=(i+1)+ ". " + array[i]+ " ";
+    while(array[i++]!=null){
+      announcement=announcement+ i + ". " + array[i]+ " ";
     }
   }
   return announcement;
