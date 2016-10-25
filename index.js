@@ -19,6 +19,7 @@ function currentLine(katzDeliLine) {
 
     for (var i = 0; i < katzDeliLine.length; i++) {
       var position = i + 1;
+
       if (i !== katzDeliLine.length - 1) {
         message += position + '. ' + katzDeliLine[i] + ', ';
       } else {
