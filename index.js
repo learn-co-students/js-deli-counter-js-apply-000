@@ -28,16 +28,16 @@ function currentLine (katzDeliLine) {
   if (katzDeliLine.length > 0) {
 
     for (var i = 0; i < katzDeliLine.length; i++) {
-      ret_string += (i + 1) + '. ' + katzDeliLine[i];
-      if (i < (katzDeliLine.length - 1)) {
-        ret_string += ', ';
-      };
+      ret_string += (i + 1) + '. ' + katzDeliLine[i] + ', ';
+//      if (i < (katzDeliLine.length - 1)) {
+//        ret_string += ', ';
+//      };
 
     }
 
 
 
-    return ret_string;
+    return ret_string.substring(0, ret_string.length - 2);
 
   } else {
     return "The line is currently empty.";
