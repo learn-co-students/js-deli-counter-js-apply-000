@@ -13,10 +13,10 @@ else{
 }
 return s// returns the variable after removing the first value of the array
 }
-function currentLine(line){
-  var s="The line is currently:"
-  if(line.length===0){
-  s= "The line is currently empty."
+function currentLine(line){///create a function and name it currentLine with a parameter name line
+  var s="The line is currently:"/// create a var and store a value
+  if(line.length===0){/// if arrays length is equal to 0
+  s= "The line is currently empty."/// 
   }
   else{
     for(var i=0; i<line.length; i++){
