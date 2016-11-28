@@ -1,9 +1,9 @@
 var katzDeli = [];
 
-function takeANumber(katzDeliLine, newName) {
-  katzDeliLine.push(newName);
-  var position = katzDeliLine.indexOf(newName) + 1;
-  return "Welcome, " + newName + ". You are number " + position + " in line.";
+function takeANumber(katzDeliLine) {
+  katzDeliLine.push(katzDeliLine.length + 1);
+  var position = katzDeliLine.length;
+  return "Welcome. You are number " + position + " in line.";
 }
 
 function nowServing(katzDeliLine) {
@@ -28,6 +28,6 @@ function currentLine(katzDeliLine) {
     var position = i+1;
     lineList.push(position + ". " + customer);
     i++;
-  }
-  return "The line is currently: " + lineList[0] + ", " + lineList[1] + ", " + lineList[2];
+  } // lineList = ["1. Bill", "2. Fred"]
+  return "The line is currently: " + lineList.join(", ");
 }
