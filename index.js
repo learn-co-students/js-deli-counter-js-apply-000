@@ -4,7 +4,7 @@ function takeANumber(line, name){
 }
 
 function nowServing(line){
-  if(line[0] === undefined){
+  if(line[0] == undefined){
     return "There is nobody waiting to be served!"
   }
   else{
@@ -13,16 +13,15 @@ function nowServing(line){
 }
 
 function currentLine(line){
-  if(line[0] === undefined){
+  if(line[0] == undefined){
     return "The line is currently empty."
   }
   else{
-    var lineMessage = "The line is currently: "
+    var lineMessage = "The line is currently:"
     for(var i = 0; i<line.length; i++){
-      lineMessage += (i+1) + ". " + line[i] + ", "
+      lineMessage += ` ${i+1}. ${line[i]},`
     }
-    lineMessage = lineMessage.substring(0,lineMessage.length-2)
   }
 
-  return lineMessage
+  return lineMessage.substring(0,lineMessage.length-1)
 }
