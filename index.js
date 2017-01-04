@@ -16,10 +16,7 @@ function nowServing(katzDeli){
   else if (katzDeli.length >= 1){
     var firstCustomer = katzDeli[0]
     katzDeli.shift()
-    /*var empty = []
-    for (var i = 0; var i < katzDeli.length){
 
-    }*/
     return "Currently serving " + firstCustomer + "."
   }
 
@@ -33,7 +30,6 @@ function currentLine(katzDeli){
   }
 
   else if (katzDeli.length >= 1){
-    var firstCustomer = katzDeli[0]
     var empty = []
     for (var i = 0; i < katzDeli.length; i++ ){
       var j = parseInt(i + 1)
