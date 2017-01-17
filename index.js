@@ -7,16 +7,16 @@ function nowServing(line) {
   if (line.length === 0) {
     return "There is nobody waiting to be served!"
   } else {
-  return `Currently serving ${line.shift()}.`
+    return `Currently serving ${line.shift()}.`
   }
 }
 
 function currentLine(line) {
-  var statement = ""
+  var statement = "The line is currently"
   if (line.length === 0) {
-    statement += "The line is currently empty."
+    statement += " empty."
   } else
-    statement = "The line is currently:"
+    statement = ":"
     for (var i = 0; i < line.length; i++) {
       statement += ` ${i+1}. ${line[i]}`
       if (i + 1 < line.length) {
