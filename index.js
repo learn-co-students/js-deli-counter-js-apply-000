@@ -16,7 +16,7 @@ function currentLine(line) {
   if (line.length === 0) {
     statement += " empty."
   } else
-    statement = ":"
+    statement += ":"
     for (var i = 0; i < line.length; i++) {
       statement += ` ${i+1}. ${line[i]}`
       if (i + 1 < line.length) {
