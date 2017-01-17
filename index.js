@@ -29,7 +29,7 @@ function nowServing(katzDeliLine) {
 }
 //dont put katzDeliLine as global
 
-/*function currentLine(katzDeliLine) {
+function currentLine(katzDeliLine) {
    if (katzDeliLine.length > 0) {
      var placesPlease = katzDeliLine.forEach(function(element, index) {
         (index + 1 + ". " + element + " ");
@@ -39,7 +39,7 @@ function nowServing(katzDeliLine) {
              return "The line is currently empty."
              }
     }
-};*/
+};
 /*? I'm pretty sure the .forEach
 won't actually return those values = placesPlease will always be undefined.
 one way to approach this, is to create
