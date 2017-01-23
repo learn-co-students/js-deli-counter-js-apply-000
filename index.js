@@ -8,13 +8,11 @@ function nowServing(deliLine) {
 
   if (deliLine.length > 0){
     var curr = deliLine.shift();
-    console.log(deliLine);
     return 'Currently serving ' + curr + '.';
   } else {
     return 'There is nobody waiting to be served!';
   }
 }
-nowServing(["Steven", "Blake", "Avi"]);
 
 function currentLine(deliLine) {
   if (deliLine.length > 0){
