@@ -26,8 +26,11 @@ function currentLine(deliLine) {
     return "The line is currently empty.";
   } else {
     for(var i = 0; i < deliLine.length; i++){
-      lineList.push(`${i+1}. ${deliLine[i]}`);
+      lineList += (i + 1) + ". " + deliLine[i] + ", ";
     }
-    return `The line is currently: ${lineList.join(', ')}`;
+    // an extra space at the end of the string
+    lineList = lineList.slice(0, lineList.length-2);
+    // an extra comma
+    return "The line is currently: " + lineList;
   }
 }
