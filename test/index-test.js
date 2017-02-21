@@ -1,5 +1,4 @@
 /*global describe, it */
-
 describe('deli', () => {
   describe('takeANumber', () => {
     var katzDeli;
