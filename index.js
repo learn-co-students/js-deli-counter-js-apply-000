@@ -15,11 +15,6 @@ function nowServing(katzDeliLine){
   }
 }
 
-/*Build a function currentLine that returns the current line. For example, if
-katzDeliLine is currently ["Ada", "Grace"], currentLine(katzDeliLine) would
-return "The line is currently: 1. Ada 2. Grace". If there is nobody in line, it
-should return "The line is currently empty."*/
-
 function currentLine(katzDeliLine){
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
