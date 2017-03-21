@@ -11,10 +11,13 @@ function nowServing(arrayLineOne) {
 }
 
 function currentLine(arrayLineTwo) {
+  var myArray = []
+  // establish line is empty
   if (arrayLineTwo < 1) {
     return "The line is currently empty."
   }
     for (var i = 0; i < arrayLineTwo.length; i++) {
-      console.log(`The line is currently: ${arrayLineTwo[i]}. ${name[i]}`)
+      myArray.push(`${i+1}. ${arrayLineTwo[i]}`)
     }
+    return `The line is currently: ${myArray.join(', ')}`
 }
