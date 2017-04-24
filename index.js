@@ -7,20 +7,18 @@ let takeANumber = (katzDeliLine, name) => {
 }
 
 let nowServing = katzDeliLine => {
-  if (katzDeliLine.length <= 0) {
 
-    return "There is nobody waiting to be served!";
-  } else {
+  return (katzDeliLine.length <= 0 ? "There is nobody waiting to be served!" : `Currently serving ${katzDeliLine.shift()}.`)
 
-    return `Currently serving ${katzDeliLine.shift()}.`;
-  }
 }
+
+
 
 
 let currentLine = katzDeliLine => {
   let sentence = "The line is currently: "
   if (katzDeliLine.length <= 0) {
-    
+
     return "The line is currently empty."
   } else {
     for (let i = 0; i < katzDeliLine.length; i++) {
