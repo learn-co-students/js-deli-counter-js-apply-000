@@ -17,10 +17,10 @@ function currentLine(katzDeliLine){
   if (katzDeliLine.length === 0){ return "The line is currently empty."; }
   else {
     var line = "The line is currently:";   
-    for(var i=0; i<katzDeliLine.length; i++){
-      line += ` ${i+1}. ${katzDeliLine[i]}`
-      if (i < katzDeliLine.length - 1){ line += ',';}
-    }
+   katzDeliLine.forEach(function(val,index){
+    line += ` ${index+1}. ${katzDeliLine[index]}`
+    if (index < katzDeliLine.length - 1){ line += ',';}
+   });
     return line;
   }
 }
