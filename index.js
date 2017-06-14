@@ -16,11 +16,10 @@ function nowServing(katzDeliLine){
 function currentLine(katzDeliLine){
     if (katzDeliLine.length === 0){ return "The line is currently empty."; }
     else {
-	var line = "The line is currently:";   
-	katzDeliLine.forEach(function(val,index){
-	    line += ` ${index+1}. ${katzDeliLine[index]}`;
-	    if (index < katzDeliLine.length - 1){ line += ',';}
-	});
-	return line;
+    	return katzDeliLine.reduce(function(acc,val,index){
+	    let placeName = `${index+1}. ${val}`;
+	    if (index < katzDeliLine.length - 1){ return acc + placeName + ', '; }
+	    else { return acc + placeName; }
+	}, "The line is currently: ");
     }
 }
