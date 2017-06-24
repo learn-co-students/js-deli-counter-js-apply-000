@@ -3,9 +3,9 @@ var katzDeli = [];
 function takeANumber(katzDeliLine, name) { // function should return the persons position in line
   var len = katzDeliLine.length;
   katzDeliLine.push(name);
-  katzDeli = katzDeliLine;
-  return `Welcome, ${name}. You are number ${katzDeli.length} in line.`;
+  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
 }
+
 
 function nowServing(katzDeliLine) { // should return the first person in line and then remove that individual from the line. If there is nobody in line, it should return "There is nobdoy waiting to be served!"
   if (katzDeliLine.length > 0) {
