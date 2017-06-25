@@ -1,8 +1,7 @@
 var katzDeli = [];
 
 function takeANumber(katzDeliLine, name) { // function should return the persons position in line
-  var len = katzDeliLine.length;
-  katzDeliLine.push(name);
+  katzDeliLine.push(name)
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
 }
 
@@ -16,29 +15,13 @@ function nowServing(katzDeliLine) { // should return the first person in line an
   }
 }
 
-// function currentLine(katzDeliLine) {
-//   var i = 0
-//   var text = "The line is currently: "
-//
-//   if (katzDeliLine.length == 0) {
-//     return "The line is currently empty."
-//   } else {
-//     for (; i < katzDeliLine.length; i++) {
-//       text += `${i+1}. ${katzDeliLine[i]}, `;
-//     }
-//     return text.slice(0, (text.length - 2));
-//   }
-// }
-
 function currentLine(katzDeliLine) {
-  var i = 0
-  var text = "The line is currently: "
-  for (; i < katzDeliLine.length; i++) {
-    text += `${i+1}. ${katzDeliLine[i]}, `;
-  }
-
   if (katzDeliLine.length == 0) {
     return "The line is currently empty."
+  } else {
+    for (var i = 0, text = "The line is currently: "; i < katzDeliLine.length; i++) {
+      text += `${i+1}. ${katzDeliLine[i]}, `
+    }
+    return text.slice(0, (text.length - 2));
   }
-  return text.slice(0, (text.length - 2));
 }
