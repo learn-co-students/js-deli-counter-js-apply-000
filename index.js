@@ -1,9 +1,9 @@
-var katzDeliLine = [] //variable takes an empty array, will be added to by the function
+var katzDeliLine = [] //variable takes an empty array, as the below function iterates elements will be added to it
 
 function takeANumber(katzDeliLine, name) { //function takes 2 parameters - the place in the katzDeliLine array and the person's name
-  katzDeliLine.length = katzDeliLine.push(name) //pushes a new name onto the end of the  katzDeliLine array and assigns the name a number
+  katzDeliLine.push(name); //pushes a new name onto the end of the  katzDeliLine array and assigns the name an index
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.` //outputs a statement returning a name and their position in line
-};
+};                                                                           // based on the length of the list, not the index
 
 function nowServing(katzDeliLine, name) {
   if(!katzDeliLine.length){ // if the line length is 0 (!) the function returns the statement below
