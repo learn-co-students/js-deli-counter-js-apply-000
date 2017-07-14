@@ -1,9 +1,8 @@
-var katzDeli = [];
+
 
 function takeANumber (katzDeliLine, nextPerson){
- return `Welcome, ${nextPerson}. You are number ${katzDeliLine.push(nextPerson)} in line.`
-
-
+ katzDeliLine.push(nextPerson)
+ return `Welcome, ${nextPerson}. You are number ${katzDeliLine.length} in line.`
 }
 
 var katzDeli = [];
@@ -20,7 +19,7 @@ function nowServing(katzDeli){
   }
 }
 
-function currentLine(katzDeliLine){
+function currentLine(katzDeliLine){ //katzDeliLine = ["Ada", "Grace"]
   if (katzDeliLine.length === 0){
   return "The line is currently empty.";
  }
@@ -28,7 +27,7 @@ function currentLine(katzDeliLine){
     var line = "The line is currently: "
     var list = []
     for ( var i = 0; i < katzDeliLine.length; i++){
-        list.push(`${i+1}. ${katzDeliLine[i]}`)
+        list.push(`${i+1}. ${katzDeliLine[i]}`) //1. Ada, 2. Grace
 
 
     }
