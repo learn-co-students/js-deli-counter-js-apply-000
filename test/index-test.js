@@ -47,7 +47,7 @@ describe('deli', () => {
     });
 
     it('says who is in line when there are people waiting', () => {
-      expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
+      expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill,2. Jane,3. Ann");
     });
   });
 })
