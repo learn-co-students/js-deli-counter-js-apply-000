@@ -22,7 +22,7 @@ function currentLine (katzDeliLine) {
    katzDeliLine[i] = [` ${i+1}. ${katzDeliLine[i]}`];
    i++}
  if (i>0) {
-   return `The line is currently:${katzDeliLine} `;
+   return `The line is currently:${katzDeliLine}`;
  }
  else {
    return "The line is currently empty."
