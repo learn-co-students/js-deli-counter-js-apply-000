@@ -26,22 +26,21 @@ function currentLine(deli) {
 }
 
 
-function nowServing(deli1) {
-  var deliLine = [];
-  var name = deli1[0];
-  if (deli1.length === 0) {
+
+
+function nowServing(deli) {
+  var name = deli[0];
+  if (deli.length === 0) {
     return 'There is nobody waiting to be served!';
   }
 
-  if (deli1.length ===1) {
+  if (deli.length ===1) {
+    deli = [];
     return "Currently serving " + name + '.'
 
   } else {
-      for (var i = 1; i < deli1.length; i++) {
-        deliLine.push(deli1[i]);
-    }
+      deli = deli.splice(1, deli.length-1);
   }
 
-  deli1 = deliLine;
   return "Currently serving " + name + '.'
 }
