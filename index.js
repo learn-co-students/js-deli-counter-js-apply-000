@@ -1,11 +1,11 @@
 function takeANumber ( line, person) {
   line.push(person);
-  return line.length;
+  return 'Welcome ' + person + ' ' + line.length + ' in line';
 };
 
 function nowServing ( line){
   if(line == null) return 'There is nobody waiting to be served!';
-  else return line.shift();
+  else return 'Currently serving ' + line.shift() + '.';
 };
 
 function currentLine ( line){
