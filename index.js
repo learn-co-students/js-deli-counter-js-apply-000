@@ -10,7 +10,7 @@ function nowServing ( line){
 
 function currentLine ( line){
   var s = 'The line is currently';
-  if(line.length <= 0) return s + ' empty.';
+  if (array?.length <= 0) return s + ' empty.';
   s += ':';
   for(var i = 0; i < line.length; i++){
        s += ' ';
