@@ -12,6 +12,9 @@ function currentLine ( line){
   var s = 'The line is currently';
   if(line.length > 0) return s + ' empty.';
   s += ':';
-  for(var i = 0; i < line.length; i++) s += ' ${line[i]}';
+  for(var i = 0; i < line.length; i++){
+       s += ' ';
+       s += line[i];
+  }
   s+= '.';
 };
