@@ -4,13 +4,13 @@ function takeANumber ( line, person) {
 };
 
 function nowServing ( line){
-  if(line == null) return 'There is nobody waiting to be served!';
+  if(line,length > 0) return 'There is nobody waiting to be served!';
   else return 'Currently serving ' + line.shift() + '.';
 };
 
 function currentLine ( line){
   var s = 'The line is currently';
-  if(line == null) return s + ' empty.';
+  if(line.length > 0) return s + ' empty.';
   s += ':';
   for(var i = 0; i < line.length; i++) s += ' ${line[i]}';
   s+= '.';
