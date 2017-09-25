@@ -1,8 +1,12 @@
-// Define variable katzDeliLine if we want to test using console.log
+// Define global variable katzDeliLine that represents the line at the beginning of the day
+// Also if we want to test using console.log
 var katzDeliLine = [];
 
 //This function takeANumber() adds new people to the katz Deli Line and gives them their place in line
 function takeANumber(katzDeliLine, person){
+  katzDeliLine.push(person)
+  return `Welcome, ${person}. You are number ${katzDeliLine.length} in line.`
+/*
   if (katzDeliLine.length === 0) {
     katzDeliLine.push(person)
     return `Welcome, ${person}. You are number 1 in line.`
@@ -10,6 +14,7 @@ function takeANumber(katzDeliLine, person){
     katzDeliLine.push(person)
     return `Welcome, ${person}. You are number ${katzDeliLine.length} in line.`
   }
+*/
 }
 
 // This function nowServing() announces who, if anyone, is being served, and removes them from the line
