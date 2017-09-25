@@ -6,15 +6,6 @@ var katzDeliLine = [];
 function takeANumber(katzDeliLine, person){
   katzDeliLine.push(person)
   return `Welcome, ${person}. You are number ${katzDeliLine.length} in line.`
-/*
-  if (katzDeliLine.length === 0) {
-    katzDeliLine.push(person)
-    return `Welcome, ${person}. You are number 1 in line.`
-  }else {
-    katzDeliLine.push(person)
-    return `Welcome, ${person}. You are number ${katzDeliLine.length} in line.`
-  }
-*/
 }
 
 // This function nowServing() announces who, if anyone, is being served, and removes them from the line
