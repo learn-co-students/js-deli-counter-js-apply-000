@@ -16,11 +16,7 @@
 // `currentLine(katzDeliLine)` would return `"The line is currently: 1. Ada, 2. Grace"`.  If there is nobody in line, it should return
 //  `"The line is currently empty."`
 
-// function takeANumber(katzDeliLine,name){
-//   var lineNumber = length.katzDeliLine + 1
-//   var welcome = "Hello, " + name + " you are number " + lineNumber + " in line"
-//   return welcome
-// }
+
 function takeANumber(line,name){
   var lineNumber = line.length + 1
   line.push(name)
