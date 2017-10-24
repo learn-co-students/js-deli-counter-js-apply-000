@@ -33,21 +33,23 @@ function nowServing(line,name){
   return line
 }
 function currentLine(line){
-  
+
   var lastItem = (line.length) + ". "  + line[line.length-1]
+
   if(line.length ===0){
     var finalString = "The line is currently empty."
     return finalString
+
   }else{
-    var lastString = ""
+    var middleItems = ""
     for (var i = 0; i<line.length-1; i++){
 
       var lineString = (i+1) + ". " + line[i] + ", "
       // creates a string from the lineName and linePlace variables
-      lastString += lineString
+      middleItems += lineString
       //adds the newest string from the present [i] to the existing string
 
     }
-    return "The line is currently: " + lastString + lastItem
+    return "The line is currently: " + middleItems + lastItem
   }
 }
