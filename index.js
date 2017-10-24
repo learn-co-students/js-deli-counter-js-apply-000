@@ -34,7 +34,7 @@ function nowServing(line,name){
 }
 function currentLine(line){
 
-  var lastItem = (line.length) + ". "  + line[line.length-1]
+
 
   if(line.length ===0){
     var finalString = "The line is currently empty."
@@ -42,6 +42,8 @@ function currentLine(line){
 
   }else{
     var middleItems = ""
+    var lastItem = (line.length) + ". "  + line[line.length-1]
+
     for (var i = 0; i<line.length-1; i++){
 
       var lineString = (i+1) + ". " + line[i] + ", "
