@@ -6,7 +6,7 @@ function takeANumber(line,name){
 }
 
 
-function nowServing(line,name){
+function nowServing(line){
 
   if(line.length === 0){
     var queue = "There is nobody waiting to be served!"
