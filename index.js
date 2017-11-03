@@ -25,19 +25,23 @@ function nowServing(katzDeliLine) {
 
 
 function currentLine(katzDeliLine) {
- var order = [];
+  var order = [];
 
- if (katzDeliLine.length > 0) {
-
+  if (katzDeliLine.length > 0) {
+/*in regards to scope. the for loop of i is only when katzdeli has a line
+or katzDeliLine.length>0. the for loop has to go in the if statement to run properly.
+*/
    for (var i = 0; i < katzDeliLine.length; i++) {
+     var customer = katzDeliLine[i];
+     order.push ((i+1) + ". " + customer);
+     /* push the code for "1. name" into an empty array so that we can access it as a whole
+     in the return. now the array order is consist of "1. steven", "2, maria", "3. becky" ...*/
 
-    var customer = katzDeliLine[i];
-    order.push ((i+1) + ". " + customer);
+   } return "The line is currently: " + order.join(', ');
+   /*.join combines the elements of the order array seperated by a ','. makes the function Pass
+   */
+ }    else {
 
-  } return "The line is currently: " + order.join(', ');
-
-} else {
-
-    return "The line is currently empty.";
-  }
+      return "The line is currently empty.";
+     }
 }
