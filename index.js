@@ -3,8 +3,6 @@ var katzDeli = [];
 function takeANumber(katzDeliLine, name){
   katzDeliLine.push(name);
 
-  var placeInLine = katzDeliLine.length;
-
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
 }
 
