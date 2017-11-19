@@ -7,19 +7,15 @@ function nowServing(line){
     return "There is nobody waiting to be served!"
   }else{
     return `Currently serving ${line.shift()}.`
-
   }
-
 }
 function currentLine(line){
-  if(line.length===0){
+  if(!line.length){
     return "The line is currently empty."
-  }
-  else{
-    var placeInLine=[]
-    for(let i=0;i<line.length;i++){
-      placeInLine.push(`${i+1}. ${line[i]}`)
-    }
-  return `The line is currently: ${placeInLine.join(', ')}`
+  }else{
+    let emptyArray=[]
+    for(let i=0;i<line.length;i++)
+      emptyArray.push(`${i+1}. ${line[i]}`)
+      return `The line is currently: ${emptyArray.join(', ')}`
   }
 }
