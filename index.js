@@ -22,10 +22,10 @@ function currentLine(line){
  // if the line is empty then it returns a peachy phrase
  // if the line is not empty then we return the phrase plus the customer and their position
  function nowServing(line) {
-   if (line.length === 0) {
+   if (line.length === 0) { // If the line is 0 then return
      return "There is nobody waiting to be served!"
-   } else { if (line.length !== 0) {
-     return "Currently serving " + line.shift() + ".";
+   } else { if (line.length !== 0) { // if the line is not 0 then return the currently serving
+     return "Currently serving " + line + ".";
    }
   }
  }
