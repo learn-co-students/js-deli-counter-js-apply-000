@@ -17,7 +17,7 @@ function currentLine(katzDeliLine) {
 
   const numbersAndNames = [];
 
-  for (let i = 0, l = katzDeliLine.length; i < l; i++) {
+  for (let i = 0; i < katzDeliLine.length; i++) {
     numbersAndNames.push(`${i + 1}. ${katzDeliLine[i]}`);
   }
 
