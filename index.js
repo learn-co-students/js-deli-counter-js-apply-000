@@ -22,10 +22,10 @@ function currentLine(katzDeliLine) {
   
   for (var i = 0; i < katzDeliLine.length; i++) {
     if (i === (katzDeliLine.length - 1)) {
-      string += (" " + (i + 1) + ". " + katzDeliLine[i]);
+      string += ` ${i + 1}. ${katzDeliLine[i]}`;
     } else {
-      string += (" " + (i + 1) + ". " + katzDeliLine[i] + ",");
+      string += ` ${i + 1}. ${katzDeliLine[i]},`;
     }
   }
-  return string;
+  return string; 
 }
