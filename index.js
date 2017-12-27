@@ -1,5 +1,3 @@
-// var katzDeliLine = [];
-
 function takeANumber(arr, str) {
   arr.push(str);
   let position = arr.length;
@@ -32,9 +30,3 @@ function currentLine(arr) {
   return result; 
 }
 
-
-
-
-// for (let i = 0; i < arr.length; i++) {
-//   if (str === arr[i])
-// }
