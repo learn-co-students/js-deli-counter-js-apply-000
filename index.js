@@ -25,22 +25,20 @@ else {return "There is nobody waiting to be served!"}
 
 
 
+
 function currentLine(array){
 
-var result = " "
+var result = ""
 
 if (array.length>0){
 
-for(var i = 0; i < array.length ; i++){
+for(var i = 0; i < array.length-1 ; i++){
 
-result+= (array.indexOf(array[i])+1)+ ". " + array[i] + ","
+result+= (array.indexOf(array[i])+1)+". "+array[i]+ ", "}
 
-  if(array.indexOf(array[i]) === array.length-1) {return array[i]}
+return "The line is currently: " + result + array.length+ ". "+array[array.length-1]
+
+}
   
-  else {return "The line is currently:" + result}
-
-} }
-
-else {return "The line is currently empty."}
-
+  else {return "The line is currently empty."}
 }
