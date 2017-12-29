@@ -16,20 +16,16 @@ function nowServing(katzDeliLine){
 }
 
 function currentLine(katzDeliLine){
-	var list2 = [];
-	var katzDeliLine2 = [];
-		if(katzDeliLine.length === 0){
-			return "The line is currently empty."
-		} else{
+	if(katzDeliLine.length === 0){
+		return "The line is currently empty."
+	} else{
+			var list2 = [];
+			var katzDeliLine2 = [];
 				for(var i = 0; i < katzDeliLine.length; i++){
-					if(i = 0){katzDeliLine2[i] = [i + 1] + ". " + katzDeliLine[i]
-						list2.push(katzDeliLine2[i])
-					} else{
-						katzDeliLine2[i] = " " + [i + 1] + ". " + katzDeliLine[i]
-						list2.push(katzDeliLine2[i])
-					}
-		}
-			return "The line is currently: " + katzDeliLine2
-		}		
-					
+					katzDeliLine2[i] = " " + [i + 1] + ". " + katzDeliLine[i]
+					list2.push(katzDeliLine2[i])
+				}
+		return "The line is currently:" + katzDeliLine2
+	}		
+				
 }
