@@ -1,27 +1,30 @@
-function takeANumber(arr, str) {
-  arr.push(str);
-  let position = arr.length;
-  let result = `Welcome, ${str}. You are number ${position} in line.`;
-  return result;
+
+function takeANumber(katzDeliLine, name) {
+  katzDeliLine.push(name);
+  let position = katzDeliLine.length;
+  let result = `Welcome, ${name}. You are number ${position} in line.`; //
+  return result; 
 }
 
-function nowServing(arr) {
-  if (arr.length >= 1) {
-    let firstPerson = arr.shift();
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length >= 1) {
+    let firstPerson = katzDeliLine.shift();
     return `Currently serving ${firstPerson}.`;
   } else {
     return "There is nobody waiting to be served!";
   }
 }
 
-function currentLine(arr) {
+function currentLine(katzDeliLine) {
   let result = 'The line is currently: ';
-  if (arr.length >= 1) {
-    for (let i = 0; i < arr.length; i++) {
-      if (i !== arr.length - 1) {
-        result += `${i + 1}. ${arr[i]}, `;
+  if (katzDeliLine.length >= 1) {
+    for (let i = 0; i < katzDeliLine.length; i++) {
+      let position = i + 1;
+      let name = katzDeliLine[i]; 
+      if (i !== katzDeliLine.length - 1) {
+        result += `${position}. ${name}, `; 
       } else {
-        result += `${i + 1}. ${arr[i]}`;
+        result += `${position}. ${name}`;
       }
     }
   } else {
@@ -29,4 +32,3 @@ function currentLine(arr) {
   }
   return result; 
 }
-
