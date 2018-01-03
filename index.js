@@ -15,13 +15,15 @@ function nowServing(katzDeliLine) {
   }
 }
 
+
 function currentLine(katzDeliLine) {
   let result = 'The line is currently: ';
   if (katzDeliLine.length >= 1) {
     for (let i = 0; i < katzDeliLine.length; i++) {
       let position = i + 1;
       let name = katzDeliLine[i]; 
-      if (i !== katzDeliLine.length - 1) {
+      let lastPosition = katzDeliLine.length - 1
+      if (i !== lastPosition) {
         result += `${position}. ${name}, `; 
       } else {
         result += `${position}. ${name}`;
@@ -32,3 +34,4 @@ function currentLine(katzDeliLine) {
   }
   return result; 
 }
+
