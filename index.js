@@ -6,7 +6,7 @@ function nowServing(line) {
 if (line.length === 0) { return "There is nobody waiting to be served!" }
 else { return "Currently serving " + line.shift() + "." } }
 
-function currentLine(line) {
+/* function currentLine(line) {
   var array = []
   for (var i = 0; i < line.length; i++) 
  { if (i === 0) {array.push( "The line is currently: 1. " + line[i]) }
@@ -14,4 +14,25 @@ else {array.push((line.indexOf(line[i]) + 1) + ". " + line[i]) }}
 if (array.length === 0) { return "The line is currently empty." }
 else {
 var fine = array.join(", ")
-return fine }}
+return fine }} */
+
+function currentLine(line) { 
+  if (line.length === 0) {
+    return "The line is currently empty."
+  }
+  else {
+  line = line.map(i => line.indexOf(i) + 1 + ". " + i)
+  return "The line is currently: " + line.join(", ")
+  }
+}
+/*
+function currentLine(line) {
+  var array = []
+  if (line.length === 0) { return "The line is currently empty." }
+  else {
+  for (var i = 0; i < line.length; i++) {
+array.push((i + 1) + ". " + line[i]) 
+  }}
+return "The line is currently: " + array.join(", ")
+}
+*/  
