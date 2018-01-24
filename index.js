@@ -23,7 +23,6 @@ function nowServing(arr){
 }
 
 
-// "The line is currently: 1. Bill, 2. Jane, 3. Ann"
 
 
 function currentLine(line){
@@ -32,8 +31,13 @@ function currentLine(line){
     return "The line is currently empty."
   }
   else{
-    return "The line is currently: 1. " + line[0] + ", 2. " + line[1] + ", 3. " + line[2]
+
+    var temp = []
+
+    for(var i=0; i<line.length; i++){
+      temp.push(' ' + (i+1).toString() + '. ' + line[i])
+    }
+    temp.join(',')
+    return "The line is currently:" + temp
   }
-
-
 }
