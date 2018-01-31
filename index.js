@@ -11,11 +11,9 @@ hopes up by telling them they are number 6 in line.
 
 function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
-  var index = katzDeliLine.indexOf(name);
-  var position = index + 1;
-  var message = "Welcome, " + name + ". You are number " + position + " in line."
+  var position = katzDeliLine.indexOf(name) + 1;
 
-  return message;
+  return "Welcome, " + name + ". You are number " + position + " in line.";
 }
 
 /*Build a function nowServing. This function should return the first
@@ -26,11 +24,12 @@ waiting to be served!"*/
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
-  } else {
-    var personserving = katzDeliLine[0];
-    katzDeliLine.shift();
-    return "Currently serving " + personserving + ".";
   }
+
+  var personServing = katzDeliLine[0];
+  katzDeliLine.shift();    //remove first element from the array
+
+  return "Currently serving " + personServing + ".";
 }
 
 /*Build a function currentLine that returns the current line.
@@ -40,18 +39,20 @@ Ada, 2. Grace". If there is nobody in line, it should return "The
 line is currently empty."*/
 
 function currentLine(katzDeliLine) {
-  var people = "";
+  var line = "";
+
   if (katzDeliLine.length === 0) {
-    return "The line is currently empty.";
-  } else {
-    for (var i = 0; i < katzDeliLine.length; i++) {
-      if (i === katzDeliLine.length - 1) {
-        people += i+1 + ". " + katzDeliLine[i];
-      } else {
-        people += i+1 + ". " + katzDeliLine[i] + ", ";
-      }
-    }
+    return "The line is currently empty."
   }
 
-  return "The line is currently: " + people;
+  for (var i = 0; i < katzDeliLine.length; i++) {
+    if (i === katzDeliLine.length - 1) {
+      line += i+1 + ". " + katzDeliLine[i];
+    } else {
+      line += i+1 + ". " + katzDeliLine[i] + ", ";
+    }
+
+  }
+
+  return "The line is currently: " + line;
 }
