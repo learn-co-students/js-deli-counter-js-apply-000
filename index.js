@@ -34,4 +34,4 @@ function currentLine(katzDeliLine){
     lineAsString += " empty.";
   }
   return lineAsString;
-}
+} // end of currentLine()
