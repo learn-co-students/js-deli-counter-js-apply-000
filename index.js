@@ -21,10 +21,7 @@ function nowServing(katzDeliLine){
 
 function currentLine(katzDeliLine){
   var lineAsString = "The line is currently";
-  if(katzDeliLine.length === 1 ){
-    lineAsString += ": 1." + katzDeliLine[i];
-  }
-  else if(katzDeliLine.length > 1){
+  if(katzDeliLine.length > 1){
     lineAsString += ": ";
     var i;
     for(i = 0; i <katzDeliLine.length - 1; i++){
