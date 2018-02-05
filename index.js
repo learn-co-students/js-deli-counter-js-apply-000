@@ -2,9 +2,9 @@ var katzDeli = []; //line as an array
 
 function takeANumber(katzDeliLine, name){
   katzDeliLine.push(name);
-  
+
   //array.length gives nth position starting at 1
-  return ("Welcome, " + name + ". You are number " +  
+  return ("Welcome, " + name + ". You are number " +
            katzDeliLine.length + " in line.");
 } //end of takeANumber()
 
