@@ -1,20 +1,15 @@
-//funkshion 1...RRREEEDDDD LLLIIIGGGHHHTTT
+//funkshion 1...Green LLLIIIGGGHHHTTT
 var katzDeli = [];
-var katzDeliLine = ["Steven", "Blake", "Avi"];
+var katzDeliLine = ['Steven', 'Blake', 'Avi'];
 
-function takeANumber(katzDeli, katzDeliLine) {
-  if (katzDeli.length === 0) {
-    katzDeli.push('Ada');
-    return 'Welcome, ' + katzDeli[0] +'. You are number ' + (katzDeli.indexOf('Ada') + 1) + ' in line.'
-  } else if (katzDeli.length > 0) {
-      katzDeli.push('Grace', 'Kent');
-  } else if (katzDeliLine.length > 0) {
-      katzDeliLine.push('Grace');
-      return 'Welcome, ' + katzDeliLine[3] + '. You are number ' + (katzDeliLine.indexOf('Grace') + 1) + ' in line.'
-  } 
+function takeANumber(katzDeli, name) {
+  katzDeli.push(name);
+  var message = `Welcome, ${name}. You are number ${katzDeli.length} in line.`;
+  return message;
 }
 
-//funkshion 2... let's do dis bwoyy!!!!!! it's lit offish bro
+
+//funkshion 2...it's goodie
 
 var emptyDeli = [];
 var otherDeli = ['Steven', 'Blake', 'Avi'];
@@ -39,7 +34,7 @@ function currentLine(line) {
      var emptyMessage = 'The line is currently empty.';
      return emptyMessage;
   }
-
+  
   else if (fullLine.length > 0) {
     var message = `The line is currently: 1. ${fullLine[0]}, 2. ${fullLine[1]}, 3. ${fullLine[2]}`;
     return message;
