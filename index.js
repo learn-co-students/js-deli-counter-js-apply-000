@@ -2,42 +2,45 @@
 
 var katzDeli = [];
 
-function takeANumber (katzDeliLine, name) {
+function takeANumber (DeliLine, name) {
 
-katzDeliLine.push(name);
+  for(var i = 0; i<=DeliLine.length;i++) {
 
-return "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line."
-
-}
-
-function nowServing (katzDeliLine) {
-
-if(katzDeliLine.length === 0)
-
-return "There is nobody waiting to be served!"
-
-if(katzDeliLine.length > 0)//if katzDeliLine > 0, true and will execute
-
-return "Currently serving " + katzDeliLine.shift() + "."
+  DeliLine.push(name);
 
 
-}
-
-function currentLine(katzDeliLine){
-
-if(katzDeliLine.length === 0) {
-
-return "The line is currently empty."
+  return "Welcome, " + name + ". You are number " + DeliLine.length +  " in line."
+  }
 }
 
 
-for (var i=0; i<katzDeliLine.length; i++) {
+function currentLine(DeliLine) {
+var newArray = [];
 
-  var lineNamesAndOrder = [];
+if (!DeliLine.length) {
+  return "The line is currently empty."
+}
 
-  lineNamesAndOrder.push(i+1 + ". " + lineNamesAndOrder[i])
+else for(var i = 0; i<DeliLine.length;i++) {
+
+newArray.push(`${i+1}. ${DeliLine[i]}`)
+}
+
+return "The line is currently: " + newArray.join(", ")
+
+}
 
 
-return "The line is currently: " + lineNamesAndOrder
 
+
+
+
+function nowServing (DeliLine) {
+
+  //If length is 0, !DeliLine.length will be True and execute.
+  if (!DeliLine.length) {
+    return "There is nobody waiting to be served!"
+  }
+  else return "Currently serving " + DeliLine.shift() + "."
+  //Removes first person from line.
 }
