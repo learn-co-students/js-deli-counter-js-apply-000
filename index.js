@@ -15,6 +15,7 @@ function takeANumber (DeliLine, name) {
 
 
 function currentLine(DeliLine) {
+  //To Iterate over array I created a new array.
 var newArray = [];
 
 if (!DeliLine.length) {
@@ -29,11 +30,6 @@ newArray.push(`${i+1}. ${DeliLine[i]}`)
 return "The line is currently: " + newArray.join(", ")
 
 }
-
-
-
-
-
 
 function nowServing (DeliLine) {
 
