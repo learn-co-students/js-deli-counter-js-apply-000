@@ -1,25 +1,28 @@
-function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name)
+// function to show people their current place in line or announce that the line is empty
 
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+function currentLine(line){
+  if(line.length === 0) {
+    return "The line is currently empty.";
+  }
+  var peopleInLine = [];
+// accept new people in line and assign them to numbers
+  for (var i = 0; i < line.length; i++) {
+    peopleInLine.push(`${i + 1}. ${line[i]}`)
+  }
+  // return the list of people in line
+  return `The line is currently: ${peopleInLine.join(', ')}`
 };
-
-function nowServing(katzDeliLine) {
-  if (!katzDeliLine.length) {
+// Show the first person in line and remove them from the line.
+function nowServing(line) {
+  if(line.length === 0) {
     return "There is nobody waiting to be served!"
   }
-  return `Currently serving ${katzDeliLine.shift()}.`
-};
+    return `Currently serving ${line.shift()}.`
+  };
 
-function currentLine(katzDeliLine) {
-  if (!katzDeliLine.length) {
-    return "The line is currently empty."
-  }
+// welcome people to deli. Add new customers to the line.
+function takeANumber(line, name){
+  line.push(name);
 
-  const numsNames = []
-
-  for (let i = 0, l = katzDeliLine.length; i < l; i++) {
-    numsNames.push(`${i + 1}. ${katzDeliLine[i]}`)
-  }
-  return `The line is currently: ${numsNames.join(', ')}`
+  return `Welcome, ${name}. You are number ${line.length} in line.`
 };
