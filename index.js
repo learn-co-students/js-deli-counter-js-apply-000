@@ -8,7 +8,7 @@ function takeANumber(katzDeliLine, newCustomer) {
   return `Welcome, ${newCustomer}. You are number ${katzDeliLine.length} in line.`
 }
 
-//removes first person in current line aka SHIFT then returns removed element
+//SHIFT = remove first element in array then return removed element
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 1) {
     // or if (katzDeliLine.length === 0) or (!katzDeliLine.length)
