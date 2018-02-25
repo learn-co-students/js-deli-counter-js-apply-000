@@ -7,6 +7,8 @@ function takeANumber(katzDeliLine, newCustomer) {
   //RETURN the new customer line and notify them of their order
   return `Welcome, ${newCustomer}. You are number ${katzDeliLine.length} in line.`
 }
+//takeANumber(katzDeliLine, "Ada"); // "Welcome, Ada. You are number 1 in line."
+
 
 //SHIFT = remove first element in array then return removed element
 function nowServing(katzDeliLine) {
@@ -22,7 +24,7 @@ function nowServing(katzDeliLine) {
 function currentLine(katzDeliLine) {
   let peopleArray = []
   for (var i = 0; i < katzDeliLine.length; i++) {
-    //PUSH new customer to the end of current line as long as there is one or more
+    //PUSH new customer(s) to the end of current line as long as there is one or more
     peopleArray.push(`${i + 1}. ${katzDeliLine[i]}`)
   }
 
@@ -33,3 +35,6 @@ function currentLine(katzDeliLine) {
     return (`The line is currently: ${peopleArray.join(", ")}`)
   }
 }
+//currentLine(katzDeliLine); // "The line is currently: 1. Ada, 2. Grace, 3. Kent"
+//nowServing(katzDeliLine); // "Currently serving Ada."
+//currentLine(katzDeliLine); // "The line is currently: 1. Grace, 2. Kent"
