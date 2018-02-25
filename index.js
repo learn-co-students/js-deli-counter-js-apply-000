@@ -10,11 +10,11 @@ function takeANumber(katzDeliLine, newCustomer) {
 
 //SHIFT = remove first element in array then return removed element
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length > 1) {
-    // or if (katzDeliLine.length === 0) or (!katzDeliLine.length)
-  return `Currently serving ${katzDeliLine.shift()}.`
+  if (katzDeliLine.length === 0) {
+    // or if (katzDeliLine.length >= 1) or (!katzDeliLine.length)
+    return "There is nobody waiting to be served!"
 } else {
-  return "There is nobody waiting to be served!"
+    return `Currently serving ${katzDeliLine.shift()}.`
   }
 }
 
