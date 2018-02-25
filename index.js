@@ -28,7 +28,7 @@ function nowServing(katzDeliLine) {
 function currentLine(katzDeliLine) {
   let peopleArray = []
   for (var i = 0; i < katzDeliLine.length; i++) {
-    //For loop iterates through katzDeliLine(current line) & pushes position # & person name on peopleArray
+    //For loop iterates through katzDeliLine(current line) & 'pushes'/adds position # & person name on peopleArray
     peopleArray.push(`${i + 1}. ${katzDeliLine[i]}`)
   }
 
