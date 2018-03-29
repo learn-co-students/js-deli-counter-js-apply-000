@@ -24,7 +24,7 @@ function currentLine(katzDeli){
   }
   let lineText = (`The line is currently: `);
   for (let i = 0; i < katzDeli.length; i++){
-    //here i'm trying to concatenate my 'introText' string,
+    //here i'm trying to concatenate my 'lineText' string,
     //and a string naming the place in line plus the person at that array index
     //using template literals
     lineText += `${[i + 1]}. ${katzDeli[i]}`;
