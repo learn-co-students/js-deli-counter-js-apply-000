@@ -1,6 +1,6 @@
 //setting this variable here isn't necessary - serves as a reminder
 //on how to use the array as a parameter
-let katzDeli = [];
+//let katzDeli = [];
 
 //two parameters here: the array and a string that acts as the 'name'
 function takeANumber(katzDeli, name){
