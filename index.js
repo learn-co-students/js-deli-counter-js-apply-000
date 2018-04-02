@@ -1,13 +1,19 @@
 var katzDeliLine = [];
 var newName = [];
+var linePosition;
 //katzDeliLine = ["Ada", "Grace", "Kent"];
-function takeANumber(katzDeliLine, newName){
-  katzDeliLine.push(newName);
-  var linePosition = katzDeliLine.indexOf(newName) + 1;
+function takeANumber(katzDeliLine){
   
-  var message = "Welcome, " + newName + ". You are number " + linePosition + 
-  " in line.";
-  return message;
+  if (katzDeliLine.length() > 0){
+    
+  linePosition = linePosition + 1;
+  return linePosition;
+  }
+  else
+  {
+    linePosition = 1;
+    return linePosition;
+  }
  }
 
 function nowServing(katzDeliLine)
