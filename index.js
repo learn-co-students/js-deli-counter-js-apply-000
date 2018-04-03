@@ -20,6 +20,6 @@ var katzDeliLine = []; // Line at Katz deli is empty so an empty array is used
       for (var i = 0; i < katzDeliLine.length; i++) {
         currentLineString.push(i + 1 + '. ' + katzDeliLine[i]);
       }
-      return "The line is currently: " + currentLineString.join(", "); // use join to add a seperator for the position in line with the name
+      return "The line is currently: " + currentLineString.join(", "); // use join to add a seperator for the position in line with the name and to return message as a string
     }
   }
