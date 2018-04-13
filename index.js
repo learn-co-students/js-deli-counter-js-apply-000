@@ -16,6 +16,8 @@ function nowServing(katzDeliLine){
     return `Currently serving ${katzDeliLine.shift()}.`
   }
 }
+//The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+//The push() method adds one or more elements to the end of an array and returns the new length of the array.
 
 function currentLine(katzDeliLine){
   if(katzDeliLine.length === 0){
@@ -25,7 +27,7 @@ function currentLine(katzDeliLine){
       for(let i = 0; i < katzDeliLine.length; i++){
         people.push(`${i + 1}. ${katzDeliLine[i]}`);
       }
-
+//The join() method joins all elements of an array (or an array-like object) into a string and returns this string.
     return `The line is currently: ${people.join(', ')}`
   }
 }
