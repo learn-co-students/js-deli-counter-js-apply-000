@@ -62,6 +62,7 @@ function currentLine (katzDeliLine) {
   for (var c = 0; c < katzDeliLine.length; c++) {
     
     //add the position and name for each iteration(position)
+    //add the +1 to position to get the "plain english" location, rather than the index (which starts from 0)
     theLine += ` ${c + 1}. ${katzDeliLine[c]},` 
   }
   
