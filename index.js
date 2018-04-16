@@ -1,3 +1,5 @@
+var katzDeliLine = [];
+
 //takeANumber function adds new patron the list and returns patron's position in plain english
 //Parameters: katzDeliLine, patronName
 //Return: patron's position in line in plain english
@@ -20,7 +22,8 @@ function takeANumber (katzDeliLine, patronName) {
 
 function nowServing (katzDeliLine) {
   //check if there is a line. If there is no line, return string from lesson.
-  if (lineEmpty(katzDeliLine)) {
+  //lineEmpty will return true if line is empty
+  if ( lineEmpty(katzDeliLine) ) {
     return "There is nobody waiting to be served!";
   }
   
@@ -40,8 +43,12 @@ function nowServing (katzDeliLine) {
 //Return: String with list of patrons (including their position) --- OR --- string stating that the line is empty.
 function currentLine (katzDeliLine) {
   
+  
+  
   //Check if the the line has patrons
-  if (lineEmpty(katzDeliLine)) {
+  //lineEmpty will return true if line is empty
+  
+  if ( lineEmpty(katzDeliLine) ) {
     return "The line is currently empty.";
   }
 
@@ -53,23 +60,21 @@ function currentLine (katzDeliLine) {
     //create beginning of string to start sentence. The string will be added to by iterating through the katzDeliLine array.
     var theLine = "The line is currently:";
 
-    //Adds the lline position and patron name for each patron in the line.
+    //Adds the line position and patron name for each patron in the line.
+    //this is accomplished through concatanation using += assignment operator for each iteration.
     for (var c = 0; c < katzDeliLine.length; c++) {
-      theLine += ` ${c + 1}. ${katzDeliLine[c]},`
+      theLine += ` ${c + 1}. ${katzDeliLine[c]},`;
     }
     
     //removes the final comma in the string because list is over.
     //.substring removes the last character in this instance
     theLine = theLine.substring(0, theLine.length - 1);
 
-    //return the string that contains line
+    //return the string that contains the line with patrons and their positions.
     return theLine;
   }
 
 }
-
-
-
 
 
 
