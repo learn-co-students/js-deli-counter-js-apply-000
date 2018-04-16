@@ -1,75 +1,71 @@
-//Start with an empty array to represent empty deli at start of day
-var katzDeli = [];
+//takeANumber function adds new patron the list and returns patron's position in plain english
+//Parameters: katzDeliLine, patronName
+//Return: patron's position in line in plain english
 
-//array to hold the current line
-var katzDeliLine = [];
-
-
-//function takeANumber — accepts current line of people (katzDeliLine) and patron's name as parameteres
-//function returns position in line (in plain english — not an index)
 function takeANumber (katzDeliLine, patronName) {
   
-  //will hold the line position by getting length of katzDeliLine
-  var linePosition;
-
-  //Add partron name to the end of array in katzDeliLine
-  katzDeliLine.push(patronName);
+  //.push returns the new length of the array
+  //katzDeliLine.length is the same as the last patron's line position
   
-  //linePosition will equal katzDeliLine.length (don't need to worry about accounting for 0 index by using length)
-  linePosition = katzDeliLine.length;
-  
-  //return position in line (in plain english)
-  return `Welcome, ${patronName}. You are number ${linePosition} in line.`;
+  return `Welcome, ${patronName}. You are number ${katzDeliLine.push(patronName)} in line.`;
 }
 
 
 
-//nowServing function returns the first person in line
-//Also remove that individual from the line
-//Returns specific string if nobody is in line
+
+
+//nowServing function states the next patron to be served (first in line) and removes the individual from the line, or returns a string if the line is empty.
+//Parameters: katzDeliLine
+//Return: Person that is now being served (first in line) --- OR --- string stating the line is empty
+
 function nowServing (katzDeliLine) {
-  
-  if (katzDeliLine.length === 0) {
+  //check if there is a line. If there is no line, return string from lesson.
+  if (lineEmpty(katzDeliLine)) {
     return "There is nobody waiting to be served!";
   }
   
-  //nextUp is the next person in line (index 0)
-  var nextUp = katzDeliLine[0];
-  
-  //use .shift to remove that individual from the front of the line
-  katzDeliLine.shift();
-  
-  //return nextUp
-  return `Currently serving ${nextUp}.`;
-  
+  //If there is a line, return string stating next patron and remove that individual from the line (katzDeliLine array)
+  else {
+    //.shift removes first element from array AND returns the removed element from array.
+    return `Currently serving ${katzDeliLine.shift()}.`;
+  }
 }
 
 
 
-//function currentLine returns the current line in a string
 
+
+//currentLine function returns the current line of patrons.
+//Parameters: katzDeliLine
+//Return: String with list of patrons (including their position) --- OR --- string stating that the line is empty.
 function currentLine (katzDeliLine) {
   
-  //check if there are partrons in line
-  if (katzDeliLine.length === 0) {
+  //Check if the the line has patrons
+  if (lineEmpty(katzDeliLine)) {
     return "The line is currently empty.";
   }
-  
-  //Start of string that will be returned. The rest of the string of patrons waiting will be added later.
-  var theLine = "The line is currently:";
-  
-  //iterate over the line to obtain each position
-  for (var c = 0; c < katzDeliLine.length; c++) {
+
+
+
+  //If line has patrons, form string with patron's and their location in line.
+  else {
+
+    //create beginning of string to start sentence. The string will be added to by iterating through the katzDeliLine array.
+    var theLine = "The line is currently:";
+
+    //Adds the lline position and patron name for each patron in the line.
+    for (var c = 0; c < katzDeliLine.length; c++) {
+      theLine += ` ${c + 1}. ${katzDeliLine[c]},`
+    }
     
-    //add the position and name for each iteration(position)
-    //add the +1 to position to get the "plain english" location, rather than the index (which starts from 0)
-    theLine += ` ${c + 1}. ${katzDeliLine[c]},` 
+    //removes the final comma in the string because list is over.
+    //.substring removes the last character in this instance
+    theLine = theLine.substring(0, theLine.length - 1);
+
+    //return the string that contains line
+    return theLine;
   }
-  
-  //remove the final "," to end the list
-  theLine = theLine.substring(0, theLine.length - 1);
-  
-  return theLine; 
+
 }
 
 
@@ -78,4 +74,15 @@ function currentLine (katzDeliLine) {
 
 
 
+
+
+
+//This function checks to see if there is a line (if katzDeliLine array is empty or not)
+//Returns true if the line is empty (array === 0)
+function lineEmpty (katzDeliLine) {
+
+  if (katzDeliLine.length === 0) {
+    return true;
+  }
+}
 
