@@ -25,7 +25,7 @@ function currentLine(katzDeli) {
   }else {
     
     for(let i = 1; i<=katzDeli.length; i ++){
-    return 'The line is  currently: ' +  [i].indexOf() + '.' + ' '  + katzDeli
+    return 'The line is  currently: ' + katzDeli.indexOf([i]) + '.' + ' '  + katzDeli
     }
     
   }
