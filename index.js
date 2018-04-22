@@ -1,26 +1,31 @@
-var katzDeliLine = [];
+var katzDeli = [];
 
 function takeANumber(katzDeliLine, newPerson) {
   katzDeliLine.push(newPerson);
-  return 'Welcome, ' + newPerson +'. You are number ' + katzDeli.length + ' in line.';
+  return 'Welcome, ' + newPerson +'. You are number ' + katzDeliLine.length + ' in line.';
+
 }
 
-function nowServing() {
-  if (katzDeli[0] === undefined) {
-    return 'There is nobody waiting to be served!';
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length === 0) {
+    return "There is nobody waiting to be served!";
   } else {
-    var first = katzDeli.shift();
-    return first;
+    return 'Currently serving ' + katzDeliLine.shift() + '.';
   }
 }
 
 function currentLine(katzDeliLine) {
-  if (katzDeli.length === 0) {
+  if (katzDeliLine.length === 0) {
     return 'The line is currently empty.';
   }
   var lineStr = 'The line is currently:';
-  katzDeli.forEach(function(person, i) {
-    lineStr += ' ' + (i + 1) + '. ' + person + ',';
-  });
+  for (var i = 0; i < katzDeliLine.length; i++) {
+    var person = katzDeliLine[i];
+    if (i === katzDeliLine.length -1) {
+        lineStr += ' ' + (i + 1) + '. ' + person;
+      } else {
+        lineStr += ' ' + (i + 1) + '. ' + person + ',';
+      }
+  }
   return lineStr;
 }
