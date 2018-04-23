@@ -48,5 +48,4 @@ function currentLine(katzDeliLine){
   //returns numbered list of people on line
   return `The line is currently: ${line}`
   }
-}
-
+} 
