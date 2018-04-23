@@ -31,7 +31,6 @@ function nowServing(katzDeliLine){
   }
 }
 
-
 //function takes in katzDeliLine array as parameter and returns a numbered list of the current line
 function currentLine(katzDeliLine){
   //if there is no one on line return string that states its empty
