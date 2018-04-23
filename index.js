@@ -1,5 +1,5 @@
-//creates empty array to be used later
-var x = [];
+//creates empty array to be used later to store names of people in line with their number preceeding 
+var line = [];
 //create empty array to store names of people in line
 var katzDeliLine = [];
 //create counter variable to be used later
@@ -35,12 +35,18 @@ function currentLine(katzDeliLine){
   if (katzDeliLine.length === 0) {
     return "The line is currently empty."
   }
+  //if there are people on line
   else {
-   x.push(`${i+1}. ${katzDeliLine[i]}`)
+   //adds the first person on line to the array with their line number in front
+   line.push(`${i+1}. ${katzDeliLine[i]}`)
+   //repeats this process to add all additional people on line to the end of the array
+   //neccessary to maintain the format 1. name 2. name ... with proper spacing 
    for (let i = 1; i < katzDeliLine.length; i++) {
-  x.push(` ${i+1}. ${katzDeliLine[i]}`)
+  //adds new person to end of line array 
+  line.push(` ${i+1}. ${katzDeliLine[i]}`)
     }
-  return `The line is currently: ${x}`
+  //returns numbered list of people on line
+  return `The line is currently: ${line}`
   }
 }
 
