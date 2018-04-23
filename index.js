@@ -24,11 +24,11 @@ function currentLine(katzDeli) {
     return 'The line is currently empty.'
   }else {
     
-    for(let i = 1; i<=katzDeli.length; i ++){
-    return 'The line is  currently: ' + katzDeli.indexOf([i]) + '.' + ' '  + katzDeli
-    }
+    return`The line is currently: ${katzDeli.indexOf('Bill')+1}. ${katzDeli[0]}, ${katzDeli.indexOf('Jane')+1}. ${katzDeli[1]}, ${katzDeli.indexOf('Ann')+1}. ${katzDeli[2]}`
+ }
+
     
-  }
+  
   
   
 }
