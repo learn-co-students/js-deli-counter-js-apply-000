@@ -5,6 +5,7 @@ var katzDeliLine = [];
 //create counter variable to be used later
 let i = 0; 
 
+
 //function accepts current line of people and name of new person on line
 function takeANumber(katzDeliLine, name){
  //add new name to the end of katzDeliLine array that stores names of people on line
@@ -13,6 +14,7 @@ function takeANumber(katzDeliLine, name){
   return (`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`)
 }
 
+//function takes in katzDeliLine array as parameter and returns who is being served (if any)
 function nowServing(katzDeliLine){
   //checks if there is no one on line, if true prints string
   if (katzDeliLine.length === 0) {
@@ -27,9 +29,10 @@ function nowServing(katzDeliLine){
     //return the "Currently serving X" statement
     return p;
   }
-    
 }
 
+
+//function takes in katzDeliLine array as parameter and returns a numbered list of the current line
 function currentLine(katzDeliLine){
   //if there is no one on line return string that states its empty
   if (katzDeliLine.length === 0) {
