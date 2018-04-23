@@ -42,8 +42,8 @@ function currentLine(katzDeliLine){
    //repeats this process to add all additional people on line to the end of the array
    //neccessary to maintain the format 1. name 2. name ... with proper spacing 
    for (let i = 1; i < katzDeliLine.length; i++) {
-  //adds new person to end of line array 
-  line.push(` ${i+1}. ${katzDeliLine[i]}`)
+    //adds new person to end of line array 
+    line.push(` ${i+1}. ${katzDeliLine[i]}`)
     }
   //returns numbered list of people on line
   return `The line is currently: ${line}`
