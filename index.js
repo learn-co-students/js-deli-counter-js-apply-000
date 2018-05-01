@@ -1,11 +1,8 @@
 var katzDeli = [ ];
 
-// Destructive functions
-
 function takeANumber(line, person){
   line.push(person)
   return `Welcome, ${person}. You are number ${line.length} in line.`
-  
 }
 
 function nowServing(line){
@@ -30,10 +27,17 @@ function currentLine(line){
 }
 
 
-/* non Destructive methods
 
+
+
+
+
+
+ //non Destructive methods
+ 
+/*
 function takeANumber(line, person){
-  var newLine = [...line,person]
+  var newLine = [...line, person]
   return `Welcome, ${person}. You are number ${newLine.length} in line.`
 }
 
@@ -64,6 +68,7 @@ function currentLine(line){
   }
 }
 
-
 */
+
+
 
