@@ -29,7 +29,11 @@ function currentLine(line){
   	line.push(i+1 + "." + katzDeli[i]);
   	i++;
   }
-  	//console.log(numberedLine);
-  return `The line is currently: ${line}`
+
+  if (katzDeli.length > 0) {
+  	return `The line is currently: ${line}`
+  } else{
+   return "The line is currently empty."
+  }
 }
 
