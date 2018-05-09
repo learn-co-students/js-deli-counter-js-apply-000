@@ -1,7 +1,8 @@
-function takeANumber(katzDeliLine, string)  {
-  var result = "Welcome, "+ string + ". You are number " + parseInt(katzDeliLine.length+1) + " in line."
 
-  katzDeliLine.push(string);
+function takeANumber(katzDeliLine, name)  {
+  var result = "Welcome, "+ name + ". You are number " + parseInt(katzDeliLine.length+1) + " in line."
+
+  katzDeliLine.push(name);
 
   return result;
 }
@@ -12,7 +13,7 @@ function nowServing(katzDeliLine) {
   if(katzDeliLine[0])  {
     result = katzDeliLine[0];
 
-    katzDeliLine.splice(0,1);
+    katzDeliLine.shift();
     return "Currently serving " + result + ".";
   }
 
