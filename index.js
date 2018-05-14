@@ -15,9 +15,11 @@ function currentLine(katzDeliLine) {
   const line = [];
   
   if (katzDeliLine.length > 0) {
-    for (let i = 0, n = line.length; i < n; i++) {
-  line.push(`${i + 1}. ${katzDeliLine[i]}`)
-}
-  return `The line is currently: ` + line
-} else return 'The line is currently empty.'
+    //start with 3 people based on Katz Deli Line 
+    for (let i = 0, n = katzDeliLine.length; i < n; i++) {
+      line.push(`${i + 1}. ${katzDeliLine[i]}`)
+    }
+  console.log(line)
+  return `The line is currently: ` + line.join(`, `)
+  } else return 'The line is currently empty.'
 }
