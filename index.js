@@ -1,6 +1,6 @@
 function takeANumber(arr, name){
   arr.push(name);
-  var index = arr.indexOf(name) + 1;
+  var index = arr.length;
   return "Welcome, " + name + ". You are number " + index + " in line."
 }
 
