@@ -1,29 +1,29 @@
 var katzDeli = [];
 var katzDeliLine = [];
-function takeANumber(katzDeliLine, custName){
-  katzDeliLine.push(custName);
-  var katzDeliPos = katzDeliLine.indexOf(custName) + 1;
+function takeANumber(deliLine, custName){
+ deliLine.push(custName);
+  var katzDeliPos = deliLine.indexOf(custName) + 1;
   return "Welcome, " + custName + ". You are number " + katzDeliPos + " in line.";
 }
 
-function nowServing (katzDeliLine){
-  if (katzDeliLine.length > 0) {
-    var serving = katzDeliLine.shift();
+function nowServing (deliLine){
+  if (deliLine.length > 0) {
+    var serving = deliLine.shift();
     return "Currently serving " + serving + ".";
   } else {
     return "There is nobody waiting to be served!";
   }
 }
 
-function currentLine (katzDeliLine){
-  if (katzDeliLine.length > 0){
+function currentLine (deliLine){
+  if (deliLine.length > 0){
     var lineStatement = "The line is currently: ";
     var customer = "";
-    for (var i = 0; i < katzDeliLine.length; i++){
-      if (i === katzDeliLine.length - 1){
-      customer = i + 1 + ". " + katzDeliLine[i];
+    for (var i = 0; i < deliLine.length; i++){
+      if (i === deliLine.length - 1){
+      customer = i + 1 + ". " + deliLine[i];
       } else {
-        customer = i + 1 + ". " + katzDeliLine[i] + ", ";
+        customer = i + 1 + ". " + deliLine[i] + ", ";
       }
       lineStatement = lineStatement.concat(customer);
     }
