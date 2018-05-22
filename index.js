@@ -20,12 +20,11 @@ function currentLine(katzDeliLine) {
     return "The line is currently empty."
   } else {
     var i;
+    var lineString = "The line is currently: ";
     for (i=0; i < katzDeliLine.length; i++) {
-      var lineString = "The line is currently: ";
-      
-      lineString = `${lineString} ${(i+1)}. ${katzDeliLine[i]},`;
+      lineString = `${lineString}${(i+1)}. ${katzDeliLine[i]}, `;
     }
-    lineString = lineString.substring (0, lineString.length - 1);
+    lineString = lineString.substring(0, lineString.length -2);
     return lineString;
   }
 }
