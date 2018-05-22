@@ -17,16 +17,16 @@ function nowServing(katzDelineLine) {
 }
 
 function currentLine(katzDelineLine) {
-  var string = "The line is currently: "
+  var string = "The line is currently: ";
   if (katzDelineLine.length === 0) {
     return "The line is currently empty.";
   } 
   else {
   for (var i = 0; i < katzDelineLine.length; i++) {
-  string += `${1 + i}. ${katzDelineLine[i]}, `
+  string += `${1 + i}. ${katzDelineLine[i]}, `;
   }
   }
-  return string.slice(0, string.length - 2)
+  return string.slice(0, string.length - 2);
 }
   
   
