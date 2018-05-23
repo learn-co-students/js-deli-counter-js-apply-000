@@ -36,7 +36,7 @@ function currentLine(katzDeliLine){
     /*Use for loop to loop through each person in line and assign proper position and name*/
     for(let i = 0, p = katzDeliLine.length; p > i; i++) {
       
-      /*add position and name to the end of array variable*/
+      /*add position and name to the end of array variable (this adds the commas as well)*/
       result.push(` ${i+1}. ${katzDeliLine[i]}`) 
       
     }
