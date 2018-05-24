@@ -1,5 +1,5 @@
 function takeANumber(katzDeliLine, name){
-  /*Array length start off at 0 so add 1 to accurately show the position*/
+  /*Array index start off at 0 so add 1 to accurately show the position*/
   var position = katzDeliLine.length + 1 
   
   /*Add each customer's name to the end of the array*/
