@@ -28,8 +28,8 @@ function currentLine(katzDeliLine){
   
 }
 
-function DeliCounter(){
-  takeANumber();
-  nowServng();
-  currentLine();
-}
+nowServing(katzDeliLine, function(){
+  currentLine(katzDeliLine);
+});
+  
+
