@@ -30,16 +30,3 @@ function currentLine(katzDeliLine){
     return "The line is currently:" + newArray.toString()
   };
 };
-
-//   do {
-//     return "The line is currently empty."
-//   } while (katzDeliLine.length === 0);
-//
-// do {
-//   for (let i=0; i<katzDeliLine.length; i++){
-//       katzDeliLine.unshift(katzDeliLine.length + ". ")
-//       var newLine = katzDeliLine.toString();
-//     };
-//     return `The line is currently: ${newLine}`
-//   } while (katzDeliLine.length > 0)
-// }
