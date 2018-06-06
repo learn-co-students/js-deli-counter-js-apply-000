@@ -1,20 +1,26 @@
 var katzDeliLine = [];
 
-function takeANumber(line, name){
-    line.push(name);
+function takeANumber(line, customer) {
+    line.push(customer);
     
-    console.log("Welcome, " + name + ". You are number " + line.length + " in line.");
+    console.log("Welcome, " + customer + ". You are number " + line.length + " in line.");
     
+    // return "Welcome, " + name + ". You are number " + line.length + " in line.";
   }
 
   function currentLine(line) {
     var currentlyInLine = [];
-    line.forEach(element => {
-        currentlyInLine.push(line.indexOf(element) + 1 + ". " + element); 
+    line.forEach(customer => {
+        currentlyInLine.push(line.indexOf(customer) + 1 + ". " + customer); 
     });
     
-    currentlyInLine.toString();
-    console.log("The line is currently: " + currentlyInLine.join(', ') );
+    if(line.length > 0) {
+      currentlyInLine.toString();
+      console.log("The line is currently: " + currentlyInLine.join(', '));
+    } else {
+      console.log("The line is empty!!!");
+    }
+    
   }
 
   function nowServing() {
@@ -47,6 +53,7 @@ function takeANumber(line, name){
   nowServing();
   nowServing();
   nowServing();
+  currentLine(katzDeliLine);
   
  
 
