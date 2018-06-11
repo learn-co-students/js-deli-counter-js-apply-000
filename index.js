@@ -8,7 +8,6 @@ function takeANumber(katzDeliLine, newPerson) {
 }
 
 function nowServing(line) {
-  
   if(line.length > 0) {
     let currentPerson = line[0];
     line.shift();
