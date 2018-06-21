@@ -30,7 +30,10 @@ function currentLine(LineArray) {
     for (let i=0; i<LineArray.length;i++) {
      var lineNo = i+1;
      var name = LineArray[i];
+
      listarray.push(`${lineNo}. ${name}`);
+
+
     }
     var message = listarray.join(', ');
     return `The line is currently: ${message}`;
