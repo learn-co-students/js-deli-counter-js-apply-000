@@ -44,6 +44,4 @@ currentLine(katzDeliLine); // "The line is currently: 1. Grace, 2. Kent, 3. Matz
 nowServing(katzDeliLine); // "Currently serving Grace."
 
 currentLine(katzDeliLine); // "The line is currently: 1. Kent, 2. Matz"
-```
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-deli-counter' title='Deli Counter Lab'>Deli Counter Lab</a> on Learn.co and start learning to code for free.</p>
