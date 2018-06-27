@@ -1,6 +1,3 @@
-//Create an empty array called katzDeli = [];
-
-// var katzDeli = [];
 
 /*Create an array, (katzDeliLine) that represents
 	the current line of people*/
@@ -48,24 +45,7 @@ function nowServing(katzDeliLine){
 // 		"The line is currently: 1. Ada, 2. Grace".
 // 	2. If nobody is in line, returns
 // 		"The line is currently empty"*/
-//
-//
-// function currentLine(katzDeliLine){
-// 	if (katzDeliLine.length < 1) {
-// 		return ("The line is currently empty.")
-// 		} else
-// 		for(var i = 0; i <= katzDeliLine.length; i++)
-// 			return("The line is currently: " + ". " + katzDeliLine[i] + ".");
-//
-// }
-// function currentLine(katzDeliLine){
-// 	if (katzDeliLine.length < 1) {
-// 		return ("The line is currently empty.")
-// 		} else
-// 		katzDeliLine.forEach()
-// 			return("The line is currently: " + ". " + katzDeliLine[i] + ".");
-//
-// }
+
 
 function currentLine(katzDeliLine){
 	var currentKatzDeliLine = []
@@ -79,29 +59,3 @@ function currentLine(katzDeliLine){
 		}
 	return ("The line is currently: " + currentKatzDeliLine);
 	}
-
-
-//
-// katzDeliLine.forEach(function(currentLine)){
-// 	currentKatzDeliLine.push(katzDeliLine);
-// 	return currentKatzDeliLine
-// }
-
-
-// for(var i = 0; i > 0; i++)
-// 	return("The line is currently: " + count++ + ". " + katzDeliLine + ".")
-
-// function currentLine() {
-// 	for(var i = 0; i < katzDeliLine.length; i++);{
-// 		return("The line is currently: " + (count++) + katzDeliLine);
-// 	}
-// }
-
-
-// var lineNumber = 1
-// while( var i=0; i<katzDeliLine.length; i++){
-// lineNumber = lineNumber++
-
-// katzDeliLine.forEach(currentLine()) {
-// 	return("The line is currently: " + katzDeliLine);
-// };
