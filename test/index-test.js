@@ -12,7 +12,7 @@ describe('deli', () => {
 
     it('adds a person to the line', () => {
       expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
-      expect(katzDeli).toEqual(['Ada']);
+      expect(katzDeli).toEqual([`Ada`]);
     });
 
     it('appends the person the end of the line if there are already people on it', () => {
