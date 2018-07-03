@@ -11,14 +11,13 @@ function nowServing(deliLine){
     }
   }
   function currentLine(line){
-    var i = 0;
-    if (i < line.length){
-      return `The line is currently: 1. Bill, 2. Jane, 3. Ann`
-    }
-    else {
-      return `The line is currently empty.`;
-    }
-  }
-
-  //for (var i = 0; i < deliLine.length; i++){
-    //sentence.push(`Currently serving ${deliLine[i]}.`)
+    if (line.length === 0) {
+     return "The line is currently empty."
+ } else {
+   var newline = []
+    for (let i = 0; i < line.length; i++) {
+   newline.push(` ${i+1}. ${line [i]}`)
+ }
+ return `The line is currently:${newline}`;
+ }
+ }
