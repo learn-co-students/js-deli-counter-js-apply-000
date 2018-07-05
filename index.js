@@ -1,5 +1,24 @@
 var katzDeliLine = [];
 
+
+/*var counter = 0;
+
+function takeANumber(katzDeliLine){
+  katzDeliLine.push(++counter);
+  return `Welcome! You're ticket number is #${counter}`;
+}*/
+
+// takeANumber(katzDeliLine) => "Welcome! You're ticket number #1"  katzDeliLine => [1]
+// takeANumber(katzDeliLine) => "Welcome! You're ticket number #2" [1,2]
+
+// nowServing(katzDeliLine) => "Currently Serving: #1" [2]
+// nowServing(katzDeliLine) => "Currently Serving: #2" []
+
+// takeANumber(katzDeliLine) => "Welcome! You're ticket number #3" [3]
+
+
+
+
 function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
