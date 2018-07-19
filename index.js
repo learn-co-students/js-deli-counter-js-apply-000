@@ -29,7 +29,7 @@ function currentLine(line){
     newLine.push(`${numbers[i]}. ${line[i]}`);
     
   }
-    return `The line is currently: ${newLine}`;
+    return `The line is currently: ${newLine.join(", ")}`;
   } else {
     return "The line is currently empty.";
   }
