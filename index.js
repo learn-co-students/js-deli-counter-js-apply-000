@@ -11,3 +11,14 @@ takeANumber(katzDeli, 'Ada');
 takeANumber(katzDeli, 'Grace');
 takeANumber(katzDeli, 'Kent');
 
+function nowServing (DeliLine){
+  if(DeliLine.length>0){
+    console.log(`Currently serving ${DeliLine[0]}.`);
+    DeliLine.shift();
+  } else{
+    return "There is nobody waiting to be served!";
+  }
+}
+
+const deliLine = ["Steven", "Blake", "Avi"];
+nowServing(deliLine);
