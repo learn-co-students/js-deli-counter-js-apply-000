@@ -10,8 +10,7 @@ const deliLine = ["Steven", "Blake", "Avi"];
 
 function nowServing (Deli){
   if(Deli.length>0){
-    console.log(`Currently serving ${Deli[0]}.`);
-    Deli.shift();
+    return `Currently serving ${Deli.shift()}.`;
   } else{
     return "There is nobody waiting to be served!";
   }
