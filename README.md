@@ -1,3 +1,4 @@
+
 # Deli Counter Lab
 
 ## Objectives
