@@ -1,6 +1,10 @@
-function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name)
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
+function takeANumber(katzDeliLine, ...name) {
+  // Account for multiple customers!
+  for (var customer of name) {
+    katzDeliLine.push(customer)
+  }
+  var lastCustomer = katzDeliLine[katzDeliLine.length - 1];
+  return `Welcome, ${lastCustomer}. You are number ${katzDeliLine.length} in line.`;
 }
 
 function nowServing(arr) {
