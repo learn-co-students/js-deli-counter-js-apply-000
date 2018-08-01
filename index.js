@@ -3,7 +3,7 @@ const takeANumber = (currLine, name) => {
   return `Welcome, ${name}. You are number ${currLine.length} in line.`;
 }
 
-const nowServing = (currLine) => {
+const nowServing = currLine => {
   if (currLine.length) {
     const firstCust = currLine.shift();
     return `Currently serving ${firstCust}.`;
@@ -12,7 +12,7 @@ const nowServing = (currLine) => {
   }
 }
 
-const currentLine = (currLine) => {
+const currentLine = currLine => {
   if (currLine.length === 0) return "The line is currently empty.";
   var line = 'The line is currently: ';
   for (let i = 0; i < currLine.length -1; ++i) {
