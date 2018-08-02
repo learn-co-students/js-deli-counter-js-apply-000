@@ -1,20 +1,16 @@
-var katzDeliLine = ["Ada", "Grace", "Kent"];
+var katzDeliLine = [];
 
 function takeANumber(line, name) {
 	var linePosition = 0;
-	line.push(name); // adding the name into the array
-
+	line.push(name);
 	linePosition = line.indexOf(name) + 1;
-
 	var retString = "Welcome, " + name + ". You are number " + linePosition + " in line.";
-
 	return retString;
 }
 
 function nowServing(line) {
 	var person = "";
 	var retString = "";
-
 	if (line.length > 0) {
 		person = line.shift();
 		retString = "Currently serving " + person + ".";
