@@ -11,7 +11,7 @@ function nowServing(katzDeliLine) {
   }
 }
 
-function currentLine(katzDeliLine) {
+function currentLineWhile(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   }
@@ -19,9 +19,26 @@ function currentLine(katzDeliLine) {
   var message = "The line is currently: ";
   var counter = 0;
   while (counter<katzDeliLine.length) { 
-    message = message + (counter+1) + ". " + katzDeliLine[counter] + ", ";
-    counter = counter + 1;
+    message += (counter+1) + ". " + katzDeliLine[counter] + ", ";
+    counter ++;
   }
   message = message.slice(0, -2);
   return message;
 }
+
+function currentLine(katzDeliLine) {
+  if (katzDeliLine.length === 0) {
+    return "The line is currently empty.";
+  }
+  
+  var message = "The line is currently: ";
+  
+  for (var counter = 0; counter<katzDeliLine.length;counter ++) { 
+    message += (counter+1) + ". " + katzDeliLine[counter] + ", ";
+    
+  }
+  message = message.slice(0, -2);
+  return message;
+}
+
+
