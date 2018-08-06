@@ -21,5 +21,6 @@ function currentLine(queue){
   for (var i=0; i<queue.length;i++){
     startStr = startStr + (i+1) + ". " + queue[i] +", "
   }
-  return startStr.slice(0,startStr.length-2) //removes last comma, <adding new if
+  var sliced = startStr.slice(0,-2)
+  return sliced //removes last comma, <adding new if
 }
