@@ -8,13 +8,6 @@ function takeANumber(maxDeliLine, newName){
   welcomeMessage = "Welcome, " + newName + ". You are number " + linePos + " in line.";
   return welcomeMessage
 }  
-  /*
-  for(var i = 0; i < currentLine.length; i++){
-    if(currentLine[i] == newName){
-      linePos = i + 1;
-    }
-  }*/
-
 
 function nowServing(maxDeliLine){
   if(maxDeliLine.length === 0){
