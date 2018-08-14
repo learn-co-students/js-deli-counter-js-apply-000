@@ -9,7 +9,7 @@ function takeANumber(katzDeli, customerName) {
   return (`Welcome, ${customerName}. You are number ${katzDeli.length} in line.`)
 };
 
-//function nowServing accepts one parameter katzDeli. The function body creates a counter variable i and assigns it value 0. A while loop runs as long as i < katzDeli.length (we are using while loop because we might not know how long the array is and want to it run as long as the array is not empty). Each iteration of the loop increments the counter variable by 1. The loop body also uses an if statement to check if the katzDeli is empty. If yes it returns a string "There is nobody waiting to be served!". Else it returns the `Currently serving ${katzDeli.shift()}.` The first element of katzDeli array is removed from the array.
+//function nowServing accepts one parameter katzDeli. The function body creates a counter variable i and assigns it value 0. A while loop runs as long as i < katzDeli.length (we are using while loop because we might not know how long the array is and want to it run as long as the array is not empty). Each iteration of the loop increments the counter variable by 1. The function body also uses an if statement to check if the katzDeli is empty. If yes it returns a string "There is nobody waiting to be served!". Else it returns the `Currently serving ${katzDeli.shift()}.` The first element of katzDeli array is removed from the array.
 function nowServing(katzDeli) {
   let i = 0;
   while (i < katzDeli.length) {
