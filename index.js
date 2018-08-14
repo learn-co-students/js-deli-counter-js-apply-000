@@ -22,7 +22,7 @@ function nowServing(katzDeli) {
   }
 };
 
-// this variable was created for the sole purpose two joining (interpolating two strings)
+
 // katzDeliLine array holds the customers name with their position in line in front of their name [i+1].
 var katzDeliLine = [];
 
