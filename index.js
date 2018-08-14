@@ -8,7 +8,7 @@ takeANumber(katzDeli, "Ada")
 takeANumber(katzDeli, "Grace")
 takeANumber(katzDeli, "Kent")
 
-deliLine = ["Steven", "Blake", "Avi"]
+var deliLine = ["Steven", "Blake", "Avi"]
 function nowServing(deliLine) {
   if (deliLine.length === 0) {
     return "There is nobody waiting to be served!"
