@@ -22,7 +22,7 @@ function nowServing(katzDeli) {
   }
 };
 
-// this variable was created for the sole purpose two joining (interpolating two strings)
+// this variable was created for the sole purpose of joining two strings (interpolating two strings)
 var katzDeliLine = [];
 
 
