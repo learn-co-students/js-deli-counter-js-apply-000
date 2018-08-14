@@ -26,19 +26,23 @@ function currentLineWhile(katzDeliLine) {
   return message;
 }
 
-function currentLine(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
-    return "The line is currently empty.";
-  }
-  
-  var message = "The line is currently: ";
-  
-  for (var counter = 0; counter<katzDeliLine.length;counter ++) { 
-    message += (counter+1) + ". " + katzDeliLine[counter] + ", ";
-    
-  }
-  message = message.slice(0, -2);
-  return message;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
