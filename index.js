@@ -19,7 +19,7 @@ function currentLine(katzDeliLine) {
   let array = [];
   let i = 0;
   while (i < katzDeliLine.length) {
-    array.push(' '+[i+1]+'. '  + katzDeliLine[i]) // Takes the empty array and appends the index+1 and the index element
+    array.push([i+1]+'. '  + katzDeliLine[i]) // Takes the empty array and appends the index+1 and the index element
     i++; //adds one to the preceding value.
   }
   if (katzDeliLine.length === 0) {  //if theres nothing store in the array
