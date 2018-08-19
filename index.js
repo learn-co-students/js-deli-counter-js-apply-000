@@ -15,19 +15,16 @@ function nowServing (katzDeliLine)
   else {return ("There is nobody waiting to be served!")}
 }
 
-function currentLine(katzDeliLine){
-  if(katzDeliLine.length > 0){
-    var string = "The line is currently: " 
-    for (var i = 0; i < katzDeliLine.length; i++){
-      if (i === katzDeliLine.length -1){
-       string += `${i+1}. ${katzDeliLine[i]}`  
-    }
-      else {
-      string += `${i+1}. ${katzDeliLine[i]}, `
-    }
-  } 
-    return string 
-  } 
-else{
-return "The line is currently empty."}
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
+
+  const numbersAndNames = []
+
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
 }
