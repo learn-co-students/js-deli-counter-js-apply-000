@@ -1,16 +1,14 @@
-var katzDeli = [];
 var katzDeliLine = [];
 
 function takeANumber(lineOfPeople, newName) {
-  if (lineOfPeople.length > 0); {
     lineOfPeople.push(newName);
     return "Welcome, " + newName + ". You are number " + lineOfPeople.length + " in line."
+
+}
 
 takeANumber(katzDeliLine, "Ada");
 takeANumber(katzDeliLine, "Grace");
 takeANumber(katzDeliLine, "Kent");
-  }
-}
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
