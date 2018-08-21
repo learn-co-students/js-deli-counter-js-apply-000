@@ -14,17 +14,17 @@ function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
   }
-  var customer = katzDeliLine.shift();
-  return "Currently serving " + customer + ".";
+  var person = katzDeliLine.shift();
+  return "Currently serving " + person + ".";
 }
 
 var currentLine = function(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   }
-  var customerNo = [];
+  var newPersonNo = [];
   for (var i = 0; i < katzDeliLine.length; i++) {
-    customerNo.push(i + 1 + ". " + katzDeliLine[i])
+    newPersonNo.push(i + 1 + ". " + katzDeliLine[i])
   }
-  return "The line is currently: " + customerNo.join(", ");
+  return "The line is currently: " + newPersonNo.join(", ");
 }
