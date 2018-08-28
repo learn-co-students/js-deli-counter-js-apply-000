@@ -23,7 +23,7 @@ function currentLine(line) {
     for (let i = 0; i < line.length; i++) {
       i !== line.length -1 ? newLine.push(` ${i + 1}. ${line[i]},`) : newLine.push(` ${i + 1}. ${line[i]}`);
     }
-    return newLine.join("");
+    return newLine.join(""); // joins the two sides of the array without the space
   }
 
 }
