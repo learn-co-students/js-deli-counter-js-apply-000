@@ -33,5 +33,4 @@ function currentLine(line) {
 if NOT (line.length -1) (last index position of the line array). 
 Print statement with ",". or if false and is the last index position
 of the array. push statement without the comma.
-
 */
