@@ -2,7 +2,6 @@ var greeting = null
 var lineLength = null
 var lineStatement = ''
 var thisPatron = null
-//var i = null
 
 function takeANumber(currentDeliLine, newCustomer){
   lineLength = currentDeliLine.length + 1
