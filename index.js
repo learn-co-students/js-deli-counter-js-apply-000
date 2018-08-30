@@ -2,7 +2,7 @@ var greeting = null
 var lineLength = null
 var lineStatement = ''
 var thisPatron = null
-var i = null
+//var i = null
 
 function takeANumber(currentDeliLine, newCustomer){
   lineLength = currentDeliLine.length + 1
@@ -25,7 +25,7 @@ function currentLine (currentDeliLine) {
   if (currentDeliLine.length === 0) {
     return "The line is currently empty."
   } else {
-    i = 0
+    var i = 0
     while (i < currentDeliLine.length){
       lineStatement +=  i + 1 + ". " + currentDeliLine[i] + ", "
       i++
