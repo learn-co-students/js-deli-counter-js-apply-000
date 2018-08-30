@@ -8,6 +8,14 @@ function takeANumber(currentDeliLine, newCustomer){
   lineLength = currentDeliLine.length + 1
   greeting = 'Welcome, ' + newCustomer + '. You are number ' + lineLength + ' in line.'
   currentDeliLine.push(newCustomer)
+
+var lineStatement = null
+
+function takeANumber(currentLine, newCustomer){
+  
+  lineLength = currentLine.length + 1
+  greeting = 'Welcome, ' + newCustomer + '. You are number ' + lineLength + ' in line.'
+  currentLine.push(newCustomer)
   return greeting
 }
 
@@ -31,5 +39,13 @@ function currentLine (currentDeliLine) {
       i++
     }
     return "The line is currently: " + lineStatement.slice(0,-2)
+}
+
+function currentLine (currentDeliLine) {
+  
+  if (currentDeliLine.length === 0) {
+    return "The line is currently empty."
+  } else {
+    return lineStatement
   }
 }
