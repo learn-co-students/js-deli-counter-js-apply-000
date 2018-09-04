@@ -22,9 +22,5 @@ function currentLine(katzDeliLine) {
     suffix.push(`${i+1}. ${katzDeliLine[i]}`)
   }
   
-  for(let i = 0; i < katzDeliLine.length; i++) {
-    suffix.push(`${i+1}. ${katzDeliLine[i]}`)
-  }
-  
   return prefix + suffix.join(", ")
 }
