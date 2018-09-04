@@ -6,20 +6,25 @@ function takeANumber(katzDeliLine, name) {
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!"
-  } else {
-    return `Currently serving ${katzDeliLine.shift()}.`
   }
+  
+  return `Currently serving ${katzDeliLine.shift()}.`
 }
 
 function currentLine(katzDeliLine) {
-  var prefix = `The line is currently: `
-  var suffix = [];
+  const prefix = "The line is currently: "
+  const suffix = [];
   if (katzDeliLine.length === 0) {
     return "The line is currently empty."
-  } else {
-    for(var i = 0; i < katzDeliLine.length; i++) {
-      suffix[i] = `${i+1}. ${katzDeliLine[i]}`
-    }
-  return prefix + suffix.join(", ")
   }
+  
+  for(let i = 0; i < katzDeliLine.length; i++) {
+    suffix.push(`${i+1}. ${katzDeliLine[i]}`)
+  }
+  
+  for(let i = 0; i < katzDeliLine.length; i++) {
+    suffix.push(`${i+1}. ${katzDeliLine[i]}`)
+  }
+  
+  return prefix + suffix.join(", ")
 }
