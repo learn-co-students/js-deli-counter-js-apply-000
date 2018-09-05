@@ -29,19 +29,11 @@ function currentLine(lineArray) {
   for (let i = 0; i < lineArray.length; i++) {
     const currentName = lineArray[i];
     const number = i + 1;
-    
-   if (i === lineArray.length - 1) {
-     
-     finalString+= ` ${number}. ${currentName}`
-     
-   } else {
+  
      finalString+= ` ${number}. ${currentName},`
-   }
-   
-   
   }
   
-  return finalString;
+  return finalString.slice(0,finalString.length-1);
   
 }
 
