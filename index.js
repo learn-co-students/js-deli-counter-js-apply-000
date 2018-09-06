@@ -1,5 +1,5 @@
 function takeANumber(katzDeliLine, personName) {
-    katzDeliLine.push(personName); // Adds the name to the array
+    katzDeliLine.push(personName); // Adds the personName to the array the katzDeliLine array
     return `Welcome, ${personName}. You are number ${katzDeliLine.length} in line.`;
     // Output: Welcome, PERSON NAME. You are number NUMBER in line.
 }
@@ -8,7 +8,7 @@ function nowServing(katzDeliLine) {
     if (katzDeliLine.length === 0) {
         return "There is nobody waiting to be served!";
     } else {
-        return `Currently serving ${katzDeliLine.shift()}.`;
+        return `Currently serving ${katzDeliLine.shift()}.`; //.shift() removes the first item from the array
     }
 }
 
