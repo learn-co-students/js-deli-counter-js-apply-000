@@ -20,9 +20,9 @@ function currentLine(deliLine){
   if (deliLine.length > 0){
   
     for (var i = 0; i < deliLine.length; i ++){
-      statement.push((i+1) + "." + deliLine[i]);
+      statement.push(" " + (i+1) + ". " + deliLine[i]);
     }
-  return "The line is currently: " + statement;
+  return "The line is currently:" + statement;
   
   }else {
     return "The line is currently empty."
