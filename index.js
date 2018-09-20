@@ -1,18 +1,14 @@
 function takeANumber(place, name) {
   place.push(name);
-  return ("Welcome," + " " + name + ". You are number" +" " + place.length +" " +  "in line.")
-  i++
+  return "Welcome," + " " + name + ". You are number" +" " + place.length +" " +  "in line."
 }
 
 function nowServing(line){
-  var t = 0
-  
   if (line.length === 0) {
     return "There is nobody waiting to be served!";
   }
   else  {
-    return "Currently serving " + line.shift() + "."
-    t++;
+    return "Currently serving " + line.shift() + ".";
   }
 }
 
