@@ -13,10 +13,10 @@ else {
 }
 
 function currentLine(katzDeliLine) {
-  var i = 0;
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   }
+  var i = 0;
   var line = [];
   for(i=0; i<katzDeliLine.length; i++) {
     line.push(i+1 + ". "+ katzDeliLine[i]);
