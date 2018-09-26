@@ -1,5 +1,3 @@
-
-
 /*
 * The "takeANumber()" function accepts two parameterr:
 * 1) current line of people
