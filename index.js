@@ -23,14 +23,10 @@ function currentLine(lineOfPeople) {
   } else {
     for (let i = 0; i < lineOfPeople.length; i++) {
       const currentPerson = lineOfPeople[i];
-      if (i !== lineOfPeople.length - 1) {
-        result += `${i + 1}. ${currentPerson}, `;
-      } else {
-        result += `${i + 1}. ${currentPerson}`;
-      }
+      result += `${i + 1}. ${currentPerson}, `;
     }
   }
-  return result;
+  return result.slice(0, result.length - 2);
 }
 
 
