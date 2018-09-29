@@ -1,38 +1,36 @@
-function takeANumber(arrOfPeople, newPerson) {
-  let welcomeMessage = '';
-  arrOfPeople.push(newPerson);
-  welcomeMessage = `Welcome, ${newPerson}. You are number ${arrOfPeople.length} in line.`;
-  return welcomeMessage;
+function takeANumber(lineArray, newName) {
+  let result = '';
+  lineArray.push(newName);
+  result += `Welcome, ${newName}. You are number ${lineArray.length} in line.`
+  return result;
 }
 
 function nowServing(katzDeliLine) {
-  let announcement = '';
+  let result = '';
   if (katzDeliLine.length === 0) {
-    return "There is nobody waiting to be served!";
+    return 'There is nobody waiting to be served!';
   } else {
-    for (let i = 0; i < katzDeliLine.length; i++) {
-      const currentPerson = katzDeliLine[i];
-      announcement = `Currently serving ${katzDeliLine[0]}.`;
-      katzDeliLine = katzDeliLine.splice(0, 1);
-    }
+    result = `Currently serving ${katzDeliLine[0]}.`;
+    katzDeliLine = katzDeliLine.splice(0, 1);
   }
-  return announcement;
+  return result;
 }
 
-function currentLine(line) {
-  let nextUp = 'The line is currently: ';
-  if (line.length === 0) {
+function currentLine(lineOfPeople) {
+  let result = 'The line is currently: ';
+  if (lineOfPeople.length === 0) {
     return 'The line is currently empty.';
   } else {
-    for (let i = 0; i < line.length; i++) {
-      const currentPerson = line[i];
-      if (i === line.length - 1) {
-        nextUp += `${i + 1}. ${currentPerson}`;
+    for (let i = 0; i < lineOfPeople.length; i++) {
+      const currentPerson = lineOfPeople[i];
+      if (i !== lineOfPeople.length - 1) {
+        result += `${i + 1}. ${currentPerson}, `;
       } else {
-        nextUp += `${i + 1}. ${currentPerson}, `;
+        result += `${i + 1}. ${currentPerson}`;
       }
     }
   }
-  return nextUp;
-}  
+  return result;
+}
+
 
