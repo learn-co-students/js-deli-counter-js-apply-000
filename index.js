@@ -69,7 +69,7 @@ function currentLine(katzDeliLine){
   return 'The line is currently: '+curLine.join(', ');
 }
 
-I tried to teach myself for each loop but couldn't get it to work. Think that would be most efficient I just don't understand the syntax. 
+I tried to teach myself forEach loop but couldn't get it to work. Think that would be most efficient I just don't understand the syntax. 
 
 
 */
