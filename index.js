@@ -6,7 +6,6 @@ function takeANumber(currentLine, name) {
   return `Welcome, ${name}. You are number ${position} in line.`;
 }
 
-
 /*
 function nowServing(currentLine){
   if (currentLine === false){
