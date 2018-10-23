@@ -1,3 +1,11 @@
+
+
+function takeANumber(currentLine, name) {
+  currentLine.push(name);
+  return `Welcome, ${name}. You are number ${currentLine.length} in line.`;
+}
+
+/*
 function takeANumber(currentLine, name) {
   currentLine.push(name);
   // one way is to do:
@@ -5,14 +13,16 @@ function takeANumber(currentLine, name) {
   let position = currentLine.length;
   return `Welcome, ${name}. You are number ${position} in line.`;
 }
+*/
 
+//OR
 
 /*
 function nowServing(currentLine){
   if (currentLine === false){
     return "There is nobody waiting to be served!";
   } else {
-    return currentLine.shift();
+    return `Currently serving ${currentLine.shift()}.`;
   }
 }
 
@@ -41,3 +51,24 @@ function currentLine(line){
   return str.slice(0,str.length-1)
   }
 }
+
+/*
+
+OR 
+
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
+
+  const numbersAndNames = []
+
+  for (let i = 0; i < line.length; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+}
+
+
+*/
