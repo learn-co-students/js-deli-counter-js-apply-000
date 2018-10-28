@@ -3,7 +3,7 @@
 function takeANumber(katzDeli, newCustomer )
 {
   katzDeli.push(newCustomer)
-  return("Welcome,"+ newCustomer + ". You are number " + katzDeli.length + " in line.")
+  return("Welcome, "+ newCustomer + ". You are number " + katzDeli.length + " in line.")
 }
 
 //2. 
@@ -16,10 +16,19 @@ function nowServing(katzDeliLine)
   else 
   {
     var Customer = katzDeliLine.shift() // remove first customer from array
-    return ('Currently serving' + Customer +'.')
+    return ('Currently serving ' + Customer +'.')
   }
 }
 
 //3.
 function currentLine(katzDeliLine)
-{}
+{
+  if ( katzDeliLine.length !==0 ) 
+  {
+    return ('The line is currently: ' + katzDeliLine)
+  }
+  else
+  {
+    return ("The line is currently empty.")
+  }
+}
