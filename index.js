@@ -1,17 +1,20 @@
 
 function takeANumber(line, name) {
-  return "Welcome, ${name}. You are number ${line.length} in line."
+  line.push(name)
+  return "Welcome, " + name + ". You are number " + line.length + " in line."
+  //Question: ${name} not working, why?
 }
 
 function nowServing(line) {
-  if line.length <= 0 {
+  if (line.length === 0) {
     return "There is nobody waiting to be served!"
   } else {
-    return line.shift()
+    return "Currently serving " + line.shift() + "."
+    //shift() returns first item and removes it
   }
 
   //or..
-  //return line.length <= 0 ? "There is nobody waiting to be served!" : line.shift()
+  //return line.length <== 0 ? "There is nobody waiting to be served!" : "Currently serving " + line.shift() + "."
 }
 
 function currentLine(line) {
@@ -21,11 +24,11 @@ function currentLine(line) {
   else {
     var names = ""
     for (var i = 0; i < line.length; i++) {
-      if (i == (line.length - 1)) {
-        names = names + "${i + 1}" + ". " + line[i]
+      if (i === (line.length - 1)) {
+        names = names + (i + 1) + ". " + line[i]
       }
       else {
-        names = names + "${i + 1}" + ". " + line[i] + ", "
+        names = names + (i + 1) + ". " + line[i] + ", "
       }
 
     }
@@ -34,4 +37,3 @@ function currentLine(line) {
 
   }
 }
-//return "The line is currently: " +  lines.map(x => line.indexOf(x) + 1 + ". " + x)
