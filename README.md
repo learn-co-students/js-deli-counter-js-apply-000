@@ -44,5 +44,17 @@ nowServing(katzDeliLine); // "Currently serving Grace."
 
 currentLine(katzDeliLine); // "The line is currently: 1. Kent, 2. Matz"
 ```
+root = true
 
+[*]
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+
+[*{.java,.py}]
+indent_size = 4
+
+[*.{js,json,rb}]
+charset = utf-8
+indent_size = 2
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-deli-counter' title='Deli Counter Lab'>Deli Counter Lab</a> on Learn.co and start learning to code for free.</p>
