@@ -17,7 +17,7 @@ function currentLine(curr){
     return "The line is currently empty.";
   }
   else {
-    currLine = "The line is currently: ";
+    var currLine = "The line is currently: ";
    for (var i = 0; i < curr.length; i++){
      currLine += (i+1);
      currLine += ". ";
