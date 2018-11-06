@@ -8,8 +8,7 @@ function nowServing(curr){
     return "There is nobody waiting to be served!";
   }
   else {
-    currPerson = curr.shift();
-    return "Currently serving " + currPerson + " .";
+    return "Currently serving " + curr.shift() + " .";
   }
 }
 
