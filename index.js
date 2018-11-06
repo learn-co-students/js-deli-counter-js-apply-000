@@ -13,11 +13,11 @@ function nowServing(curr){
 }
 
 function currentLine(curr){
-  currLine = "The line is currently: ";
   if(curr.length === 0){
     return "The line is currently empty.";
   }
   else {
+    currLine = "The line is currently: ";
    for (var i = 0; i < curr.length; i++){
      currLine += (i+1);
      currLine += ". ";
