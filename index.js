@@ -26,6 +26,6 @@ function currentLine(curr){
        currLine += ", ";
      }
    }
+   return currLine;
   }
-  return currLine;
 }
