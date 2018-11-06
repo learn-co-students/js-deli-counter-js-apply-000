@@ -5,10 +5,11 @@ function takeANumber(curr, name){
 
 function nowServing(curr){
   if(curr.length === 0){
-    return "There is nobody waiting to be served.";
+    return "There is nobody waiting to be served!";
   }
   else {
-    return curr.shift();
+    currPerson = curr.shift();
+    return "Currently serving " + currPerson + " .";
   }
 }
 
