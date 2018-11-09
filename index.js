@@ -31,9 +31,12 @@ function currentLine(katzDeliLine){
             
             string = string + number + ". " + katzDeliLine[i] + ", ";
         }
+        
+        //okay, I KNOW THIS IS SLOPPY, im sorry, i had a few ideas on how to do this much more elegantly but none of them went as expected!!! GRRR!! help will certainly be appreciated here
+       //so it would be easier to just use .pop(), but for some reason it isnt working that i dont understand?
       
     string = string.split("");
-    var popper = string.length-2 //so it would be easier to just use .pop(), but for some reason it isnt working that i dont understand?
+    var popper = string.length-2
     var popper2 = string.length-1
     delete string[popper];
     delete string[popper2];
