@@ -1,0 +1,25 @@
+
+//push method
+var katzDeliLine = [];
+function takeANumber(katzDeliLine, name){
+  katzDeliLine.push(name);
+  // add +1 to end of Array
+  //return string
+  var position = katzDeliLine.indexOf(name)+1;
+  return 'Welcome, ${name}. You are number ${position} in line.'
+}
+
+//shift method
+
+function nowServing(katzDeliLine){
+  if (katzDeliLine.length){
+    return 'Currently serving' + katzDeliLine.shift() + ".";
+  }
+  else return 'There is nobody waiting to be served!'
+}
+
+function currentLine(katzDeliLine){
+  
+}
+else return "The line is currently empty."
+}
