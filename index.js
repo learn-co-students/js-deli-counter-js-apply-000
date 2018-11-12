@@ -37,7 +37,7 @@ function currentLine (line){
   else {
     var list = []
     let i = 0
-    while (i <= line.length){
+    while (i < line.length){
       list.push(` ${i+1}. ${line[i]}`)
       i++
     }
