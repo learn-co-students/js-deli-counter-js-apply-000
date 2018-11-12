@@ -36,9 +36,9 @@ function currentLine (line){
   }
   else {
     var list = []
-    let i = 1
+    let i = 0
     while (i <= line.length){
-      list.push(` ${i}. ${line[i-1]}`)
+      list.push(` ${i+1}. ${line[i]}`)
       i++
     }
     return `The line is currently:` + list
