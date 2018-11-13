@@ -1,31 +1,33 @@
 var katzDeliLine = [];
+var nameServing = 'There is nobody waiting to be served!';
+var message = '';
+let position;
 
-function currentLine(y) {
-  var line = []
-  if (y.length === 0) {
-    return "The line is currently empty."
+function takeANumber(katzDeliLine, name) {
+  katzDeliLine.push(name);
+  position = katzDeliLine.length;
+  message = `Welcome, ${name}. You are number ${position} in line.`
+  return message;
+}
+
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length === 0) {
+    message = "There is nobody waiting to be served!";
+  } else {
+    message = `Currently serving ${katzDeliLine.shift()}.`;
   }
-  else {
-    for(var i = 0; i < y.length; i++) {
-      line += (i + 1) + ". " +y[i] + ", "
+  return message;
+}
+
+function currentLine(katzDeliLine) {
+  if (katzDeliLine.length > 0) {
+    message = 'The line is currently: '
+
+    for (let i = 1; i < katzDeliLine.length; i++) {
+      message += i + '. ' + katzDeliLine[i - 1] + ', ';
     }
-    line = line.slice(0, line.length-2)
-    return "The line is currently: " + line
+    message += katzDeliLine.length + '. ' + katzDeliLine[katzDeliLine.length-1];
+    return message;
   }
-}
-
-function takeANumber(katzDeliLine, name){
-katzDeliLine.push(name)
-return "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line."
-}
-
-function nowServing(x) {
-  if (x.length === 0) {
-    return "There is nobody waiting to be served!"
-  }
-  else {
-    var name = x[0];
-    x.splice(0,1)
-    return "Currently serving " + name + ".";
-  }
+  else return (message = 'The line is currently empty.')
 }
