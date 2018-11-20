@@ -7,7 +7,7 @@ describe('deli', () => {
 
     beforeEach(() => {
       katzDeli = [];
-      otherDeli = ["Steven", "Blake", "Avi"];
+      otherDeli = ["Steven", "Blake", "Avi",];
     });
 
     it('adds a person to the line', () => {
