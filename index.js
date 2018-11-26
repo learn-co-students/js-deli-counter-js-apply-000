@@ -11,7 +11,7 @@ function nowServing(queue) {
   }
 }
 
-/*function currentLine(queue) {
+function currentLine(queue) {
   if (queue.length === 0) {
       return 'The line is currently empty.';
     }  
@@ -20,9 +20,9 @@ function nowServing(queue) {
     newQueue.push(`${i + 1}. ${queue[i]}`);
   }
   return `The line is currently: ${newQueue.join(', ')}`;
-}*/
+}
 
-function currentLine(queue) {
+/*function currentLine(queue) {
   if (queue.length === 0) {
       return 'The line is currently empty.';
     }  
@@ -35,4 +35,4 @@ function currentLine(queue) {
     }
   }
   return newQueue;
-}
+}*/
