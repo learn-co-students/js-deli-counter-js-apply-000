@@ -11,14 +11,28 @@ function nowServing(queue) {
   }
 }
 
-function currentLine(queue) {
-  var newQueue = [];
-  
+/*function currentLine(queue) {
   if (queue.length === 0) {
       return 'The line is currently empty.';
     }  
+  var newQueue = [];
   for (let i = 0; i < queue.length; i++) {
     newQueue.push(`${i + 1}. ${queue[i]}`);
   }
   return `The line is currently: ${newQueue.join(', ')}`;
+}*/
+
+function currentLine(queue) {
+  if (queue.length === 0) {
+      return 'The line is currently empty.';
+    }  
+  var newQueue = 'The line is currently: ';
+  for (let i = 0; i < queue.length; i++) {
+    if (queue.length - 1 == i) {
+      newQueue += `${i + 1}. ${queue[i]}`
+    } else {
+      newQueue += `${i + 1}. ${queue[i]}, `
+    }
+  }
+  return newQueue;
 }
