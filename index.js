@@ -1,6 +1,6 @@
 function takeANumber(queue, newPerson) {
   queue.push(newPerson);
-  return`Welcome, ${newPerson}. You are number ${queue.length} in line.`;
+  return `Welcome, ${newPerson}. You are number ${queue.length} in line.`;
 }
 
 function nowServing(queue) {
