@@ -24,6 +24,4 @@ function currentLine(line){
   return "The line is currently:" + first;
  }
  else{ return "The line is currently empty."}
-   
- 
 } 
