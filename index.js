@@ -1,7 +1,7 @@
 function takeANumber(line, name) {
   line.push(String(name))
   
-  return "Welcome, " + name + "." + " You are number " + line.length + " in line."
+  return `Welcome, ${name}. You are number ${line.length} in line.`
 }
 
 function nowServing(line) {
@@ -9,7 +9,7 @@ function nowServing(line) {
     return "There is nobody waiting to be served!"
   }
   
-  return "Currently serving " + line.shift() + "."
+  return `Currently serving ${line.shift()}.`
 }
 
 function currentLine(line) {
@@ -20,10 +20,9 @@ function currentLine(line) {
   var output = "The line is currently: "
   
   for (var i = 0; i < line.length - 1; i++) {
-    output += i + 1 + ". " + line[i] + ", "
+    output += `${i + 1}. ${line[i]}, `
   }
-  
-  output += line.length + ". " + line[line.length - 1]
+  output += `${line.length}. ${line[line.length - 1]}`
   
   return output
 }
