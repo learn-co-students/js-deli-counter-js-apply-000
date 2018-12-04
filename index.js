@@ -1,5 +1,3 @@
-var line = [];
-var linesNamesNumbers = [];
 
 function takeANumber(line, name){
   line.push(name);
@@ -13,6 +11,8 @@ function nowServing(line) {
     return "Currently serving " + line.shift() + ".";
   }
 }
+
+var linesNamesNumbers = [];
 
 function currentLine(line){
   if(!line.length) {
