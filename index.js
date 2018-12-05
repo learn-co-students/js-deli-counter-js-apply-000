@@ -26,6 +26,7 @@ function currentLine(katzDeliLine)
   
     {
       var line = "";
+
       for(var i=0;i<katzDeliLine.length-1; i++)
       {
        // 1. Bill
@@ -35,8 +36,13 @@ function currentLine(katzDeliLine)
       var laststring = (katzDeliLine.length) + ". " + katzDeliLine[katzDeliLine.length-1];
       //Remove last letter from line
       line = line + laststring;
-    return "The line is currently: " + line ;
-      
+    return "The line is currently: " + line 
+      for(var i=0;i<katzDeliLine.length; i++)
+      {
+      line = katzDeliLine[i]+1 + "." + katzDeliLine  // line =  1. person[0] + 2. person[1] +.person[n-1]
+        
+      }
+    return "The line is currently: " + katzDeliLine[i]+1 + "."+ katzDeliLine;
   }
   
   else
