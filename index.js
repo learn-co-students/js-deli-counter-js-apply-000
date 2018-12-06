@@ -1,8 +1,8 @@
 //var katzDeliLine = [];
 function takeANumber (katzDeliLine, name){
   katzDeliLine.push(name);
-  var num = (katzDeliLine.indexOf(name)) + 1
-  return `Welcome, ${name}. You are number ${num} in line.`
+  var num = (katzDeliLine.indexOf(name)) + 1;
+  return `Welcome, ${name}. You are number ${num} in line.`;
 }
 // alternative solutions:
 // katzDeliLine[katzDeliLine.length] = name;
@@ -22,7 +22,7 @@ function nowServing(katzDeliLine){
 
 //alternative solutions:
 // switch if & else. if(katzDeliLine > 0);
-// firstInLine = katzDeliLine.splice(0,1);
+// var firstInLine = katzDeliLine.splice(0,1);
 
 function currentLine(katzDeliLine){
    if (katzDeliLine.length === 0) {
@@ -33,7 +33,7 @@ function currentLine(katzDeliLine){
     var currNum = i + 1 ;
     var phrase = "The line is currently: ";
     while (i < katzDeliLine.length){
-    phrase += currNum + ". " +  katzDeliLine[i] + ", ";
+    phrase += `${currNum}. ${katzDeliLine[i]}, `;
     i++; 
     currNum++; }
     return phrase.substr(0, phrase.length-2);
