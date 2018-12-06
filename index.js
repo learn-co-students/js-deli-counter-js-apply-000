@@ -37,7 +37,7 @@ function currentLine(katzDeliLine) {
       i++; 
       currNum++; 
     }
-    return phrase.substr(0, phrase.length-2);
+    return phrase.substring(0, phrase.length-2);
   }
 } 
 
