@@ -27,7 +27,7 @@ function nowServing(katzDeliLine) {
 
 function currentLine(katzDeliLine) {
   if (katzDeliLine.length === 0) {
-    return "The line is currently empty." 
+    return "The line is currently empty." ;
   } else {
     var i = 0;
     var currNum = i + 1;
@@ -41,10 +41,10 @@ function currentLine(katzDeliLine) {
   }
 } 
 
-/* 
-alternative using a for loop:
 
-function currentLine(katzDeliLine) {
+//alternative using a for loop:
+
+/* function currentLine(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "The line is currently empty."
   } else {
@@ -57,6 +57,7 @@ function currentLine(katzDeliLine) {
   }
 }
 */
+
 
 
 
