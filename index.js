@@ -35,7 +35,8 @@ function currentLine(katzDeliLine){
     while (i < katzDeliLine.length){
     phrase += `${currNum}. ${katzDeliLine[i]}, `;
     i++; 
-    currNum++; }
+    currNum++; 
+    }
     return phrase.substr(0, phrase.length-2);
     }
 } 
