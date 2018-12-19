@@ -19,11 +19,11 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return 'The line is currently empty.'
   } else {
-    let queue = [];
+    let queuePosition = [];
     for (var i = 0; i < katzDeliLine.length; i++) {
-      queue.push( ` ${i + 1}. ${katzDeliLine[i]}` );
+      queuePosition.push( ` ${i + 1}. ${katzDeliLine[i]}` );
     }
-    return `The line is currently:${queue}`
+    return `The line is currently:${queuePosition}`
   }
 
 }
