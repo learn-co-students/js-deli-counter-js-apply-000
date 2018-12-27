@@ -29,31 +29,24 @@ function nowServing(katzDeliLine){
 function currentLine(katzDeliLine) {
     let stmnt = 'The line is currently: ';
     let lnLngth = katzDeliLine.length;
-    if(lnLngth ===0){
-      return 'The line is currently empty.'
-    }else{
+    if(lnLngth===0){
+      return 'The line is currently empty.'//if there is no one in the line
+    }else{ //if there is someone in the line
       let i = 0;
       let rtndLn = '';
-      // let echPstn = ;
       while(i != katzDeliLine.length){
         let echPstn = parseInt(katzDeliLine.indexOf(katzDeliLine[i]))+1;
-        if(echPstn!=3){
+        if(echPstn!=3){// added use case to add the commas
         rtndLn = rtndLn+echPstn+". "+katzDeliLine[i]+", ";
       }else{
         rtndLn = rtndLn+echPstn+". "+katzDeliLine[i];
       }
-    // loop and index plus 1 and concat
       i++;
       }
       return stmnt+rtndLn;
     }
 }
 
-// let nwPrsnInLn = "Steve"//prompt("What is your name?");
-// let katzDeliLine = ['Ada','Grace','Kent'];
-// takeANumber(katzDeliLine, nwPrsnInLn)
-
-// test scenario
 var katzDeliLine = [];
 
 takeANumber(katzDeliLine, "Ada"); // "Welcome, Ada. You are number 1 in line."
