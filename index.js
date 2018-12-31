@@ -6,13 +6,13 @@ function takeANumber(currentLine, newPerson){
 }
 
 function nowServing(katzDeliLine){
-  return nowServing
+ return
   
   if(nowServing > 0){
   katzDeliLine.pop()
   }
   if( nowServing = 0){
-    return ("There is nobody waiting to be served")
+    return ("There is nobody waiting to be served!")
   }
 }
 
