@@ -6,23 +6,23 @@ function takeANumber (katzDeliLine,name) {
   return "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line."
 }
 
-function nowServing (katzDeliLine) {
+function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
-    return "There is nobody waiting to be served!";
+    return "There is nobody waiting to be served!"
   } else {
-    return "Currently serving " + name + "."}
-}
-
-function currentLine (katzDeliLine) {
-  var line = []
-  if (katzDeliLine.length === 0) {
-    return "The line is currently empty."
-  } else {
-    line.push ()
-    for(var i = 0; i < katzDeliLine.length; i++) {
-      line += (i + 1) + "." + katzDeliLine[i] + ", "
-    }
-    line = line.slice(0, line.length-2)
-    return "The line is currently: " + line
+    return `Currently serving ${katzDeliLine.shift()}.`
   }
 }
+
+function currentLine(lineNow) {
+    var line = []
+    if (lineNow.length === 0) {
+      return "The line is currently empty."
+    } else {
+      for(var i = 0; i < lineNow.length; i++) {
+        line += (i + 1) + ". " + lineNow[i] + ", "
+      }
+      line = line.slice(0, line.length-2)
+      return "The line is currently: " + line
+    }
+}  
