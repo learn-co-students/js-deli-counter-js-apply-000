@@ -7,7 +7,7 @@ function nowServing(line){
   if(line.length === 0){
     return "There is nobody waiting to be served!";
   }else{
-    return `Currently serving ${line.shift()}.`
+    return `Currently serving ${line.shift()}.`;
   }
 }
 
@@ -19,8 +19,8 @@ function nowServing(line){
   }else{
     for(let i = 0; i < line.length; i++){
       currentLineStatus.push(` ${x}. ${line[i]}`);
-      x++
+      x++;
     }
-    return `The line is currently:${currentLineStatus}`
+    return `The line is currently:${currentLineStatus}`;
   }
  }
