@@ -1,53 +1,1 @@
-/*global describe, it */
-
-describe('deli', () => {
-  describe('takeANumber', () => {
-    var katzDeli;
-    var otherDeli;
-
-    beforeEach(() => {
-      katzDeli = [];
-      otherDeli = ["Steven", "Blake", "Avi"];
-    });
-
-    it('adds a person to the line', () => {
-      expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
-      expect(katzDeli).toEqual(['Ada']);
-    });
-
-    it('appends the person the end of the line if there are already people on it', () => {
-      expect(takeANumber(otherDeli, 'Grace')).toEqual("Welcome, Grace. You are number 4 in line.");
-      expect(otherDeli).toEqual(["Steven", "Blake", "Avi", "Grace"]);
-    });
-
-    it("properly handles multiple people being added", () => {
-      takeANumber(katzDeli, 'Ada');
-      takeANumber(katzDeli, 'Grace');
-      takeANumber(katzDeli, 'Kent');
-
-      expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
-    });
-  });
-
-  describe('nowServing', () => {
-    it('returns the line is empty when no one is on line', () => {
-      expect(nowServing([])).toEqual("There is nobody waiting to be served!");
-    });
-
-    it('returns an announcement about the person it is serving, and shifts the line', () => {
-      const deliLine = ["Steven", "Blake", "Avi"]
-      expect(nowServing(deliLine)).toEqual("Currently serving Steven.");
-      expect(deliLine).toEqual(["Blake", "Avi"]);
-    });
-  });
-
-  describe('currentLine(line)', () => {
-    it('returns "The line is currently empty." if no one is in line', () => {
-      expect(currentLine([])).toEqual("The line is currently empty.");
-    });
-
-    it('says who is in line when there are people waiting', () => {
-      expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
-    });
-  });
-})
+function takeANumber(currentLineArray, newPersonName){            var lineLength = currentLineArray.length;        var newArrayPosition = lineLength;        currentLineArray[newArrayPosition] = newPersonName;        var newLinePosition = lineLength+1;        var message = "Welcome, "+newPersonName+". You are number "+newLinePosition+" in line.";    return message;}function nowServing(currentLineArray){    if(currentLineArray.length>0){        var personBeingServed = currentLineArray[0];        for(var i=1;i<currentLineArray.length;i=i+1){                        currentLineArray[i-1] = currentLineArray[i];         }                currentLineArray.pop();                return "Currently serving "+personBeingServed;    }    else{        return "There is nobody waiting to be served!";    }}function currentLine(currentLineArray){    if(currentLineArray.length===0){        return "The line is currently empty.";    }    else{              var message = "The line is currently: ";        for(i=0; i<currentLineArray.length; i=i+1){                        var positionInLine = i+1;            if(i == currentLineArray.length-1){               message = message+ positionInLine+". "+currentLineArray[i];                           }            else{                message = message+ positionInLine+". "+currentLineArray[i]+", ";                                          }        }                return message;    }    }
