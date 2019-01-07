@@ -7,7 +7,7 @@
 4. Pass an array as a function parameter
 
 ## Instructions
-
+  
 A pretty important deli needs somebody to program the "Take a Number" feature for their counter.
 
 At the beginning of the day, the deli is empty and is represented by an empty array, like `var katzDeliLine = [];`. However,  you don't need to code the array as a variable, since the test scripts will create it and pass it to the functions you are about to build. 
