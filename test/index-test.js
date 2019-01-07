@@ -1,6 +1,6 @@
 /*global describe, it */
 
-describe('deli', () => {
+/*describe('deli', () => {
   describe('takeANumber', () => {
     var katzDeli;
     var otherDeli;
@@ -50,4 +50,39 @@ describe('deli', () => {
       expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
     });
   });
-})
+})*/
+/*Build a function that a new customer will use when entering the deli*/
+
+var katzDeli = []; //define an empty Array
+function takeANumber(katzDeli, name){
+  katzDeli.push(`${name}`);
+  return(`Welcome, ${name}. You are number ${katzDeli.length} in line.`);
+}
+/*Build a function nowServing. This function should return the first person in line and then remove that individual from the line*/
+
+function nowServing(katzDeli){
+  let i = 0;
+  while (i < katzDeli.length){
+    i++;
+  }
+  if (katzDeli.length === 0){
+    return "There is nobody waiting to be served!";
+  }
+  else
+  return (`Currently serving ${katzDeli.shift()}.`);
+}
+
+/*Build a function currentLine that returns the current line*/
+var line = [];
+function currentLine(katzDeli) {
+  let i = 0;
+  while (i < katzDeli.length){
+    line.push(` `+[i+1]+`. `  + katzDeli[i])
+    i++;
+  }
+  if (katzDeli.length === 0){
+    return "The line is currently empty.";
+  }
+  else
+  return(`The line is currently:` + line);
+}
