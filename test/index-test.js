@@ -1,53 +1,60 @@
-/*global describe, it */
+var katzDeliLine = []; // Holds the incoming customers.
+var katzDeliNumber = []; // Holds number for incoming customers.
 
-describe('deli', () => {
-  describe('takeANumber', () => {
-    var katzDeli;
-    var otherDeli;
+function takeANumber(katzDeliLine, name) // Takes deli line and a new customer name as input.
+{
+  katzDeliLine.push(name); // Add new customer to deli line.
 
-    beforeEach(() => {
-      katzDeli = [];
-      otherDeli = ["Steven", "Blake", "Avi"];
-    });
+  var number = katzDeliLine.indexOf(name)+1; // Stores customer number postion in line.
+  katzDeliNumber.push(number); // Adds customer number to katzDeliNumber array.
+  return `Welcome, ${name}. You are number ${number} in line.`; // Returns the required string.
+}
 
-    it('adds a person to the line', () => {
-      expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
-      expect(katzDeli).toEqual(['Ada']);
-    });
+function nowServing(katzDeliLine) // Takes deli line as input.
+{
+	var firstPersonInLine = ""; // Stores first person in line in order to be served.
 
-    it('appends the person the end of the line if there are already people on it', () => {
-      expect(takeANumber(otherDeli, 'Grace')).toEqual("Welcome, Grace. You are number 4 in line.");
-      expect(otherDeli).toEqual(["Steven", "Blake", "Avi", "Grace"]);
-    });
+	if (katzDeliLine.length === 0) // If the function is called and there's no one on line then...
+	{
+		return  "There is nobody waiting to be served!"; //...say this string.
+	}
+	else // However, if someone is on line then...
+	{
+		firstPersonInLine = katzDeliLine[0]; // ...hold on to this customer so he or she can be served and...
+		katzDeliLine.shift(); //...remove this customer's line status.
+		return `Currently serving ${firstPersonInLine}.`; // Returns the required string.
+	}
+}
 
-    it("properly handles multiple people being added", () => {
-      takeANumber(katzDeli, 'Ada');
-      takeANumber(katzDeli, 'Grace');
-      takeANumber(katzDeli, 'Kent');
+function currentLine(katzDeliLine) // Takes deli line as input.
+{
+  var lineMessage = ""; // Holds the message of the customers on line.
+  var localArrayForCustomers = []; // Holds the line of customers locally for manipulation.
+  var localArrayForNumbers = []; // Holds the customer number locally for manipulation.
+  localArrayForNumbers = localArrayForNumbers.concat(katzDeliNumber); // inputs global to local array.
+  localArrayForCustomers = localArrayForCustomers.concat(katzDeliLine); // inputs global to local array.
 
-      expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
-    });
-  });
+  function appendRemainingCustomers() // Helper function to assist with adding info of the remaining customers on line to the line message.
+  {
+    var lineCounter = (katzDeliLine.length - 1); // counts the current amount of customers on line,
+    while (lineCounter > 0) // While there's more customers on line...
+    {
+      localArrayForCustomers.shift(); // ...locally remove the first person on line since the info is already added to the line message..
+      localArrayForNumbers.shift(); // ...locally remove the first person's number since the info is already added to the line message...
+      lineMessage += `, ${localArrayForNumbers[0]}. ${localArrayForCustomers[0]}`; // ...append the remaining customer's info to the line message.
+      lineCounter--;// ... subtract the amount currently counted for the customer line
+    }
+  }
 
-  describe('nowServing', () => {
-    it('returns the line is empty when no one is on line', () => {
-      expect(nowServing([])).toEqual("There is nobody waiting to be served!");
-    });
-
-    it('returns an announcement about the person it is serving, and shifts the line', () => {
-      const deliLine = ["Steven", "Blake", "Avi"]
-      expect(nowServing(deliLine)).toEqual("Currently serving Steven.");
-      expect(deliLine).toEqual(["Blake", "Avi"]);
-    });
-  });
-
-  describe('currentLine(line)', () => {
-    it('returns "The line is currently empty." if no one is in line', () => {
-      expect(currentLine([])).toEqual("The line is currently empty.");
-    });
-
-    it('says who is in line when there are people waiting', () => {
-      expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
-    });
-  });
-})
+	if (katzDeliLine.length === 0) // If the function is called and there's no one on line then...
+	{
+		return  "The line is currently empty."; //...say this string.
+	}
+	else // However, if someone is on line then...
+	{
+      lineMessage = `The line is currently: ${localArrayForNumbers[0]}. ${localArrayForCustomers[0]}`; //...add their info to the line message...
+      appendRemainingCustomers(); //...check if there's more than one customer on line and add their info if needed...
+      lineMessage += "."; // ...add a period to the end of the line message.
+      return lineMessage; // Returns the required string.
+	}
+}
