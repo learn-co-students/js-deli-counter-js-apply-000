@@ -46,7 +46,7 @@ function currentLine(katzDeliLine) // Takes deli line as input.
   var localArrayForCustomers = []; // Holds the line of customers locally for manipulation.
   localArrayForCustomers = localArrayForCustomers.concat(katzDeliLine); // inputs global to local array.
 
-  function appendRemainingCustomers() // Helper function to assist with adding info of the remaining customers on line to the line message.
+  function appendRemainingCustomersAndTicketNumbers() // Helper function to assist with adding info of the remaining customers on line to the line message.
   {
     var lineCounter = (katzDeliLine.length - 1); // counts the current amount of customers on line,
     var numberCounter = 1; // holds the first ticket number
@@ -66,7 +66,7 @@ function currentLine(katzDeliLine) // Takes deli line as input.
   else // However, if someone is on line then...
   {
       lineMessage = `The line is currently: 1. ${localArrayForCustomers[0]}`; //...add their info to the line message...
-      appendRemainingCustomers(); //...check if there's more than one customer on line and add their info if needed...
+      appendRemainingCustomersAndTicketNumbers(); //...check if there's more than one customer on line and add their info if needed...
       // lineMessage += "."; // ...add a period to the end of the line message.
       return lineMessage; // Returns the required string.
   }
