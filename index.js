@@ -18,6 +18,7 @@
    }
    
  }
+
  
 function currentLine(katzDeliLine){
   
@@ -38,8 +39,6 @@ function currentLine(katzDeliLine){
   }
   
 }
-
-
 
 
 
