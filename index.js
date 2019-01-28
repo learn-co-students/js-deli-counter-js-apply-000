@@ -13,12 +13,12 @@ const nowServing = line => {
 
 const currentLine = line => {
   if (!line.length) {
-    return "The line is currently empty."
+    return "The line is currently empty.";
   } else {
-    let numberedLine = []
+    let numberedLine = [];
     for (let i = 0; i < line.length; i++) {
       numberedLine.push(`${i + 1}. ${line[i]}`)
     }
-    return `The line is currently: ${numberedLine.join(', ')}`
+    return `The line is currently: ${numberedLine.join(', ')}`;
   }
 }
