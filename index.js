@@ -17,8 +17,8 @@ const currentLine = line => {
   } else {
     let numberedLine = []
     for (let i = 0; i < line.length; i++) {
-      numberedLine.push(` ${i + 1}. ${line[i]}`)
+      numberedLine.push(`${i + 1}. ${line[i]}`)
     }
-    return `The line is currently:${numberedLine.toString()}`
+    return `The line is currently: ${numberedLine.join(', ')}`
   }
 }
