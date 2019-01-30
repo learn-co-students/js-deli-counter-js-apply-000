@@ -1,24 +1,31 @@
+
+
 function takeANumber(katzDeli, newCustomer)
 {
   
-  if(katzDeli.length === 0)
+  var lineLength = katzDeli.length
+  var newArrayPosition = lineLength
+  var newCustomerPosition = newArrayPosition + 1
+  
+  if(lineLength === 0)
   {
+    
     katzDeli[0] = newCustomer
-    return 'Welcome, ' + katzDeli[0] + '. You are number ' + katzDeli.length + ' in line.'
-    //return 'Welcome, ' + katzDeli[0] + '. You are number 1 in line.'
+    
+    return 'Welcome, ' + newCustomer + '. You are number 1 in line.'
   }
   
-  if(katzDeli.length > 0)
+  if(lineLength > 0)
   {
     
-    for(var ctr = 0; ctr < newCustomer.length; ctr++)
-    {
-      katzDeli[(katzDeli.length + ctr)] = newCustomer
-      return 'Welcome, ' + katzDeli[(katzDeli.length - 1)] + '. You are number ' + katzDeli.length + ' in line.'
-    }
-    
     //katzDeli.push(newCustomer)
-    //return 'Welcome, ' + katzDeli[(katzDeli.length - 1)] + '. You are number ' + katzDeli.length + ' in line.'
+    
+    katzDeli[newArrayPosition] = newCustomer
+    
+    return 'Welcome, ' + newCustomer + '. You are number ' + newCustomerPosition + ' in line.'
+
+    
+    
   }
   
 }
@@ -34,8 +41,6 @@ function nowServing(katzDeli)
   if(katzDeli.length > 1)
   {
     return "Currently serving " + katzDeli.shift() + "." 
-  
-    
   }
 }
 
@@ -51,14 +56,22 @@ function currentLine(katzDeli)
   {
     var lineString = "The line is currently: "
     
-    for(var ctr = 0; ctr < (katzDeli.length-1); ctr++)
+    //for(var ctr = 0; ctr < (katzDeli.length-1); ctr++)
+    //{
+    //  lineString += (ctr+1) + ". " + katzDeli[ctr] + ", "
+    //}
+    
+    var ctr = 0
+    
+    while(ctr < katzDeli.length-1 )
     {
       lineString += (ctr+1) + ". " + katzDeli[ctr] + ", "
+      ctr++
     }
     
     lineString += (katzDeli.length) + ". " + katzDeli[(katzDeli.length -1)]
     
-    //lineString = lineString.slice(0,-1) doesn't work for whatever reason
+    //could have had the loop go through the whole array and then sliced off the last comma using lineString.slice(-1)
     
     return lineString
     
