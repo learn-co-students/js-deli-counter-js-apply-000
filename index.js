@@ -1,28 +1,35 @@
 //I'll have what she's having.
 
-function takeANumber(array,name){
-  array.push(name)
-  return ("Welcome, " + name + ". You are number " + [array.length] + " in line.")
+function takeANumber(array, name){
+  array.push(name);
+  return `Welcome, `+ name+`. You are number `+(array.length)+` in line.`
 }
 
 function nowServing(array){
-  if (array.length>0) {
-  return "Currently serving "+ array.shift() + "."}
-  else {return "There is nobody waiting to be served!"}}
+  if (array.length===0){
+    return `There is nobody waiting to be served!`
+  }
+    else {
+      return `Currently serving `+ array.shift()+`.`
+    }
+}
 
 function currentLine(array){
-  var i = 0
-  var lineString = ("The line is currently: "+(i+1)+". "+ array[i])
-  function spotInLine(index){return (", "+ (index+1) + ". " + array[index])}
-  if (array.length<1) {return "The line is currently empty."}
-  else {
-    for (let i = 1; i < (array.length); i++) {
-      lineString = lineString.concat(spotInLine(i))}
-      return lineString}}
-  
-
-
-
+  if (array.length===0){
+    return `The line is currently empty.`}
+    else {
+      var string = `The line is currently: `
+      for (let i = 0; i < array.length; i++){
+        if (i===array.length-1){
+          string = string.concat((i+1)+`. `+array[i])
+        }
+        else {
+          string = string.concat((i+1)+`. `+array[i]+`, `)
+        }
+      }
+    return string
+    }
+}
 
 //This is where you test the functions
 //takeaNumber
