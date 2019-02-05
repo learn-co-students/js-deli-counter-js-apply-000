@@ -5,9 +5,10 @@ function takeNumber(katzDeli, otherDeli){
 }
 function nowServing(katzDeli) {
   for( var i = 0; i < katzDeli.length; i++) {
-  	return (`Currently serving ${katzDeli.shift()}.`);
+    return (`Currently serving ${katzDeli.shift()}.`);
+  }
 }
-
+ 
 var position = [];
 function currentLine(katzDeli) {
   for (var i = 0; i < katzDeli.length; i++) {
