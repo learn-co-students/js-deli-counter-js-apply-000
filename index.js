@@ -11,10 +11,9 @@ function nowServing(katzDeli) {
  
 function currentLine(katzDeli) {
 var position = [];
-if (katzDeli > []){
   for (var i = 0; i < katzDeli.length; i++) {
     position.push([i+1]+ '-'+ katzDeli[i])
     return("The line is currently at " + position);
   }
-}
+
 }
