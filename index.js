@@ -13,19 +13,23 @@ function nowServing(katzDeliLine){
 
 function currentLine(katzDeliLine){
   var customer = "";
-  var comma = ", ";
+  var comma = "";
   var i;
-  if (katzDeliLine.length){
-    for (i = 0; i < katzDeliLine.length; i++){
-      while (i < katzDeliLine.length-1)
-        comma = "";
-        
-      customer += `${i + 1}. ${katzDeliLine[i]}${comma}`}
-      return `The line is currently: ${customer}`;
-    } 
-    else {
-      return "The line is currently empty.";
+  function addComma(i){
+    if (i < katzDeliLine.length-1){
+      comma = ", ";
+      return comma;
+    } else {
+      return "";
     }
   }
-
+  if (katzDeliLine.length){
+    for (i = 0; i < katzDeliLine.length; i++){
+      customer += `${i + 1}. ${katzDeliLine[i]}${addComma(i)}`;
+    }
+      return `The line is currently: ${customer}`;
+    } else {
+      return "The line is currently empty.";
+    }
+}
   
