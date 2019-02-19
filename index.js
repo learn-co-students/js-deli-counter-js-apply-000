@@ -15,13 +15,12 @@ return (`Currently serving ${katzDeli.shift()}.`);
 }
 }
 function currentLine(line) {
-var nameAndNumber = []; 
-for (var i=0; i<line.length; i++) {
-  if (line.length === 0) {
-return 'The line is currently empty.';
-} else { 
-return 'The line is currently:' + line;
+var i = []; 
+if (line.length === 0) {
+  return 'The line is currently empty.';
 }
+for (i=0; i<line.length; i++) {
+console.log('The line is currently' + line);
 }
 }
    
