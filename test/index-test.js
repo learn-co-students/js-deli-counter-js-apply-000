@@ -1,5 +1,14 @@
 /*global describe, it */
-
+/*
+1. new customer, takeANumber
+*/
+let index=0;
+const takeANumber = (orderNumber, name) => {
+  let orderNumber=index+1;
+    katzDeliLine.push([orderNumber, name]);
+    alert(`Welcome, ${name}. You are ${orderNumber} in this line!`);
+    index++;
+}
 describe('deli', () => {
   describe('takeANumber', () => {
     var katzDeli;
