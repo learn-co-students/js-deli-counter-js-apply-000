@@ -2,13 +2,25 @@
 /*
 1. new customer, takeANumber
 */
-let index=0;
-const takeANumber = (orderNumber, name) => {
-  let orderNumber=index+1;
-    katzDeliLine.push([orderNumber, name]);
-    alert(`Welcome, ${name}. You are ${orderNumber} in this line!`);
-    index++;
+
+function takeANumber(currentNumber, 'name') {
+  let orderGrid=[];
+  for (let i=1;i<currentNumber;i++){
+    let order=[];
+    let orderIndex=currentNumber[i];
+
+    for (let j=0;j<=currentNumber.length;j++) {
+      let detail=currentNumber[j];
+      let detail[0]=currentNumber;
+      let detail[1]='name';
+      order.push(detail+1);
+    }
+  }
+  orderGrid.push(order);
 }
+
+var katzDeliLine = [];
+
 describe('deli', () => {
   describe('takeANumber', () => {
     var katzDeli;
