@@ -2,15 +2,14 @@
 var katzDeliLine = [];
 
 const takeANumber = (katzDeliLine, newCustomerName) => {
-let position = katzDeliLine.length+1;
 
 katzDeliLine.push(newCustomerName);
-  
+
+let position = katzDeliLine.length;
   
   return `Welcome, ${newCustomerName}. You are number ${position} in line.`;
 }
 
-// this is checking a variable that I do not understand how to store. It shouldn't have to store anything because you're submitting the current line each time. the way it is working, it is updating a global variable, but when I try to write it like it is updating katzDeliLine, it doesn't work. 
 
 
 const nowServing = (katzDeliLine) => {
