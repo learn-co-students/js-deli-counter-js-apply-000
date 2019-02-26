@@ -1,4 +1,4 @@
-# Deli Counter Lab
+ S# Deli Counter Lab
 
 ## Objectives
 1. Add elements to an array
@@ -24,7 +24,7 @@ At the beginning of the day, the deli is empty and is represented by an empty ar
 Example usage:
 
 ```javascript
-var katzDeliLine = [];
+var katzDeliLine = []
 
 takeANumber(katzDeliLine, "Ada"); // "Welcome, Ada. You are number 1 in line."
 takeANumber(katzDeliLine, "Grace"); // "Welcome, Grace. You are number 2 in line."
