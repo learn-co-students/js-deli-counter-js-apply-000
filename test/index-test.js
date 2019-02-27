@@ -1,23 +1,6 @@
 /*global describe, it */
 /*
-1. new customer, takeANumber
 */
-
-function takeANumber(currentNumber, 'name') {
-  let orderGrid=[];
-  for (let i=1;i<currentNumber;i++){
-    let order=[];
-    let orderIndex=currentNumber[i];
-
-    for (let j=0;j<=currentNumber.length;j++) {
-      let detail=currentNumber[j];
-      let detail[0]=currentNumber;
-      let detail[1]='name';
-      order.push(detail+1);
-    }
-  }
-  orderGrid.push(order);
-}
 
 var katzDeliLine = [];
 
