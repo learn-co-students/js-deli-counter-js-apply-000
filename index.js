@@ -14,7 +14,7 @@ else {
 }
 
 function currentLine (Line){
-  if (Line.length === 0) { //tripe "=" sign compares both value and type, whereas "==" compares only value (either or both operands are converted to a common type)
+  if (Line.length === 0) { //triple "===" sign compares both value and type, whereas double "==" sign compares only value (either or both operands are converted to a common type)
     return "The line is currently empty.";
   }
   else {
