@@ -1,0 +1,14 @@
+    //else {
+      //var lineUpdate = `The line is currently: ` + `1. ` + deliLine[0] + `, 2. ` + deliLine[1] + `, 3. ` + deliLine[2];
+        //return lineUpdate;
+        //lineUpdate = deliLine.slice(0, (deliLine.length - 2));
+//////
+
+
+// for (var i = 0; i < deliLine.length; i++) {
+      
+  //    var lineUpdate = (i + 1) + `. ` + deliLine[i] + `, `;
+  //  var empty = "The line is currently empty.";
+
+  //  if (deliLine.length === 0) {
+    //  return empty; 
