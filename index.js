@@ -1,5 +1,5 @@
 function takeANumber(Line, CustName) {
-  Line.push(CustName); // push() method adds new items to the end of an array, and returns the new length
+  Line.push(CustName); //.push() method adds new items to the end of an array, and returns the new length
   //console.log("Welcome, " + CustName + ". You are number " +Line.length + " in line.");
   return "Welcome, " + CustName +". You are number " +Line.length + " in line.";
 }
@@ -20,8 +20,8 @@ function currentLine (Line){
   else {
     var WhoIsInLine = [];
     for (var i = 0; i<Line.length; i++) {
-      WhoIsInLine.push(i + 1 +". " + Line[i]); //push() method adds new items to the end of an array, and returns the new length
+      WhoIsInLine.push(i + 1 +". " + Line[i]); //.push() method adds new items to the end of an array, and returns the new length
     }
-  return "The line is currently: " + WhoIsInLine.join(', ');
+  return "The line is currently: " + WhoIsInLine.join(', '); //.join joins the elements of an array into a string, and returns the string
   }
 }
