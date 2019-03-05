@@ -3,6 +3,17 @@ function takeANumber(currentLine, newName) {
   return `Welcome, ${newName}. You are number ${currentLine.length} in line.`
 }
 
+//  current numbers, new chosen numbers
+//add chosen number to current number
+
+let newNumber = 0;
+
+function takeANumber(currentNumbers) {
+  newNumber++;
+  currentNumbers.push(newNumber);
+  return `Welcome, you are number ${newNumber}`
+}
+
 function nowServing(katzDeliLine) {
   let i = 0;
   while (i < katzDeliLine.length) {
@@ -21,6 +32,6 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return 'The line is currently empty.'
   } else {
-    return `The line is currently:${line}`;
+    return `The line is currently:${line.join(',')}`;
   }
 }
