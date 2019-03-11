@@ -10,18 +10,8 @@ function nowServing(deliLine) {
     return 'Currently serving ' + serving + '.';
   }
   do {
-    //Not sure if there is any advantage or disadvantage for using a do while loop here instead of an if statement, but it worked so I decided to use it.
     return 'There is nobody waiting to be served!';
   } while (!deliLine.length);
-  
-    //The following block is the suggested solution for nowServing.
-    //(same idea, just simplified):
-    /* function nowServing(line) {
-      if (!line.length) {
-        return "There is nobody waiting to be served!"
-      }
-      return `Currently serving ${line.shift()}.`
-    }; */
 }
 
 function currentLine(line) {
@@ -34,14 +24,27 @@ function currentLine(line) {
   }
   var result = "The line is currently:" + inLine;
     return result.toString();
-    // return `The line is currently: ${numbersAndNames.join(', ')}`
-    // Was used in the sugested solution. It simplifies my last two lines into one.
 }
 
 
 
+//in nowServing
+//Not sure if there is any advantage or disadvantage for using a do while loop here instead of an if statement, but it worked so I decided to use it.
+
+//Suggested solution for nowServing.
+//(same idea, just simplified):
+/* function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+  return `Currently serving ${line.shift()}.`
+}; */
 
 
+
+//in currentLine
+// return `The line is currently: ${numbersAndNames.join(', ')}`
+// Was used in the sugested solution. It simplifies my last two lines into one.
 
 
 
