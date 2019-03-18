@@ -1,10 +1,12 @@
 // Already coded in the backend: var katzDeliLine = [];
 
+//Using interpolation and push method.
 function takeANumber(lineOfPeopleArray, newPerson) {
   lineOfPeopleArray.push(newPerson);
   return `Welcome, ${newPerson}. You are number ${lineOfPeopleArray.length} in line.`
 }
 
+//Using conditionals and array shift. 
 function nowServing(katzDeliLine) {
   
    if (katzDeliLine.length === 0) {
@@ -18,6 +20,8 @@ function nowServing(katzDeliLine) {
       }
 }
 
+
+//One solution for creating list concatenation with for loop.
 var empty = [];
 
 function currentLine(line) {
