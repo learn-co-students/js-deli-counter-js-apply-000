@@ -26,15 +26,17 @@ function currentLine(katzDeliLine){
     return "The line is currently empty.";
   }
   
-  for (var i=0; i < katzDeliLine.length; i++){
-    var textname;
-    var q = i+1;
-    if(q === 1){textname = "1. " + katzDeliLine[i];}
-    else {textname = " " + q + ". " + katzDeliLine[i];}
-    console.log("Array and String",katzDeliLine[i],textname);
-  katzDeliLine[i] = textname; //we are replacing our looped string into the Array
-}
-var finaltext = "The line is currently: " + katzDeliLine; //this add each loop into a string
+      for (var i=0; i < katzDeliLine.length; i++){
+        var textname;
+        var q = i+1; //because the first person is at position 1 not 0 in the array
+                    if(q === 1){textname = "1. " + katzDeliLine[i];}
+                    else {textname = " " + q + ". " + katzDeliLine[i];}
+                    console.log("Array and String",katzDeliLine[i],textname);
+              katzDeliLine[i] = textname;
+          }
+var finaltext = "The line is currently: " + katzDeliLine;
+
 console.log("Final Result =",finaltext);
+
 return finaltext;
 }
