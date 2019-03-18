@@ -20,9 +20,8 @@ function nowServing (katzDeliLine) {
 
 function currentLine (katzDeliLine) {
 if (katzDeliLine.length > 0) {
-var i = 0
 var out = "The line is currently: "
- for (i = 0; i < katzDeliLine.length; i++) {
+ for (var i = 0; i < katzDeliLine.length; i++) {
    out = out + (i + 1 + ". " + katzDeliLine[i]) + ", " }
     var n = out.lastIndexOf(",");
     var final = out.substring(0,n) 
