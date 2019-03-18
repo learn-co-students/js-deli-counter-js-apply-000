@@ -1,9 +1,7 @@
 function takeANumber(line, customerName) {
-    // provide actual position in line & not index
-    var position = line.length + 1;
     // add customers to the line
     line.push(customerName);
-    return "Welcome, " + customerName + "." + " You are number " + position
+    return "Welcome, " + customerName + "." + " You are number " + line.length
   + " in line.";
   }
 
@@ -30,7 +28,7 @@ function currentLine(line) {
     var announcement = "The line is currently: ";
     for (var x = 0; x < line.length; x++) {
       announcement += x+1 + "." + " " + line[x];
-      // if there are multiple people in line, add commas 
+      // if there are multiple people in line, add commas
       if ((x + 1) < line.length) {
         announcement += ", ";
       }
