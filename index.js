@@ -27,14 +27,13 @@ function currentLine(katzDeliLine){
   for(var i = 0; i< katzDeliLine.length; i++){
     var string;
     var q = i + 1;
-    string = " "+q +". " + katzDeliLine[i];
+    string = " "+ q +". " + katzDeliLine[i];
   katzDeliLine[i] = string;
   }
   
   var finaltextwitharray = "The line is currently:" + katzDeliLine;
   console.log("finaltextwitharray",finaltextwitharray);
   return finaltextwitharray;
-  
     
 }
   
