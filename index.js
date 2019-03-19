@@ -32,7 +32,7 @@ function currentLine(katzDeliLine){
   }
   
   var finaltextwitharray = "The line is currently:" + katzDeliLine;
-  console.log("finaltextwitharray",finaltextwitharray)
+  console.log("finaltextwitharray",finaltextwitharray);
   return finaltextwitharray;
   
     
