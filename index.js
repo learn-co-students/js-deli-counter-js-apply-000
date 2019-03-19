@@ -20,7 +20,7 @@ function nowServing(katzDeliLine){
 
 function currentLine(katzDeliLine){
   if(katzDeliLine.length === 0){
-    console.log("this should be an empty array",katzDeliLine)
+    console.log("this should be an empty array",katzDeliLine);
     return "The line is currently empty.";
   } 
  
