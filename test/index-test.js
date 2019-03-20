@@ -2,7 +2,7 @@
 
 describe('deli', () => {
   describe('takeANumber', () => {
-    var katzDeli;
+   // var katzDeli;
     var otherDeli;
 
     beforeEach(() => {
