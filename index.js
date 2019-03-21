@@ -1,39 +1,31 @@
 function takeANumber(line,name){
-  var i = line.length + 1;
-  var greeting = "Welcome, " + name +". You are number " + i +" in line.";
+  var x = line.length+1;
   line.push(name);
-  return greeting;
+  var welcome = "Welcome, " + name +". You are number "+ x +" in line.";
+  console.log(welcome);
+  return welcome;
 }
 
-function nowServing(katzDeliLine){
-  var i= 0;
-  var x = katzDeliLine[i];
-  if(x === undefined){
-    return "There is nobody waiting to be served!"}
-    else {
-    var nowserving = katzDeliLine[i];
-    katzDeliLine.shift(1); 
-    return "Currently serving " +nowserving+".";
-    }
-
+function nowServing (katzDeliLine){
+  var i = 0;
+  if(katzDeliLine[i] === undefined){
+    return  "There is nobody waiting to be served!";
+  } 
+  else {
+    var name = "Currently serving " + katzDeliLine[i]+"."; 
+  katzDeliLine.shift(1);
+  return name;
+  }
 }
 
 function currentLine(katzDeliLine){
   if(katzDeliLine.length === 0){
-    console.log("this should be an empty array",katzDeliLine);
     return "The line is currently empty.";
-  } 
- 
-  for(var i = 0; i< katzDeliLine.length; i++){
-    var string;
-    var q = i + 1;
-    string = " "+ q +". " + katzDeliLine[i];
-  katzDeliLine[i] = string;
   }
-  
-  var finaltextwitharray = "The line is currently:" + katzDeliLine;
-  console.log("finaltextwitharray",finaltextwitharray);
-  return finaltextwitharray;
-    
+  for(var i = 0; i < katzDeliLine.length; i++){
+    var x = i+1;
+    var text = " " + x +". " + katzDeliLine[i];
+    katzDeliLine[i] = text;
+  }
+  return "The line is currently:" + katzDeliLine;
 }
-  
