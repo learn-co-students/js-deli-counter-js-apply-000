@@ -42,33 +42,34 @@ function currentLine(names) {
     else {
       var sentence = "The line is currently: ";
         
-        for (var i = 0; i < names.length; i++)
+        for (var i = 0; i < names.length -1; i++)
                 
                 {
-                var comma = [", ",", ",""];
-                sentence += `${i + 1}. ${names[i]}${comma[i]}`
+                //var comma = [", "];
+                sentence += `${i + 1}. ${names[i]}, `
                       
                 }
+           
             }
-          
+          sentence += `${names.length}. ` + names[names.length - 1];
        return sentence
 }    
       
       
-      // var sentence = "The line is currently: ";
+//       var sentence = "The line is currently: ";
             
-      //         for (var i = 0; i < names.length; i++)
-      //           {
-                    // if (i < names.length - 1) 
-                    //     {var comma = ", ";}
-                    // else {var comma = ""}
-                    // while (j < names.length - 1) 
-                    //   {
-                    //var comma = ", ";
-                //sentence += `${i + 1}. ${names[i]}`
+//               for (var i = 0; i < names.length; i++)
+//                 {
+//                     if (i < names.length - 1) 
+//                         {var comma = ", ";}
+//                     else {var comma = ""}
+//                     while (j < names.length - 1) 
+//                       {
+//                     var comma = ", ";
+//                 sentence += `${i + 1}. ${names[i]}`
                       
-                      // j++;
-                      // }
+//                       j++;
+//                       }
                       
 //                   }
             
