@@ -5,9 +5,14 @@ function takeANumber(otherDeli, name) {
   return(`Welcome, ${name}. You are number ${otherDeli.length} in line.`)
 }
 
-function nowServing(otherDeli) {
+function nowServing(katzDeliLine) {
   let i = 0;
-  while (i < otherDeli.length) {
-    return
+  while (i < katzDeliLine.length) {
+    i++;
   }
+  if (katzDeliLine.length === 0) {
+    return "The line is currently empty."
+  }
+  else
+    return (`The line is currently:` + line)
 }
