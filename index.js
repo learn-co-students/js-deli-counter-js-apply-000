@@ -12,7 +12,7 @@ function nowServing(line){
       return (`Currently serving ${line.shift()}.`);
 }
 
- //
+ //add line/array contents into a new array with string
  function currentLine(line){
    var newLine=[]
    let i=0;
