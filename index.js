@@ -25,7 +25,7 @@ function currentLine(line){
   return "The line is currently empty."
 }
 
-var newName = []
+const newName = []
 
 for (let i = 0, l = line.length; i < l; i++) {
   newName.push(`${i + 1}. ${line[i]}`)
