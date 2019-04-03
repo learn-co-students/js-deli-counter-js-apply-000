@@ -6,7 +6,7 @@ return "Welcome, " + name +". You are number "+ katzDeliLine.length +" in line."
 }
 
 function nowServing(deliLinee){
-  var position=deliLinee.length + 1
+  //var position=deliLinee.length + 1
   if(deliLinee.length===0){
   return "There is nobody waiting to be served!"
   }
@@ -19,9 +19,9 @@ function nowServing(deliLinee){
  }
  function currentLine(katzDeliLine){
    if(katzDeliLine.length !==0){
-     var currentLine=katzDeliLine.sort();
-     return "The line is currently:"+""+ " 1."+ " " +katzDeliLine[1]+","+""+ " 2."+ " "
-     +katzDeliLine[2]+","+""+ " 3."+" "+katzDeliLine[0];
+     //katzDeliLine.sort();
+     return "The line is currently:"+""+ " 1."+ " " +katzDeliLine[0]+","+""+ " 2."+ " "
+     +katzDeliLine[1]+","+""+ " 3."+" "+katzDeliLine[2];
    }
    
  else{
