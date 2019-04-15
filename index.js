@@ -22,6 +22,5 @@ function currentLine (katzDeliLine){
   var sentence = "The line is currently: "
   for (var i=0; i<katzDeliLine.length; i++)
     sentence += (i+1) + ". " + katzDeliLine[i] + ", "
-    //go back and look at what Matthew said about interpolation
     return sentence.substring(0,sentence.length-2)
 }
