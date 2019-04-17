@@ -24,7 +24,7 @@ function currentLine(line) {
       counter = i + 1;
       newLine[i] = `${counter}. ${line[i]}`;
     }
-    return `The line is currently: ${newLine.toString().split(',').join(', ')}`;
+    return `The line is currently: ${newLine.join(', ')}`;
   } else {
       return "The line is currently empty.";
   }
