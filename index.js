@@ -29,6 +29,3 @@ function currentLine(line) {
       return "The line is currently empty.";
   }
 }
-
-var theLine = ["Bill", "Jane", "Ann"];
-currentLine(theLine);
