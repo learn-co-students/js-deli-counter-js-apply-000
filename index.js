@@ -30,6 +30,3 @@ function currentLine(num){
   }
 }
 
-takeANumber("Ada");
-takeANumber("Grace");
-takeANumber("Kent");
