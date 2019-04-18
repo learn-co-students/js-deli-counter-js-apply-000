@@ -1,18 +1,18 @@
+//call takeANumber
 function takeANumber(katzDeliLine, name){
-  var lineLength = katzDeliLine.push(name);
-  console.log(katzDeliLine)
+  katzDeliLine.push(name);
   return "Welcome, " + name + ". You are number " + (katzDeliLine.length) + " in line.";
 }
 
-
-
 function nowServing(katzDeliLine){
-  var person = katzDeliLine.shift()
-  console.log(person)
-  if (person ==undefined){
+  var announcement = katzDeliLine[0]
+  katzDeliLine.shift();
+  //console.log(katzDeliLine)
+  if (announcement == undefined){
     return "There is nobody waiting to be served!"
   }
-  else{return "Currently serving " + person + "."}
+  else { return "Currently serving " + announcement + "."
+  }
 }
 
 function currentLine (katzDeliLine){
@@ -20,7 +20,9 @@ function currentLine (katzDeliLine){
     return "The line is currently empty."
   }
   var sentence = "The line is currently: "
+  // for(executed once before running code; condition; executed every loop)
   for (var i=0; i<katzDeliLine.length; i++)
     sentence += (i+1) + ". " + katzDeliLine[i] + ", "
+    //after loop finishes, need to take off extra comma
     return sentence.substring(0,sentence.length-2)
 }
