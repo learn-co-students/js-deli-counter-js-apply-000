@@ -1,4 +1,3 @@
-//call takeANumber
 function takeANumber(katzDeliLine, name){
   katzDeliLine.push(name);
   return "Welcome, " + name + ". You are number " + (katzDeliLine.length) + " in line.";
@@ -11,7 +10,7 @@ function nowServing(katzDeliLine){
   if (announcement == undefined){
     return "There is nobody waiting to be served!"
   }
-  else { return "Currently serving " + announcement + "."
+  else {return "Currently serving " + announcement + "."
   }
 }
 
