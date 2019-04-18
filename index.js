@@ -22,6 +22,6 @@ function currentLine (katzDeliLine){
   // for(executed once before running code; condition; executed every loop)
   for (var i=0; i<katzDeliLine.length; i++)
     sentence += (i+1) + ". " + katzDeliLine[i] + ", "
-    //after loop finishes, need to take off extra comma
+    //substring(start index, end index) -->keep elements in this range
     return sentence.substring(0,sentence.length-2)
 }
