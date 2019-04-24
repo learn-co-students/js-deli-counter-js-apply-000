@@ -16,12 +16,28 @@ function takeANumber(katzDeli, name) {
 
 // (If) there is no one in line, it should return "There is nobody waiting to be served"
 
-function nowServing(katzDeli) {}
+function nowServing(katzDeli) {
 // let i = 0;
 // while (i < katzDeli.length) {
 //   i++;
   if (katzDeli.length === 0) {
   return `There is nobody waiting to be served!`
 } else {
-  return(`Currently serving ${katzDeli}`);
-}
+  return(`Currently serving ${katzDeli.shift()}.`);
+}}
+
+//Build a function `currentLine` that accepts the current
+//line of people and returns the current line as a string;
+//for example, if 'katzDeliLine' is currently `["Ada", "Grace"]`,
+//`currentLine(katzDeliLine)` would return `"The line is currently: 1. Ada, 2. Grace"`.
+// You don't have to use `katzDeliLine` as a variable or parameter name in your function
+//though, it's just an example of a variable that might be passed to it. If there is nobody
+// in line, it should return `"The line is currently empty."`
+
+var line = [];
+  function currentLine (line) {
+  if (katzDeli.length === 0){
+  return `The line is currently empty.`
+} else {
+  return(`The line is currently ${currentLine.toString()}.`);
+}}
