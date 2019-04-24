@@ -4,14 +4,14 @@ function takeANumber(name, number) {
 }
 
 function currentLine(name, number) {
-  if (katzDeliLine > num) {
+  if (number > 0) {
     return "Now serving, ${name}"
   }  else
       return "There is nobody waiting to be served!"
 }
 
 function nowServing(name, number) {
-  if (katzDeliLine > num) {
+  if (number > 0) {
     return `The line is currently: ${number}, ${name}`
 }    else
       return "The line is currently empty."
