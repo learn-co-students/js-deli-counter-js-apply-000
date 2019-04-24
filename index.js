@@ -1,5 +1,7 @@
 
 function takeANumber(name, number) {
+  var name = []
+  var number = []
   return "Welcome, ${name} + You are number ${number} in line."
 }
 
