@@ -34,10 +34,14 @@ function nowServing(katzDeli) {
 //though, it's just an example of a variable that might be passed to it. If there is nobody
 // in line, it should return `"The line is currently empty."`
 
-var line = [];
+
   function currentLine (line) {
-  if (katzDeli.length === 0){
+    var peopleInLine = [];
+  if (line.length === 0) {
   return `The line is currently empty.`
 } else {
-  return(`The line is currently ${currentLine.toString()}.`);
+  for (let i = 0; i < line.length; i++) {
+peopleInLine.push(`${i+1}. ${line[i]}`)
+   }
+return(`The line is currently: ${peopleInLine.join(", ")}`);
 }}
