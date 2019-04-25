@@ -1,5 +1,5 @@
-var name = ["Ada", "Grace", "Kent", "Steven"]
-var number = [1., 2., 3., 4.]
+var name = []
+var number = []
 
 
 function takeANumber(array, name, number) {
