@@ -1,5 +1,5 @@
 function takeANumber(name, number) {
-    console.log (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
+    console.log (`Welcome, ${name} + You are number ${number} in line.`)
 }
 
 /*
