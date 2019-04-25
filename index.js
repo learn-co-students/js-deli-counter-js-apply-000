@@ -1,6 +1,7 @@
-function takeANumber(array, name, number) {
-  var name = []
-  var number = []
+function takeANumber(array) {
+  var arr = katzDeliLine
+  const name = []
+  const number = []
     for (i= number, i > number, i++) {
     array.push (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
   }
