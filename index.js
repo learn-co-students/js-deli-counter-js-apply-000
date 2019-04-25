@@ -1,13 +1,13 @@
 var name = []
 var number = []
 
-function takeANumber(array, name, number) {
+function takeANumber(name, number) {
 function takeANumber(name, number) {
 
   return "Welcome, ${name} + You are number ${number} in line."
 }
 
-function currentLine(array, name, number) {
+function currentLine(name, number) {
   if (number > 0) {
     return `The line is currently: ${number}, ${name}`
   }  else
@@ -15,7 +15,7 @@ function currentLine(array, name, number) {
 
 }
 
-function nowServing(array, name, number) {
+function nowServing(name, number) {
   if (number > 0) {
     return "Now serving, ${name}"
   }  else
