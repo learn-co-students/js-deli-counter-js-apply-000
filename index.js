@@ -3,6 +3,7 @@ var number = []
 
 
 function takeANumber(array, name, number) {
+  for (let i= 0; i > 0; i++)
   return "Welcome, ${name} + You are number ${number} in line."
 }
 
