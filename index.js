@@ -3,9 +3,10 @@ var number = []
 
 
 function takeANumber(array, name, number) {
-  return (`Welcome, ${name} + You are number ${number} in line.`)
+  return (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
 }
 
+/*
 function currentLine(array, name, number) {
   if (number > 0) {
     return (`The line is currently: ${number}, ${name}`)
@@ -20,3 +21,4 @@ function nowServing(array, name, number) {
   }  else
       return "There is nobody waiting to be served!"
 }
+*/
