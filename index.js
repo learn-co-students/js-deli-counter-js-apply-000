@@ -1,7 +1,7 @@
 function takeANumber(array, name, number) {
   var name = []
   var number = []
-  for (i= 1, i >1, i++) {
+    for (i= number, i > number, i++) {
     array.push (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
   }
   return array
