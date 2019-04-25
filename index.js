@@ -1,5 +1,5 @@
 function takeANumber(name, number) {
-  var arr = katzDeliLine
+  var arr = []
   const name = []
   const number = []
     for (i= number, i > number, i) {
