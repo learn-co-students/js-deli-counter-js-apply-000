@@ -2,7 +2,7 @@
 function takeANumber(array, name, number) {
   var name = []
   var number = []
-  for (i= 1, i >0)
+  for (i= 1, i >1, i++)
   return (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
 }
 
