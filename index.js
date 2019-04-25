@@ -1,10 +1,5 @@
 function takeANumber(name, number) {
-  var arr = []
-  const name = []
-  const number = []
-    for (i= number, i > number, i) {
     array.push (`Welcome, ${name[i]} + You are number ${number[i]} in line.`)
-  }
   return array
 }
 
