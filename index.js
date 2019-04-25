@@ -2,6 +2,8 @@ var name = []
 var number = []
 
 function takeANumber(array, name, number) {
+function takeANumber(name, number) {
+
   return "Welcome, ${name} + You are number ${number} in line."
 }
 
