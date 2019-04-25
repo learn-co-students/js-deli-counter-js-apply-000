@@ -1,4 +1,4 @@
-function takeANumber(array) {
+function takeANumber(name, number) {
   var arr = katzDeliLine
   const name = []
   const number = []
