@@ -1,14 +1,16 @@
-function takeANumber(name, number) {
-    console.log (`Welcome, ${name} + You are number ${number} in line.`)
+function takeANumber(katzDeliLine, name) {
+    array.push(`Welcome, ${name} + You are number ${katzDeliLine.length} in line.`)
 }
 
-/*
-function currentLine(array, name, number) {
-  if (number > 0) {
-    return (`The line is currently: ${number}, ${name}`)
-  }  else
-      return "The line is currently empty."
 
+function currentLine(n) {
+  var peopleInLine = []
+  if (for (var i= 0; i <n; i++)) {
+    return peopleInLine += (i + 1) + '.' + x[i] + ','
+  }  else {
+    if (x.length === 0)
+  }
+    return "The line is currently empty."
 }
 
 function nowServing(array, name, number) {
@@ -17,4 +19,3 @@ function nowServing(array, name, number) {
   }  else
       return "There is nobody waiting to be served!"
 }
-*/
