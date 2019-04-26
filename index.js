@@ -7,7 +7,7 @@ function takeANumber(katzDeliLine, name) {
 
 function currentLine(n) {
   var peopleInLine = []
-  if (x.length === 0) {
+  if (n.length === 0) {
       return "The line is currently empty."
   } else {
     for(var i= 0; i < n.length; i++) {
@@ -19,7 +19,7 @@ function currentLine(n) {
 }
 
 function nowServing(n) {
-  if (x.length === 0) {
+  if (n.length === 0) {
     return "There is nobody waiting to be served!"
   }  else {
      var name = n[0];
