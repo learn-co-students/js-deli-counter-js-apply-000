@@ -13,8 +13,8 @@ function currentLine(n) {
     for(var i= 0; i < n.length; i++) {
     peopleInLine += (i + 1) + '.' + n[i] + ','
   }
-    line = line.slice(0, line.length-2)
-    return "The line is currently:" + line
+    peopleInLine = peopleInLine.slice(0, peopleInLine.length-2)
+    return "The line is currently:" + peopleInLine
   }
 }
 
