@@ -7,10 +7,10 @@ function takeANumber(katzDeliLine, name) {
 
 function currentLine(n) {
   var peopleInLine = []
-  if (x.length === 0)
+  if (x.length === 0) {
       return "The line is currently empty."
   } else {
-    for (var i= 0; i <n; i++) {
+    for(var i= 0; i < n.length; i++) {
     peopleInLine += (i + 1) + '.' + n[i] + ','
   }
     line = line.slice(0, line.length-2)
@@ -21,6 +21,9 @@ function currentLine(n) {
 function nowServing(n) {
   if (x.length === 0) {
     return "There is nobody waiting to be served!"
-  }  else
-    return 'Currently serving,' + name + '.';
+  }  else {
+     var name = n[0];
+     n.splice(0, 1);
+     return 'Currently serving,' + name + '.';
+  }
 }
