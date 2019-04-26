@@ -18,9 +18,9 @@ function currentLine(n) {
   }
 }
 
-function nowServing(array, name, number) {
-  if (number > 0) {
-    return (`Now serving, ${name}`)
+function nowServing(n) {
+  if (x.length === 0) {
+    return "There is nobody waiting to be served!"
   }  else
-      return "There is nobody waiting to be served!"
+    return 'Currently serving,' + name + '.';
 }
