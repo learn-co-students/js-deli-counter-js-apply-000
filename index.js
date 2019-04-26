@@ -5,12 +5,14 @@ function takeANumber(katzDeliLine, name) {
 
 function currentLine(n) {
   var peopleInLine = []
-  if (for (var i= 0; i <n; i++)) {
-    return peopleInLine += (i + 1) + '.' + x[i] + ','
+  if (x.length === 0)
+      return "The line is currently empty."
   }  else {
-    if (x.length === 0)
+    for (var i= 0; i <n; i++) {
+    peopleInLine += (i + 1) + '.' + n[i] + ','
   }
-    return "The line is currently empty."
+    line = line.slice(0, line.length-2)
+    return "The line is currently:" + line
 }
 
 function nowServing(array, name, number) {
