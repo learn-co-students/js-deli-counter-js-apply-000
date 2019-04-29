@@ -15,7 +15,7 @@ describe('deli', () => {
       expect(katzDeli).toEqual(['Ada']);
     });
 
-    it('appends the person the end of the line if there are already people on it', () => {
+    it('appends the person at the end of the line if there are already people on it', () => {
       expect(takeANumber(otherDeli, 'Grace')).toEqual("Welcome, Grace. You are number 4 in line.");
       expect(otherDeli).toEqual(["Steven", "Blake", "Avi", "Grace"]);
     });
