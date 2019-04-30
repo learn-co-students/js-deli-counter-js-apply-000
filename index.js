@@ -4,7 +4,11 @@
 
 function takeANumber(deliarray,customername){
   for (var i=1; i< customername.length;)i++;
-  for (var j=0; j< deliarray.length;) j++; {
-    deliarray.push( "Welcome, " + customername + "." + " You are number " + deliarray[j] + "in line.");
-  }
-  return deliarray;}
+    deliarray.push(customername);
+  return ("Welcome, " + customername + "." + " You are number " + `${deliarray.length}` + " in line.")}
+
+function nowServing(katzDeliLine){
+      if (katzDeliLine.shift() === "undefined");
+       return "There is nobody waiting to be served!";
+    } else {
+        return katzDeliLine.shift();} 
