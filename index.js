@@ -7,8 +7,16 @@ function takeANumber(deliarray,customername){
     deliarray.push(customername);
   return ("Welcome, " + customername + "." + " You are number " + `${deliarray.length}` + " in line.")}
 
-function nowServing(katzDeliLine){
-      if (katzDeliLine.shift() === "undefined");
+function nowServing(katzDeliLine) {
+  var firstname = katzDeliLine.shift();
+
+      if (katzDeliLine.shift() === undefined) {
        return "There is nobody waiting to be served!";
     } else {
-        return katzDeliLine.shift();} 
+         return "Currently serving " + firstname + ".";
+    }
+  }
+
+function currentLine(folksinline){
+    return ("The line is currently empty.");
+  }
