@@ -8,15 +8,19 @@ function takeANumber(deliarray,customername){
   return ("Welcome, " + customername + "." + " You are number " + `${deliarray.length}` + " in line.")}
 
 function nowServing(katzDeliLine) {
-  var firstname = katzDeliLine.shift();
-
-      if (katzDeliLine.shift() === undefined) {
+      if (!katzDeliLine.length) {
        return "There is nobody waiting to be served!";
     } else {
-         return "Currently serving " + firstname + ".";
+      var firstname = katzDeliLine.shift();
+      return "Currently serving " + firstname + ".";
     }
   }
+  function currentLine(folksinline){
+     if (!folksinline.length){
+      return ("The line is currently empty.");}
+    var emptyarray=[];
+    for (var i=0; i< folksinline.length; i++)
+     emptyarray.push( `${ i+1}` + ". " + folksinline[i]);
 
-function currentLine(folksinline){
-    return ("The line is currently empty.");
-  }
+    return "The line is currently: " + emptyarray;
+}
