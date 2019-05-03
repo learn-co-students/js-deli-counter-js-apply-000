@@ -10,10 +10,9 @@ function nowServing(katzDeliLine) {
 return `Currently serving ${katzDeliLine.shift()}.`;
 }
 
-
+ 
 function currentLine(katzDeliLine) {
   var namesAndNumbers = []
-  
   if (!katzDeliLine.length) {
     return "The line is currently empty."}
     
