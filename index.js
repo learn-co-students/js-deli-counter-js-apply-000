@@ -56,7 +56,7 @@ function currentLine(line) {
 
 // Once again, we want to split this function into two parts: 1. The line is empty (if), and 2. The line is currently (else)
 
-// Part 1: The line is empty (lines 46-47): If the line is 0 (if (line.length === 0)), we want to tell the customer "The line is currently empty (return ('The line is currently empty.')")
+// Part 1: The line is currently empty (lines 46-47): If the line is 0 (if (line.length === 0)), we want to tell the customer "The line is currently empty (return ('The line is currently empty.')")
 
 // Part 2: The line is currently (lines 48-53): We begin this with an else statement, meaning the code will run the following arguments when the "if" statement fails. 
 
@@ -65,5 +65,9 @@ function currentLine(line) {
         // (i < line.length) tells the loop to run only if the variable is less than the length of the line
         // (i++) tells the loop to increase by 1 each time the loop is executed
         
-    //(line 51) Next, we need to add numbers to the array
+    // (line 51) Next, we need to add numbers to the array. We don't want to give them their index number, so we need to add 1 to "i" (${i + 1}). Next, we want to return the name of the person associated with the original index number (${line[i]})
+    
+    // Finally, we want to concatenate the sentence "The line is currently:" with the number and names we set earlier. The return function should look like (return `The line is currently:` + status.join())
+     
+      // We use status.join() to represent the array values as a string. 
 
