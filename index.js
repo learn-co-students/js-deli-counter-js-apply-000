@@ -32,14 +32,11 @@ function nowServing(katzDeliLine) //katzdeliline is an array of names
   
   //============================================================
   
-  
+function nowServing(katzDeliLine) //katzdeliline is an array of names
+{
   if (katzDeliLine.length > 0)
   {
-    print('Currently serving ' + toString(katzDeliLine[0]) + '.'); //return who is up
-
-    katzDeliLine.shift(); //remove initial name from line/array
-    
-    return 'Currently serving ' + katzDeliLine[0] + '.';
+    return 'Currently serving ' + katzDeliLine.shift() + '.';
   }
   else
    {
@@ -53,14 +50,16 @@ function currentLine(katzDeliLine)
 {
   if (katzDeliLine.length < 1) //if line/array is empty say that
    {
-     return "There is nobody waiting to be served!";
+     return "The line is currently empty.";
    }
    else
    {
-    for (var x = 0; x <= katzDeliLine.length; x++)
+    var currentLine = 'The line is currently: '
+    for (var x = 0; x < katzDeliLine.length; x++)
     {
-      
+      currentLine += `${x + 1}. ${katzDeliLine[x]}, `
     }
-      return currentLine.toString();
+      return currentLine.slice(0, currentLine.length-2);
    }
 }
+
