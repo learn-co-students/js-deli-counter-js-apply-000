@@ -1,17 +1,14 @@
-var ticketNumber = 0;
-
 function takeANumber(katzDeliLine, name){
-  ticketNumber++;
-  katzDeliLine.push([name,ticketNumber]);
-  return "Welcome, " + name + ". You are number " + ticketNumber + " in line.";
+  katzDeliLine.push(name);
+  return "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line.";
 }
-//[[Peter,1], [Sarah,2], [Peter,3]]
+
 function nowServing(katzDeliLine){
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
   }
   var name = katzDeliLine.shift()
-  return "Currently serving number " + name[1] + ".";
+  return "Currently serving number " + name + ".";
 }
 
 function currentLine(katzDeliLine){
