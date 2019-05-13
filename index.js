@@ -5,8 +5,7 @@ function takeANumber (katzDeli, name) {
 }
 
 //NTS Remember to add the backticks and not general quotes, otherwise the template literals can't connect
-
-
+// can't find the parameter name in the window so i'm confused that this actually works lol
 
 function nowServing (katzDeliLine) {
   if (katzDeliLine.length === 0) {
