@@ -15,7 +15,6 @@ else
   return `Currently serving ${katzDeliLine.shift()}.`
 }
 
-//NTS don't use arrays when reffering to numbers cos it thinks it's an index number, not a literal one.
 
 
 function currentLine(line) {
