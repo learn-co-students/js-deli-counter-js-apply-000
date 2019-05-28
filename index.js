@@ -1,29 +1,31 @@
-function takeANumber(line,name){
+function takeANumber(line,name) {
   line.push(name)
-  return "Welcome, " + name + ". You are number " + (line.length) + " in line."
+  var text = "Welcome, " + name + "." + " You are number " + (line.length) + " in line."
+  return text
 }
-
-function nowServing(katzDeliLine){
+function nowServing(katzDeliLine) {
+  var sntnc
   if (katzDeliLine.length === 0) {
-  var serving = "There is nobody waiting to be served!"
+   sntnc = "There is nobody waiting to be served!" 
   }
   else {
-  var person = katzDeliLine[0]
+   var whoever  = katzDeliLine[0]
   katzDeliLine.splice(0, 1)
-  serving = "Currently serving " + person + "."
+  sntnc = "Currently serving " + whoever + "."
   }
-  return serving 
+  return sntnc
 }
-function currentLine(line){
+function currentLine(line) {
+  var sntnc
   if (line.length === 0) {
-  var inline = "The line is currently empty."
+    sntnc = "The line is currently empty."
   }
   else {
-inline = "The line is currently: "
-for(var i = 0;i< line.length; i++){
-  inline += (i+1) + ". " + line[i]
-  if(i < line.length - 1) inline += ", "
-}
-}
-  return inline
+    sntnc = "The line is currently: "
+    for (var i = 0; i < line.length; i++) {
+      sntnc += (i+1) + ". " + line[i] 
+      if (i < line.length - 1) { sntnc += ", "}
+    }
+  }
+  return sntnc 
 }
