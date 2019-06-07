@@ -3,7 +3,12 @@ function takeANumber(line, name) {
   return `Welcome, ${name}. You are number ${line.length} in line.`
 }
 // used interpolation insted of concatenation becuase it looks cleaner. 
-
+var i = 0
+function takeANumber(line) {
+  i++
+  line.push(i)
+  return `Welcome you have ticket number ${i}`
+}
 function nowServing(line) {
   if (line.length === 0) {
     return "There is nobody waiting to be served!"
