@@ -5,24 +5,13 @@ function takeANumber(arr, name){
 }
 
 function nowServing(arr){
-  if(arr.length > 0){
-    var customer = arr.shift()
-    return `Currently serving ${customer}.`;
-  }
-  else{
-    return "There is nobody waiting to be served!"
-  }
+  return (arr.length > 0) 
+  ? `Currently serving ${arr.shift()}.`
+  : "There is nobody waiting to be served!"
 }
 
 function currentLine(arr){
-  if(arr.length > 0){
-    var currLine = []
-    for(var i = 0; i < arr.length; i++){
-      currLine.push(`${i+1}. ${arr[i]}`)
-    }
-    return `The line is currently: ${currLine.join(', ')}`
-  }
-  else{
-    return "The line is currently empty."
-  }
+  return (arr.length > 0) 
+  ? `The line is currently: ${ arr.map( (x,i) => `${i+1}. ${x}`).join(', ') }`
+  : "The line is currently empty."
 }
