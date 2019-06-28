@@ -1,17 +1,27 @@
-function takeANumber(deliLine, name) {
-  deliLine.push(name);
-  return `Welcome, ${deliLine[deliLine.length - 1]}. You are number ${deliLine.length} in line.`;
+function takeANumber(deli, name) {
+  deli.push(name)
+	return `Welcome, ${deli[deli.length - 1]}. You are number ${deli.length} in line.`
 }
 
+// function nowServing(deliLine) {
+//   var new_arr = [];
+//     while (deliLine.length > 0) {
+//         new_arr.push(deliLine.shift());
+//         return `Currently serving ${new_arr[new_arr.length - 1]}.`;
+//       }
+//       if (deliLine.length ===0) {
+//         return 'There is nobody waiting to be served!';
+//       }
+// }
+
 function nowServing(deliLine) {
-  var new_arr = [];
-    while (deliLine.length > 0) {
-        new_arr.push(deliLine.shift());
-        return `Currently serving ${new_arr[new_arr.length - 1]}.`;
-      }
-      if (deliLine.length ===0) {
-        return 'There is nobody waiting to be served!';
-      }
+  if (deliLine.length > 0) {
+   var deliLine_remove = deliLine.shift()
+   return `Currently serving ${deliLine_remove}.`
+  }
+  else {
+    return "There is nobody waiting to be served!"
+  }
 }
 
 function currentLine(deliLine) {
