@@ -1,20 +1,20 @@
 var katzDeliLine = []; 
-function takeANumber(katzDeli, otherDeli){
+function takeANumber(katzDeli, name){
  // katzDeli = ["Ada", "Grace", "Kent"]
  // otherDeli.concat("Ada", "Grace", "Kent")
   var counter;
   var n
 //for (counter = 0 ; counter <= otherDeli.length-1; counter++ ){
 
-  katzDeli.push(otherDeli)
-  var i = katzDeli.indexOf(otherDeli)
-  var arr = otherDeli 
+  katzDeli.push(name)
+  var i = katzDeli.indexOf(name)
+  //var arr = otherDeli 
    
-   katzDeli = arr
+   //katzDeli = arr
     
    var e = i + 1
 
-   return "Welcome, " + katzDeli + "." +  " You are number " + e + " in line."
+   return "Welcome, " + name + "." +  " You are number " + e + " in line."
  
 
 }
@@ -25,9 +25,9 @@ function nowServing(deliLine){
   //for (counter = 0; counter <= deliLine[0].length-1; counter++){
  if (deliLine && deliLine.length){
  
-   katzDeliLine.push(deliLine)
+  /* katzDeliLine.push(deliLine)
      var arr = deliLine
-     katzDeliLine = arr
+     katzDeliLine = arr*/
     
       var an = deliLine.shift()
       
@@ -49,11 +49,11 @@ function currentLine(a){
  //for(counter = 0; counter <=arr[0].length-1; counter++){
   //for (var i =0; i<=a.length-1; i++){
        if (a  && a.length) {
+        for(var i = 0; i< a.length; i++){
+          arr.push( i+1 + ". " +a[i])
+}
+          return "The line is currently: " + arr.join(", ")
         
-          //  katzDeliLine.push(a)
-            var e = a
-            katzDeliLine = a
-          return "The line is currently:" + " 1." + " " +katzDeliLine[0] + "," + " 2." + " "+katzDeliLine[1] + "," + " 3." + " " +katzDeliLine[2]
          }
         
        
