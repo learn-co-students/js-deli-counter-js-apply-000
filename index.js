@@ -19,6 +19,9 @@ function nowServing(currentLine){
 }
 
 function currentLine(currentLine){
+  if(currentLine == ''){
+    return "The line is currently empty."
+  }
   let s = "";
   var line = [];
   for(let i = 0; i < currentLine.length; i++){
