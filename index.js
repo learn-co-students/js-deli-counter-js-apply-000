@@ -29,8 +29,6 @@ function takeANumberTwo(array) {
 console.log(takeANumberTwo(katzDeliLine))
 console.log(currentTicketNumber)
 
-
-  
 function nowServing(array) {
   if(array.length === 0) {
     return ('There is nobody waiting to be served!')
