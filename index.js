@@ -23,13 +23,20 @@ function currentLine(katzDeliLine)
   }
   else
   {
-    var str = "";
-    katzDeliLine.forEach(function(value, index)
+    var str = '';
+    var i;
+    for(i = 0; i<katzDeliLine.length;i++)
     {
-      str += `${index+1}. ${value}`;
-      if(index !== katzDeliLine.length-1)
-      str += ", ";
-    });
+      str += (i+1) + ". " + katzDeliLine[i];
+      if(i !== katzDeliLine.length-1)
+        str+= ', ';
+    }
+    // katzDeliLine.forEach(function(value, index)
+    // {
+    //   str += `${index+1}. ${value}`;
+    //   if(index !== katzDeliLine.length-1)
+    //   str += ", ";
+    // });
     return "The line is currently: " + str;
   }
 }
