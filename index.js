@@ -6,7 +6,7 @@ function takeANumber(katzDeliLine, newName) {
 }
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length == 0) {
+  if (katzDeliLine.length === 0) {
   return "There is nobody waiting to be served!";
   }
   let currently = katzDeliLine[0];
@@ -16,24 +16,12 @@ function nowServing(katzDeliLine) {
   
 function currentLine(katzDeliLine) {
  
-   /* if (katzDeliLine.length <= 0) {
-    return "The line is currently empty.";
-  } else {
-    let newLine = [];
-      for(let i = 0; i < katzDeliLine.length; i++) {
-  newLine.push(katzDeliLine.indexOf(katzDeliLine[i]) +  “.” + katzDeliLine[i]);
-  console.log(newLine[0]);
-    return "The line is currently: " + newLine.join();
-   }
-  }
-} */
-
-if (katzDeliLine.length == 0) {
+if (katzDeliLine.length === 0) {
   return 'The line is currently empty.';
 }
-let bomboclat = '';
+let nowLine = '';
 for (let i = 0; i < katzDeliLine.length; i++) {
-  bomboclat += `${i + 1}. ${katzDeliLine[i]}, `;
+  nowLine += `${i + 1}. ${katzDeliLine[i]}, `;
   }
-  return `The line is currently: ` + bomboclat.slice(0, -2);
+  return `The line is currently: ` + nowLine.slice(0, -2);
 }
