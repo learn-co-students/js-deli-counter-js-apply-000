@@ -1,17 +1,16 @@
 let katzDeliLine = [];
-let num = 0;
 
 const takeANumber = function (deliLine, newPerson) {
-  deliLine.push(newPerson)
-  let lineSpot = deliLine.length
+  deliLine.push(newPerson) 
+  let lineSpot = deliLine.length 
   return `Welcome, ${newPerson}. You are number ${lineSpot} in line.`
 }
 
 const nowServing = function (deliLine) {
-  if (deliLine[0]) {
-    let lastServed = deliLine[0]
+  if (deliLine[0]) { 
+    let nowCustomer = deliLine[0]
     deliLine.shift()
-    return `Currently serving ${lastServed}.`
+    return `Currently serving ${nowCustomer}.`
   } else {
     return 'There is nobody waiting to be served!'
   }
