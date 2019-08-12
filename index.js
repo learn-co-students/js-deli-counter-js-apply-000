@@ -24,4 +24,10 @@ function nowServing(x) {
     x.splice(0, 1);
     return "Currently serving " + name + ".";
   }
+  takeANumber("Ada");
+  takeANumber("Andre");
+  currentLine(katzDeliLine);
+  nowServing(katzDeliLine);
+  nowserving(katzDeliline);
+  currentLine(katzDeliline)
 }
