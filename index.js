@@ -13,7 +13,7 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
+  if (!katzDeliLine.length) {
     return "The line is currently empty.";
   } else {
     var line = `The line is currently: 1. ${katzDeliLine[0]}` //fencepost to avoid issues with commas
