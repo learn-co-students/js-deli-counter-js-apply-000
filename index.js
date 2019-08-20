@@ -5,21 +5,20 @@ function takeANumber(katzDeliLine, name) {
 }
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
+  if (!katzDeliLine.length) {
     return "There is nobody waiting to be served!";
-  } else {
-    return `Currently serving ${katzDeliLine.shift()}.`;
-  }
+  } 
+  return `Currently serving ${katzDeliLine.shift()}.`;
 }
 
 function currentLine(katzDeliLine) {
   if (!katzDeliLine.length) {
     return "The line is currently empty.";
-  } else {
-    var line = `The line is currently: 1. ${katzDeliLine[0]}` //fencepost to avoid issues with commas
-    for (var i = 1; i < katzDeliLine.length; i++) {
-      line += `, ${i+1}. ${katzDeliLine[i]}`
-    }
-    return line;
   }
+  //fencepost to avoid issues with commas
+  var line = `The line is currently: 1. ${katzDeliLine[0]}`
+  for (var i = 1; i < katzDeliLine.length; i++) {
+    line += `, ${i+1}. ${katzDeliLine[i]}`
+  }
+  return line;
 }
