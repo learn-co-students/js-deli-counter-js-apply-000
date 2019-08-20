@@ -14,12 +14,18 @@ function nowServing(queue){
 
 function currentLine(queue){
   if (queue.length < 1){
-    return "The line is currently empty."
+    return 'The line is currently empty.';
   } else {
-    var output = "The line is currently: ";
-     for (var i = 0; i < queue.length; i++){
-        output += `${i+1}. ${queue[i]}, `;
-     }
+    var output = 'The line is currently: ';
+    
+    //for (var i = 0; i < queue.length; i++){
+     //  output += `${i+1}. ${queue[i]}, `;
+     //}
+     
+     queue.forEach(function(customer) {
+        output += `${queue.indexOf(customer)+1}. ${customer}, `;
+     });
+     
     return output.substring(0, output.length - 2);
   }
 }
