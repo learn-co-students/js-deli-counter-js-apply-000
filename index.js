@@ -11,7 +11,7 @@ function currentLine(katzDeli) {
   for(let i = 1; i < katzDeli.length; i++) {
     newLine += ${i+1}. ${katzDeli[i]}
   }
-
+}
 function takeANumber(katzDeli, name) {
   katzDeli.push(name)
   return "Welcome, " + name + ". You are number " + katzDeli.length + " in line."
