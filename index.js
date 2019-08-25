@@ -7,11 +7,13 @@ function takeANumber(line,names){
   }
   if(line.length===0){
       welcome += names + ". You are number 1 in line.";
+      line[i] = names; 
   }
-  else{
-        welcome += names + ". You are number " + i + " in line,";
+  else{ 
+    line[i] = names;
+    i++;
+        welcome += names + ". You are number " + i + " in line.";
   }
-  line[i] = names; 
   return welcome; 
 }
 function nowServing(theLine){
@@ -19,12 +21,28 @@ function nowServing(theLine){
   if(theLine.length>0){
   serve = "Currently serving " + theLine[0] + '.';
   }
-  for(var i =0;i<theLine.length;i++){
-    theLine.splice(i,i);
-  }
+  theLine.splice(0,1);
+ 
   return serve; 
 }
 
+
+function currentLine(theLine){
+   var current = "The line is currently";
+   if(theLine.length===0){
+     current += " empty.";
+   }
+   else{
+     current += ": ";
+     for(var k=0;k<theLine.length;k++){
+       current += k+1 + ". " + theLine[k];
+       if(k<theLine.length-1){
+         current += ", ";
+       }
+     }
+   }
+   return current; 
+}
 //function currentLine(theLine){
 //  var lineIs = "The line is currently";
 //  var i = 0; 
