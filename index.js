@@ -15,7 +15,7 @@ function nowServing(deliLine) {
     return "There is nobody waiting to be served!"
   }
   else {
-    var currentGuest = deliLine.shift()
+    const currentGuest = deliLine.shift()
     return `Currently serving ${currentGuest}.`
     /*
     the .shift() method removes the first element from our array and returns that removed element
@@ -28,10 +28,10 @@ function currentLine(deliLine) {
     return "The line is currently empty."
   }
   else {
-    var guestInLine = []
+    const guestInLine = []
     //declares empty array to push elements onto
     
-    var lineLength = deliLine.length
+    const lineLength = deliLine.length
     /*
     gives us a number value to use for our for loop condition
     */
