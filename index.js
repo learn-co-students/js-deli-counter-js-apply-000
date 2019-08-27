@@ -1,10 +1,12 @@
 function takeANumber(deliLine, guestName) {
   deliLine.push(guestName)
-  // this adds a new guest to the line
+  /*
+  using the push.()method adds an element to the end of an array. this adds a new guest to the line
+  */
   
   return `Welcome, ${guestName}. You are number ${deliLine.length} in line.`
   /* 
-  using .length() allows us to return the number of elements in the array, or put more plainly the actual number the newest guest is in line
+  using .length() allows us to return the number of elements in the array, or put more plainly: the actual number the newest guest is in line
   */
 }
 
