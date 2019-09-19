@@ -38,3 +38,17 @@ function currentLine(line) {
   }
   return "The line is currently:" + arr;
 }
+
+//function that tells customers how long the food will take depending on where you are in line.
+function waitTime(line) {
+  var waitPer = 3;
+  if (line.length === 0) {
+    return "The line is currently empty! Order now!";
+  } else {
+    var arr = [];
+    for (let i = 0; i < line.length; i++) {
+      arr.push(`Welcome ${line[i]}! The current wait time is ${waitPer * (i+1)} minutes or less!`);
+    }
+  }
+  return arr.join(" ");
+}
