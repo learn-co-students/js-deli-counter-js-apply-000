@@ -1,11 +1,11 @@
 var takeANumber=function(para1,para2){
-  // assign variable to length of para1 array
+  // assign variable to the length of para1 array
   var para1Len=para1.length
   
-  // check if para2 element is in para1 array using includes method
+  // check if para2 element is in para1 array using the includes method
   if(!para1.includes(para2)){
     
-    // append para2 elment to para1 array using push method
+    // append para2 element to para1 array using the push method
     para1.push(para2)
   }
   
@@ -14,18 +14,18 @@ var takeANumber=function(para1,para2){
 }
 
 var nowServing=function(para1){
-  // special case whem para1 array is empty
+  // special case when para1 array is empty
   if(para1.length===0){
     return "There is nobody waiting to be served!"
   }
   
-  // when para1 array is not empty
+  // case when para1 array is not empty
   else{
     
     // assign variable to first element of para1 array
     var firstInLine=para1[0]
     
-    // remove the element at the beginning of para1 array using shift method
+    // remove the element at the beginning of para1 array using the shift method
     para1.shift()
     
     // return a string
@@ -34,7 +34,7 @@ var nowServing=function(para1){
 }
 
 var currentLine=function(para1){
-  // special case whem para1 array is empty
+  // special case when para1 array is empty
   if(para1.length===0){
     return "The line is currently empty."
   }
@@ -45,10 +45,10 @@ var currentLine=function(para1){
   // loop through para1 array
   for(var i=0;i<para1.length;i++){
     
-    // append string to emptyArray using push method
+    // append string to emptyArray using the push method
     emptyArray.push(` ${i+1}. ${para1[i]}`)
   }
   
-  // join all elements of emptyArray and return a string
+  // join all elements of emptyArray using the join method and return a string
   return 'The line is currently:'+emptyArray.join()
 }
