@@ -4,13 +4,16 @@ function takeANumber(katzDeliLine, name) {
 }
 
 function nowServing(katzDeliLine) {
-  let firstInLine = katzDeliLine.shift();
   
-  if (katzDeliLine.length !== 0) {
+  if (katzDeliLine.length === 0) {
+    return `There is nobody waiting to be served!`;
+  } else
+  
+  if (katzDeliLine.length >= 1) {
+    let firstInLine = katzDeliLine.shift();
     return `Currently serving ${firstInLine}.`;
-  } else {
-      return `There is nobody waiting to be served!`;
-    }
+  }
+
 }
 
 function currentLine(katzDeliLine) {
@@ -26,3 +29,15 @@ function currentLine(katzDeliLine) {
       return 'The line is currently: ' + result;
     }
 }
+
+//Alternative nowServing function:
+
+// function nowServing(katzDeliLine) {
+//   let firstInLine = katzDeliLine.shift();
+  
+//   if (katzDeliLine.length !== 0) {
+//     return `Currently serving ${firstInLine}.`;
+//   } else {
+//       return `There is nobody waiting to be served!`;
+//     }
+// }
