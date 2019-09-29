@@ -29,3 +29,19 @@ function currentLine(katzDeliLine) {
       return `The line is currently: 1. ${katzDeliLine[0]}, 2. ${katzDeliLine[1]}, 3. ${katzDeliLine[2]}`; 
     }
 }
+
+//Attempt with do...while loop
+function currentLine(katzDeliLine) {
+  if (katzDeliLine.length === 0) {
+    return 'The line is currently empty.';
+  } else {
+      let result = [];
+      let i = 0;
+      
+      do {
+        result += (i + 1) + '. ' + katzDeliLine[i] + ", ";
+      } while (i < katzDeliLine.length);
+      result = result.slice(0, result.length-2);
+      return 'The line is currently: ' + result;
+    }
+}

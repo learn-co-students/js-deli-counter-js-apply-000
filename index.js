@@ -9,20 +9,11 @@ function takeANumber(katzDeliLine, name) {
 function nowServing(katzDeliLine) {
   let firstInLine = katzDeliLine.shift();
   
-  for (let i = 0; i < katzDeliLine.length; i++) {
-  
-    while (katzDeliLine.length !== 0) {
-      return `Currently serving ${firstInLine}.`;
+  if (katzDeliLine.length !== 0) {
+    return `Currently serving ${firstInLine}.`;
+  } else {
+      return `There is nobody waiting to be served!`;
     }
-  
-    katzDeliLine.shift();
-  
-  }
-  
-  if (katzDeliLine.length === 0) {
-    return `There is nobody waiting to be served!`;
-  }
-
 }
 
 function currentLine(katzDeliLine) {
@@ -38,19 +29,3 @@ function currentLine(katzDeliLine) {
       return 'The line is currently: ' + result;
     }
 }
-
-//Attempt with do...while loop
-/*function currentLine(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
-    return 'The line is currently empty.';
-  } else {
-      let result = [];
-      let i = 0;
-      
-      do {
-        result += (i + 1) + '. ' + katzDeliLine[i] + ", ";
-      } while (i < katzDeliLine.length);
-      result = result.slice(0, result.length-2);
-      return 'The line is currently: ' + result;
-    }
-}*/
