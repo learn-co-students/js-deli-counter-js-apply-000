@@ -10,6 +10,20 @@ describe('deli', () => {
       otherDeli = ["Steven", "Blake", "Avi"];
     });
 
+function takeANumber(katzDeli, otherDeli) {
+  for (var i = 0; i < otherDeli.length; i++) {
+    var customer = otherDeli[i];
+    var number = 1;
+    
+    console.log("Welcome, " + customer + ". You are number " +  number + " in line.");
+    
+    if (katzDeli.indexOf(customer) === -1) {
+      katzDeli.push(customer);
+    }
+    number++;
+  }
+}
+
     it('adds a person to the line', () => {
       expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
       expect(katzDeli).toEqual(['Ada']);
