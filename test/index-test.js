@@ -10,20 +10,6 @@ describe('deli', () => {
       otherDeli = ["Steven", "Blake", "Avi"];
     });
 
-function takeANumber(katzDeli, otherDeli) {
-  for (var i = 0; i < otherDeli.length; i++) {
-    var customer = otherDeli[i];
-    var number = 1;
-    
-    console.log("Welcome, " + customer + ". You are number " +  number + " in line.");
-    
-    if (katzDeli.indexOf(customer) === -1) {
-      katzDeli.push(customer);
-    }
-    number++;
-  }
-}
-
     it('adds a person to the line', () => {
       expect(takeANumber(katzDeli, 'Ada')).toEqual("Welcome, Ada. You are number 1 in line.");
       expect(katzDeli).toEqual(['Ada']);
@@ -42,6 +28,13 @@ function takeANumber(katzDeli, otherDeli) {
       expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
     });
   });
+  
+        function takeANumber(katzDeli, name) {
+          katzDeli.push(name);
+          var number = katzDeli.indexOf(name) + 1;
+          return "Welcome, " + name + ". You are number " + number + " in line.";
+        }
+  
 
   describe('nowServing', () => {
     it('returns the line is empty when no one is on line', () => {
