@@ -47,6 +47,20 @@ describe('deli', () => {
       expect(deliLine).toEqual(["Blake", "Avi"]);
     });
   });
+  
+  function nowServing(katzDeli) {
+    if (katzDeli.length === 0) {
+      return "There is nobody waiting to be served!";
+    } else {
+    
+    for (var i = 0; i < katzDeli.length; i++) {
+      
+      return "Currently serving " + katzDeli[i] + ".";
+      
+    }
+    }
+  }
+
 
   describe('currentLine(line)', () => {
     it('returns "The line is currently empty." if no one is in line', () => {
