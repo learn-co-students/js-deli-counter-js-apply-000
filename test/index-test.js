@@ -48,15 +48,15 @@ describe('deli', () => {
     });
   });
   
-  function nowServing(katzDeli) {
-    if (katzDeli.length === 0) {
+  function nowServing(array) {
+    if (array.length === 0) {
       return "There is nobody waiting to be served!";
     } else {
     
-    for (var i = 0; i < katzDeli.length; i++) {
+    for (var i = 0; i < array.length; i++) {
       
-      return "Currently serving " + katzDeli[i] + ".";
-      
+      return "Currently serving " + array[i] + ".";
+     
     }
     }
   }
@@ -72,3 +72,16 @@ describe('deli', () => {
     });
   });
 })
+
+function currentLine(array) {
+  if (array.length === 0) {
+    return "The line is currently empty.";
+  } else { 
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+      newArray.push((i + 1) + ". " + array[i]);
+    }
+    }
+    var line = newArray.join(", ");
+    return ("The line is currently: " + line);
+  }
