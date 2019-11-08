@@ -10,6 +10,14 @@ function takeANumber (katzDeliLine, newName) {
   }
 }
 
+let ticketNo = 0;
+function takeANumber(katzDeliLine) {
+  ticketNo++
+  katzDeliLine.push(ticketNo);
+  return `Welcome, you have ticket number ${ticketNo}.`;
+}
+
+
 function nowServing(katzDeliLine) {
   let served = ""
   if (katzDeliLine.length !== 0) {
