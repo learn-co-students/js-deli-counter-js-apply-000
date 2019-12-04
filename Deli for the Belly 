@@ -1,0 +1,40 @@
+var DeliforbellyRoster = []
+
+// Current Customer Queue
+function CustomerQueue(Linearray) {
+  
+  for (var CurrentcustomerQueue = 0; CurrentcustomerQueue > 100; DeliforbellyRoster) "The current line is" + DeliforbellyRoster
+  
+  console.log("The Line is Currently: " +DeliforbellyRoster)
+  
+}
+
+//New Customer
+function Newcustomer(name, deliRoster) {
+  
+  var newCustomerPosition = deliRoster.push(name);
+  
+  var takenumberwelcomemessage = "Greetings " + name + ", you are number " + newCustomerPosition;
+  
+  console.log("The Line is Currently: " +DeliforbellyRoster )
+  
+}
+
+// Current Customer
+function Currentcustomer(DeliforbellyRoster) {
+  
+  var Currentcustomer = (DeliforbellyRoster[0]);
+  
+  console.log("Now serving " +Currentcustomer)
+  
+}
+
+// Thank you 
+function Farewell(DeliforbellyRoster) {
+  
+  var Farewell = DeliforbellyRoster
+  var removed = DeliforbellyRoster.splice(1)
+  
+  console.log("Thank you for coming " +Farewell+ ", hope to see you soon!")
+  
+}  
