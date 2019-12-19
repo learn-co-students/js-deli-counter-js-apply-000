@@ -1,7 +1,6 @@
 function takeANumber (line, name) {
   line.push(name);
-  let count = line.length;
-  return `Welcome, ${name}. You are number ${count} in line.`;
+  return `Welcome, ${name}. You are number ${line.length} in line.`;
 }
 
 function nowServing (katzDeliLine) {
@@ -13,7 +12,7 @@ function currentLine (queue) {
     return "The line is currently empty.";
   }
   else {
-    let lineArray = []
+    let lineArray = [];
     for (let i = 0; i < queue.length; i++) {
       lineArray.push(`${i + 1}. ${queue[i]}`);
     }
