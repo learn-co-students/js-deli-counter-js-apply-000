@@ -1,6 +1,6 @@
 function takeANumber(line, name) {
   line.push(name);
-  return "Welcome, " + name + ". You are number " + (line.length) + " in line.";
+  return "Welcome, " + name + ". You are number " + line.length + " in line.";
 }
 
 function nowServing(line) {
@@ -10,23 +10,20 @@ function nowServing(line) {
   
   let nextPerson = line.splice(0, 1);
   
-  return "Currently serving " + nextPerson[0] + ".";
+  return "Currently serving " + nextPerson + ".";
 }
 
 function currentLine(line) {
   if (Array.isArray(line) && line.length === 0) {
-    return "The line is currently empty.";
+    return `The line is currently empty.`;
   }
   
-  let announcement = "The line is currently: ";
-  let count = 0;
+  let lineWithPositions = [];
   
-  for (const element of line) {
-    count++
-    announcement += count + ". " + element + ", ";
-  }
-  
-  let announcementMinusComma = announcement.slice(0, -2);
-  
-  return announcementMinusComma;
+  line.forEach((name, i) => {
+    const position = i + 1;
+    lineWithPositions.push(`${position}. ${name}`);
+  });
+ 
+  return `The line is currently: ${lineWithPositions.join(", ")}`;
 }
