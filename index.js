@@ -1,11 +1,11 @@
 var katzDeliLine = [];
 
-function takeANumber (katzDeliLine, name){
-  var position = katzDeliLine.length+1
-  katzDeliLine.push(name)
-return "Welcome, " + name +". You are number "+ position +" in line."
 
+function takeANumber(arr,name){
+ arr.push(name)
+ return "welcome, "+name+". you are number "+`${arr.length}`+" in line"
 }
+
 
 function nowServing(katzDeliLine){
   if (katzDeliLine.length === 0){
@@ -21,11 +21,6 @@ function currentLine(line){
   if (line.length === 0){
     return "The line is currently empty."; 
   }else{
-    for(let i = 0;i<line.length - 1;i++){
-      x += (i+1) + ". " + `${line[i]}`+", ";
-    }
-   x+= (line.length)+ ". " + `${line[line.length - 1]}`
-   return x;
+   return "The line is currently:"+ line.map( (elem,index) => " "+(index+1).toString()+ ". " + elem )
   }
-  
 }
