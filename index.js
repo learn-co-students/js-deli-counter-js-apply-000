@@ -10,7 +10,7 @@ const nowServing = line => {
   else {
     const name = line[0]; // Store name at index 0 in variable name
     line.shift(); // remove index zero prior to the return statement
-    return 'Currently serving ' + name + '.'; // line[0] would no longer reference the name we need here
+    return 'Currently serving ' + name + '.'; // line[0] would no longer reference the name we need here, hence storing it prior to calling shift()
   }
 };
 
