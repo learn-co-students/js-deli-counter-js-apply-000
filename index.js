@@ -8,6 +8,7 @@ function takeANumber (line, name) {
 	return `Welcome, ${name}. You are number ${line.length} in line.`;
 }
 
+
 // nowSeving accepts 1) current line.
 // --> returns first person in line, then removes them from the line.
 function nowServing (line) {
