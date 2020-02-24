@@ -28,12 +28,12 @@ function currentLine(katzDeli){
   //get unserved array members
   else {
     var str = "The line is currently: "
-    //get the order of unserved array members
+    //concatenates the order of unserved array members
    for (var i = 0; i < katzDeli.length; i++){
    if (i < katzDeli.length - 1){
         str += `${i+1}. ${katzDeli[i]}, `  ;
    }
-   //get the last unserved array member
+   //concatenates the last unserved array member
    else {
         str += `${i+1}. ${katzDeli[i]}`  ;
    }
