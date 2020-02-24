@@ -10,6 +10,18 @@ const takeANumber = function(arr, newName) {
   return `Welcome, ${newName}. You are number ${arr.indexOf(newName) + 1} in line.`;
 }
 
+// const takeANumber = function(arr, newName) {
+//   arr.push(newName);
+//   let placeInLine = "";
+//   for(let i=0;i<arr.length;i++) {
+//     if(arr[i] === newName){
+//       placeInLine = i + 1;
+//     }
+//   }
+//   return `Welcome, ${newName}. You are number ${placeInLine} in line.`
+// }
+
+
 
 // 2. Build a function `nowServing`. This function should accept the current line of people (`katzDeliLine`) and return the first person in line and then remove that individual from the line. If there is nobody in line, it should return "There is nobody waiting to be served!"
 // nowServing
@@ -31,16 +43,16 @@ const nowServing = function(arr) {
 //✓ says who is in line when there are people waiting
 
 const currentLine = function(arr) {
-const str = `The line is currently`;
-const newArr = [];
- 
-if(arr.length===0) {
-  return `${str} empty.`;
-}
- 
-for(let i=0;i<arr.length; i++) {
-  newArr.push(`${arr.indexOf(arr[i]) + 1}. ${arr[i]}`);
-}
-return `${str}: ${newArr.join(', ')}`
+  const str = `The line is currently`;
+  const newArr = [];
+   
+  if(arr.length===0) {
+    return `${str} empty.`;
+  }
+   
+  for(let i=0;i<arr.length; i++) {
+    newArr.push(`${arr.indexOf(arr[i]) + 1}. ${arr[i]}`);
+  }
+  return `${str}: ${newArr.join(', ')}`
 }
   
