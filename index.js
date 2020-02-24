@@ -7,11 +7,11 @@ function takeANumber(katzDeli, person){
 }
 
 function nowServing(katzDeli){
-  //count array members to determine if there are no members
+  //determine if there are any array members
   if (katzDeli.length === 0){  
     return "There is nobody waiting to be served!";
   }
-  //show served member
+  //show served array member
   else {
    var message = "Currently serving " + katzDeli[0] + ".";
    //remove served member from array
@@ -21,15 +21,19 @@ function nowServing(katzDeli){
   
 }
 function currentLine(katzDeli){
+  //check for unserved members in array
   if (katzDeli.length === 0){
     return "The line is currently empty."
   }
+  //get unserved array members
   else {
     var str = "The line is currently: "
+    //get the order of unserved array members
    for (var i = 0; i < katzDeli.length; i++){
    if (i < katzDeli.length - 1){
         str += `${i+1}. ${katzDeli[i]}, `  ;
    }
+   //get the last unserved array member
    else {
         str += `${i+1}. ${katzDeli[i]}`  ;
    }
