@@ -5,18 +5,6 @@
 // ✓ appends the person the end of the line if there are already people on it
 // ✓ properly handles multiple people being added
 
-// const takeANumber = function(arr, newName) {
-//   arr.push(newName);
-//   let placeInLine = "";
-//   for(let i=0;i<arr.length;i++) {
-//     if(arr[i] === newName){
-//       placeInLine = arr.indexOf(arr[i]) + 1;
-//     }
-//   }
-//   return `Welcome, ${newName}. You are number ${placeInLine} in line.`
-// }
-
-// or
 const takeANumber = function(arr, newName) {
   arr.push(newName);
   return `Welcome, ${newName}. You are number ${arr.indexOf(newName) + 1} in line.`;
@@ -43,16 +31,16 @@ const nowServing = function(arr) {
 //✓ says who is in line when there are people waiting
 
 const currentLine = function(arr) {
- const str = `The line is currently`;
- const newArr = [];
+const str = `The line is currently`;
+const newArr = [];
  
- if(arr.length===0) {
-   return `${str} empty.`;
- }
+if(arr.length===0) {
+  return `${str} empty.`;
+}
  
- for(let i=0;i<arr.length; i++) {
-   newArr.push(`${arr.indexOf(arr[i]) + 1}. ${arr[i]}`);
- }
- return `${str}: ${newArr.join(', ')}`
+for(let i=0;i<arr.length; i++) {
+  newArr.push(`${arr.indexOf(arr[i]) + 1}. ${arr[i]}`);
+}
+return `${str}: ${newArr.join(', ')}`
 }
   
