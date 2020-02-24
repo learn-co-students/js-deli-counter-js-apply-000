@@ -1,16 +1,20 @@
 function takeANumber(katzDeli, person){
+  // add member to array
   katzDeli.push(person)
-  
+  //print string stating which number they are in line
   return "Welcome, " + person + ". You are number " + katzDeli.length + " in line.";
   
 }
 
 function nowServing(katzDeli){
+  //count array members to determine if there are no members
   if (katzDeli.length === 0){  
     return "There is nobody waiting to be served!";
   }
+  //show served member
   else {
    var message = "Currently serving " + katzDeli[0] + ".";
+   //remove served member from array
    katzDeli.shift()
    return message
   }
