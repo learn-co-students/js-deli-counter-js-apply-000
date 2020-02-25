@@ -20,18 +20,16 @@ function nowServing(deliLine) {
 
 function currentLine(deliLine) {
   var currLine = "The line is currently: "
-  var counter = deliLine.length;
 
   if (deliLine.length === 0) { 
     return "The line is currently empty."
   } else {
-    do {
-      currLine += `${deliLine.length-counter+1}. ${deliLine[deliLine.length-counter]}` 
-      counter--
-      if (counter !== 0) {
+    for (var i = deliLine.length; i > 0; i--) {
+      currLine += `${deliLine.length-i+1}. ${deliLine[deliLine.length-i]}`
+      if (i !== 1) {
         currLine += ", " 
       }
-    } while (counter > 0)
-    return currLine
+    }
   }
+  return currLine
 }
