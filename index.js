@@ -51,7 +51,7 @@ const currentLine = function(arr) {
   }
    
   for(let i=0;i<arr.length; i++) {
-    newArr.push(`${arr.indexOf(arr[i]) + 1}. ${arr[i]}`);
+    newArr.push(`${i + 1}. ${arr[i]}`);
   }
   return `${str}: ${newArr.join(', ')}`
 }
