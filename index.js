@@ -1,11 +1,7 @@
+
 function takeANumber(current, name){
-  if (current.length === 0){
     current.push(name);
     return "Welcome, " + name + ". You are number " + (current.length) +" in line.";
-  }else if (current.length > 0){
-    current.push(name);
-     return "Welcome, " + name + ". You are number " + (current.length) +" in line.";
-  }
 }
 
 function nowServing(katzDeliLine){
