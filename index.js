@@ -1,19 +1,20 @@
 function takeANumber(arr, str){
- var x = arr.push(str);
+
  arr.push(str);
- return ("Welcome, " + str + ". You are Number " + x + " in line." )
+ var x = arr.indexOf(str) + 1
+ return ("Welcome, " + str + ". You are number " + x + " in line." )
 }
 
 function nowServing(arr){
 
-var x = arr.shift();
+var x = arr[0];
 
   if (x === undefined){
     return ("There is nobody waiting to be served!")
   }
   else{
     arr.shift();
-    return (x)
+    return ("Currently serving" + " " + x + ".")
   }
 }
 
@@ -23,9 +24,10 @@ if (arr.length === 0){
 }
  else{
    var line=[]
+   var i=0
    for (i = 0; i < arr.length; i++){
 
-     line.push(" " + [i + 1] + ". " + arr[i] )
-   } return ("The line is currently: " + line)
+     line.push( [i + 1] + ". " + arr[i] )
+   } return ("The line is currently: " + line.toString())
  }
 }
