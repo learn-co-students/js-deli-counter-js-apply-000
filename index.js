@@ -28,6 +28,6 @@ if (arr.length === 0){
    for (i = 0; i < arr.length; i++){
 
      line.push( [i + 1] + ". " + arr[i] )
-   } return ("The line is currently: " + line.toString())
+   } return ("The line is currently: " + line.join( ', '))
  }
 }
