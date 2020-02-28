@@ -13,7 +13,8 @@ var takeANumber = (katzDeliLine, newPerson) => {
 var nowServing = katzDeliLine => {
   // If the line is empty, then its length is 0, which means its boolean value is 'false'
   // If the line is not empty, then its length is more than 0, which means its boolean value is 'true'
-  // Adding the bang operator (!) before katzDeliLine is the same as writing katzDeliLine.length === 0, which equates to 'false'
+  // The bang operator gives the opposing boolean value
+  // So if katzDeliLine is 0, its boolean value is false, adding ! will make it equate to true
   if (!katzDeliLine.length) return "There is nobody waiting to be served!";
 
  // The first person in line will always be the element in index 0, so this variable is assigned accordingly
