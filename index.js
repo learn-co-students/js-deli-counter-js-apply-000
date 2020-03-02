@@ -1,7 +1,16 @@
+var tracker = 0;
+
 function takeANumber(katzDeli, current){
   var place = katzDeli.length + 1
   katzDeli.push(current)
   return `Welcome, ${current}. You are number ${place} in line.`
+}
+
+
+function internalTracker(katzDeli){
+  katzDeli.push(tracker)
+  tracker++;
+  return `You are ticket number ${tracker}`
   
 }
 
