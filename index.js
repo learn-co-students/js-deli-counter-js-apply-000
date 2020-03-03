@@ -1,42 +1,42 @@
 var katzDeliLine = [];
 
-var takeANumber = (katzDeliLine, newPerson) => {
+var takeANumber = (line, newPerson) => {
   // Add the new person into the end of the line
-  katzDeliLine.push(newPerson);
+  line.push(newPerson);
 
   // Print out welcome message using temperate literals and placeholders
   // Number in line is determied by finding the element's index and then adding one (taking into account zero-based indexing)
 
-  return (`Welcome, ${newPerson}. You are number ${katzDeliLine.indexOf(newPerson) + 1} in line.`)
+  return (`Welcome, ${newPerson}. You are number ${line.indexOf(newPerson) + 1} in line.`)
 }
 
 
-var nowServing = katzDeliLine => {
-// If the line is empty, then katzDeliLine.length = 0. 0 is falsy, using the bang operator on it would make it truthy
-  if (!katzDeliLine.length) return "There is nobody waiting to be served!";
+var nowServing = line => {
+// If the line is empty, then line.length = 0. 0 is falsy, using the bang operator on it would make it truthy
+  if (!line.length) return "There is nobody waiting to be served!";
 
 // Assigning name at 0th index the first person in line
-  let firstPersonInLine = katzDeliLine[0];
-  katzDeliLine.shift(); // Removing the 0th element from the array
+  let firstPersonInLine = line[0];
+  line.shift(); // Removing the 0th element from the array
   return (`Currently serving ${firstPersonInLine}.`) // Using template literals and placeholder to return string
 }
 
-var currentLine = katzDeliLine => {
+var currentLine = line => {
   // Returning empty line message if line is empty
-  if (!katzDeliLine.length) return "The line is currently empty.";
+  if (!line.length) return "The line is currently empty.";
 
   // Assigning a variable to the string that will eventually be returned
   let str = 'The line is currently: ';
 
   // Looping through all elements in the line
-  for (let x = 0; x < katzDeliLine.length; x++) {
+  for (let x = 0; x < line.length; x++) {
     // Assigning variables to each portion of string that will be added to variable str
     let numInLinePeriod = `${x+1}. `;
-    let nameComma = `${katzDeliLine[x]}, `;
-    let name = katzDeliLine[x];
+    let nameComma = `${line[x]}, `;
+    let name = line[x];
 
     // If the loop hits the last element, add to the string 'str' above the number in line and the name without a comma
-    if (x === (katzDeliLine.length-1)) {
+    if (x === (line.length-1)) {
       str += (numInLinePeriod + name);
     }
 
