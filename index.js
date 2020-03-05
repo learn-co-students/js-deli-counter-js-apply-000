@@ -28,3 +28,5 @@ function currentLine(line) {
   return `The line is currently:${currentLine}`
   }
 }
+
+console.log("I would rather go down the street to Russ & Daughters.")
