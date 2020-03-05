@@ -1,7 +1,7 @@
 function takeANumber(lineArray, nameString){
     lineArray.push(nameString);
-    for (let i = lineArray.length + 1; i > 0; i++) {
-      return `Welcome, ${nameString}. You are number ${i - 1} in line.`;
+    for (let i = lineArray.length; i > 0; i++) {
+      return `Welcome, ${nameString}. You are number ${i} in line.`;
     }
 
 
