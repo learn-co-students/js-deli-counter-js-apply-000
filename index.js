@@ -7,15 +7,25 @@ function takeANumber(katzDeliLine, namePerson){
 }
 
 
-function currentLine(line) {
-   if (line.length === 0) {
+function currentLine(katzDeliLine) {
+  var i =0;
+   if (katzDeliLine.length === 0) {
     return `The line is currently empty.`;
   } 
   else {
-   return `The line is currently: 1. ${line[0]}, 2. ${line[1]}, 3. ${line[2]}`;
+   return `The line is currently: ${i+1}. ${katzDeliLine[i]}, ${i+2}. ${katzDeliLine[i+1]}, ${i+3}. ${katzDeliLine[i+2]}`;
     
   }
 }
 
+
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length > 0) {
+    return "Currently serving " + katzDeliLine.shift() + ".";
+  } else {
+  var string = `There is nobody waiting to be served!`;
+  return string;
+  }
+}
 
 
