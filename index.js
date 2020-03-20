@@ -11,6 +11,8 @@ function takeANumber(katzDeliLine, name) {
 //katzDeliLine.length know the amount of tickets being pulled
 
 //Now serving
+var people = []
+
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!"
@@ -20,15 +22,19 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine) {
-  if (!katzDeliLine.length) {
+  if (katzDeliLine.length === 0) {
     return "The line is currently empty."
   }
-
-  const numbersAndNames = []
+// katzDeliLine = 0 means the amount of people should not go over 0
+// line should be empty
 
   for (let i = 0, l = katzDeliLine.length; i < l; i++) {
-    numbersAndNames.push(`${i + 1}. ${katzDeliLine[i]}`)
-  }
+      people.push(`${i + 1}. ${katzDeliLine[i]}`)
+    }
 
-  return `The line is currently: ${numbersAndNames.join(', ')}`
-};
+    return `The line is currently: ${people.join(', ')}`
+  };
+// var = people is the people in line taht need to be listed
+// i is to make sure the line of people will have the number where they are in line
+//katzDeliLine will acknowldege the name of who is in the line
+//returning the line of peolple with a comma inbetween each one.
