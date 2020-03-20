@@ -12,22 +12,23 @@ function takeANumber(katzDeliLine, name) {
 
 //Now serving
 function nowServing(katzDeliLine) {
-let i = 0;
+  if (katzDeliLine.length === 0) {
+    return "There is nobody waiting to be served!"
+  }
 
-while ( i < katzDeliLine.length) {
-  i++;
-}
-if (katzDeliLine.length === 0) {
-return "There is nobody waiting to be served!";
-}
-else
-return ("Currently serving ${name}");
+  return `Currently serving ${katzDeliLine.shift()}.`
 }
 
-function currentline(katzDeliLine) {
+function currentLine(katzDeliLine) {
+  if (!katzDeliLine.length) {
+    return "The line is currently empty."
+  }
 
-var katzDeliLine = [];
+  const numbersAndNames = []
 
-if (katzDeliLine.length === 0) {
-  return "This line is currently empty."
-}
+  for (let i = 0, l = katzDeliLine.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${katzDeliLine[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
