@@ -1,4 +1,6 @@
-let ticketNumber = 0; i++;
+let ticketNumber = 0; 
+ticketNumber++;
+
 function ticketWheel(ticketNumber) {
   
  return `Welcome your ticket number is ${ticketNumber}`;
