@@ -1,9 +1,8 @@
-let ticketNumber = 0; 
-ticketNumber++;
+ var ticketNumber = 0; 
 
 function ticketWheel(ticketNumber) {
   
- return `Welcome your ticket number is ${ticketNumber}`;
+ return `Welcome your ticket number is ${++ticketNumber}`;
 }
 
 function takeANumber(katzDeliLine, newPerson) {
