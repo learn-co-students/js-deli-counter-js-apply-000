@@ -22,10 +22,14 @@ function nowServing(katzDeliLine){
 
 var line = [];
 function currentLine(katzDeliLine){
-let i =0;
+/*let i =0;
 while(i<katzDeliLine.length){
   line.push(` `+[i+1]+`. `  + katzDeliLine[i]);
   i++;
+} */
+//
+for(let i=0; i<katzDeliLine.length; i++){
+  line.push(` `+[i+1]+`. `  + katzDeliLine[i]);
 }
 
 if(katzDeliLine.length===0){
