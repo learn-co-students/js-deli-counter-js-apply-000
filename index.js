@@ -1,22 +1,24 @@
 function takeANumber(katzDeliLine, string) {
- //we want a condition so that if there is a line or there isn't to still add the name of the customer to the line
- //once the name is added a loop is created to go through the array
- //this loop will create a welcome message and announce the customer's position in line. 
- //Since it is an array we don't want it to announce it's index so we added 1 to i.
- //return the welcome message. 
+//checks that the line exists 
+//add a name to the line, then welcome everyone with a for loop
+  
   if(katzDeliLine.length === 0 || katzDeliLine.length > 0) {
+    
     katzDeliLine.push(string);
     
       for(let i = 0; i < katzDeliLine.length; i++) {
+      
       var welcome = `Welcome, ${string}. You are number ${i + 1} in line.`;
     }
   }
   return welcome;
 }
 
+
 function nowServing(katzDeliLine) {
+  
   if(katzDeliLine.length > 0) {
-   //var serving = katzDeliLine.shift();
+
     var message = `Currently serving ${katzDeliLine.shift()}.`;
     return message;
   }
