@@ -1,6 +1,6 @@
 function takeANumber(line, newCustomer) {
-  const placeInLine = line.length + 1;
   line.push(newCustomer);
+  const placeInLine = line.length;
   return `Welcome, ${newCustomer}. You are number ${placeInLine} in line.`;
 } 
 
@@ -18,8 +18,8 @@ function currentLine(line) {
   
   if(line.length === 0) return 'The line is currently empty.';
   const sentencePrefix = 'The line is currently: ';
-  const namesAndPlacesInLine = line.map((customer, i) => { return`${i+1}. ${customer}` });
-  return sentencePrefix + namesAndPlacesInLine.join(", ");
+  const sentenceSuffix = line.map((customer, i) => {return`${i+1}. ${customer}`}).join(", ");
+  return sentencePrefix + sentenceSuffix;
   
   // if(line.length === 0) return 'The line is currently empty.';
   // var sentence = 'The line is currently:';
