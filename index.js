@@ -15,6 +15,7 @@ function nowServing(katzDeliLine){
   }
   
 }
+
 function currentLine(katzDeliLine){
   let currentLineMessage = []
   if(katzDeliLine.length === 0){
@@ -22,7 +23,8 @@ function currentLine(katzDeliLine){
   } else{
     for(let i = 0; i< katzDeliLine.length; i++){
       currentLineMessage.push((i + 1 + ".") +" "+ katzDeliLine[i])
-    } return `The line is currently: ${currentLineMessage.join(", ")} `;
+    } return `The line is currently: ${currentLineMessage.join(", ")}`;
+   
 
     
   }
