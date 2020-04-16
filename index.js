@@ -1,9 +1,10 @@
- var ticketNumber = 0; 
-
 function ticketWheel(ticketNumber) {
-  
- return `Welcome your ticket number is ${++ticketNumber}`;
+  var customerNumber = 0;
+  var ticket = customerNumber += ticketNumber;
+
+ return `Welcome your ticket number is ${ticket}`;
 }
+
 
 function takeANumber(katzDeliLine, newPerson) {
   
