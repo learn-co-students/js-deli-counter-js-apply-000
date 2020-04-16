@@ -22,23 +22,23 @@ function currentLine(line){
 }
 
 
-// function nowServing(line) {
-// const deliLine = line
-//   if (line.length === 0) {
-//     return "There is nobody waiting to be served!"
-//   }
-//
-//   if (line.length > 0) {
-//     deliLine.shift
-//     return `Currently serving ${line[0]}.`
-//   }
+function nowServing(line) {
+  if (line.length === 0) {
+    return "There is nobody waiting to be served!"
+  }
 
-// }
-function nowServing(line){
-    if (line.length === 0) {
-      return 'There is nobody waiting to be served!'
-    }
-    else {
-      return `Currently serving ${line.shift()}.`
-    }
+  if (line.length > 0) {
+
+    return `Currently serving ${line[0]}.`
+    line.shift()
+  }
+
 }
+// function nowServing(line){
+//     if (line.length === 0) {
+//       return 'There is nobody waiting to be served!'
+//     }
+//     else {
+//       return `Currently serving ${line.shift()}.`
+//     }
+// }
