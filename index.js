@@ -1,16 +1,16 @@
-function takeANumber(katzDeliLine, name){
-  let customerNumber = katzDeliLine.length + 1
+function takeANumber(lineArr, name){
+  let customerNumber = lineArr.length + 1
   let welcomeMessage = `Welcome, ${name}. You are number ${customerNumber} in line.`
-  katzDeliLine.push(name)
+  lineArr.push(name)
   return welcomeMessage
 }
 
-function nowServing (katzDeliLine){
-  if (katzDeliLine.length === 0){
+function nowServing (lineArr){
+  if (lineArr.length === 0){
     return "There is nobody waiting to be served!"
   } else {
-    let firstInLine = katzDeliLine[0]
-    katzDeliLine.shift()
+    let firstInLine = lineArr[0]
+    lineArr.shift()
     return `Currently serving ${firstInLine}.`
   }
 }
