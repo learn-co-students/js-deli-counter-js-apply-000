@@ -35,7 +35,7 @@ describe('deli', () => {
     });
 
     it('returns an announcement about the person it is serving, and shifts the line', () => {
-      const deliLine = ["Steven", "Blake", "Avi"]
+      const deliLine = ["Steven", "Blake", "Avi"];
       expect(nowServing(deliLine)).toEqual("Currently serving Steven.");
       expect(deliLine).toEqual(["Blake", "Avi"]);
     });
@@ -50,4 +50,4 @@ describe('deli', () => {
       expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
     });
   });
-})
+});
