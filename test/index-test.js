@@ -28,6 +28,13 @@ describe('deli', () => {
       expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
     });
   });
+  
+        function takeANumber(katzDeli, name) {
+          katzDeli.push(name);
+          var number = katzDeli.indexOf(name) + 1;
+          return "Welcome, " + name + ". You are number " + number + " in line.";
+        }
+  
 
   describe('nowServing', () => {
     it('returns "There is nobody waiting to be served!" when no one is on line', () => {
@@ -40,6 +47,20 @@ describe('deli', () => {
       expect(deliLine).toEqual(["Blake", "Avi"]);
     });
   });
+  
+  function nowServing(array) {
+    if (array.length === 0) {
+      return "There is nobody waiting to be served!";
+    } else {
+    
+    for (var i = 0; i < array.length; i++) {
+      
+      return "Currently serving " + array[i] + ".";
+     
+    }
+    }
+  }
+
 
   describe('currentLine', () => {
 
@@ -67,3 +88,16 @@ describe('deli', () => {
 
   });
 })
+
+function currentLine(array) {
+  if (array.length === 0) {
+    return "The line is currently empty.";
+  } else { 
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+      newArray.push((i + 1) + ". " + array[i]);
+    }
+    }
+    var line = newArray.join(", ");
+    return ("The line is currently: " + line);
+  }
