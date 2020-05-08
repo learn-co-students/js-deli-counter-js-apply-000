@@ -1,8 +1,7 @@
 function takeANumber(katzDeliLine, customerName){
     katzDeliLine.push(customerName);
-    return "Welcome, "+ customerName + ". You are number " + katzDeliLine.length + " in line.";
+    return `Welcome, ${customerName}. You are number ${katzDeliLine.length} in line.`;
   }
-
 
 function nowServing(katzDeliLine){
     if(katzDeliLine.length < 1){
@@ -10,7 +9,7 @@ function nowServing(katzDeliLine){
     }
     let current = katzDeliLine[0];
     katzDeliLine.shift();
-    return "Currently serving " + current + ".";
+    return `Currently serving ${current}.`;
   }
 
 
