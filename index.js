@@ -24,7 +24,7 @@ function currentLine(katzDeliLine) {
     return "The line is currently empty.";
   } else {
     while (i <= katzDeliLine.length + 1) {
-      customers.push(`${i + 1}. ${katzDeliLine.shift()}`);
+      customers.push(`${i + 1}. ${katzDeliLine.shift()}`)
       i++;
     }
     return `The line is currently: ${customers.join(", ")}`;
