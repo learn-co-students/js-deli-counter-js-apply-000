@@ -20,10 +20,11 @@ function nowServing(katzDeliLine) {
 function currentLine(katzDeliLine) {
   let i = 0;
   let customers = [];
-  if (katzDeliLine.length === 0) {
+  let katzLineLength = katzDeliLine.length
+  if (katzLineLength === 0) {
     return "The line is currently empty.";
   } else {
-    while (i <= katzDeliLine.length + 1) {
+    while (i < katzLineLength) {
       customers.push(`${i + 1}. ${katzDeliLine.shift()}`)
       i++;
     }
