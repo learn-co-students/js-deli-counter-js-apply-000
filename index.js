@@ -33,5 +33,3 @@ function currentLine(line) {
     return result
   }
 }
-
-console.log('hi')
