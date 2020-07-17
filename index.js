@@ -1,34 +1,37 @@
-function takeANumber(currentLine, personName) {
-  currentLine.push(personName);
-  if (currentLine.length!==0) {
-    return `Welcome, ${personName}. You are number ${currentLine.length} in line.`
-  }
+function takeANumber(peopleInLine, personName){
+  
+  peopleInLine.push(personName);
+  return `Welcome, ${personName}. You are number ${peopleInLine.length} in line.`;
 }
 
 
-
-function nowServing(Line){
-  if(!Line.length){
-    return "There is nobody waiting to be served!";
+function nowServing(peopleInLine){
+  if(peopleInLine.length===0){
+    return "There is nobody waiting to be served!"
   }else{
-    return `Currently serving ${Line.shift()}.`;
-
+    return `Currently serving ${peopleInLine.shift()}.`
   }
 }
 
 
-function currentLine(currentLine){
-var newLine=[];
-if(!currentLine.length){
-  return "The line is currently empty."
-}else{
-  for(let i= 0; i<currentLine.length; i++){
-    newLine.push(`${i+1}. ${currentLine[i]}`)
+function currentLine(peopleInLine){
+  if(!peopleInLine.length){
+    return "The line is currently empty."
+  }else{
+    var newList=[];
+    for(let i=0; i<peopleInLine.length; i++){
+      newList.push(`${i+1}. ${peopleInLine[i]}`);
+    }
   }
+  return `The line is currently: ${newList.join(', ')}`;
 }
-return `The line is currently: ${newLine.join(', ')}`
 
-}
+
+
+
+
+
+
 
 
 
