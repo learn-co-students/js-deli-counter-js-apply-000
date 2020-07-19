@@ -17,7 +17,7 @@ function currentLine(katzDeliLine){
     for (var i = 0; i < katzDeliLine.length; i++){
       output += ` ${i+1}. ${katzDeliLine[i]},` 
     }
-    return 'The line is currently:' + output.slice(0,output.length-1)
+    return 'The line is currently:' + output.slice(0,output.length-1) //remove the comma `,` in the end.
   }else{
     return 'The line is currently empty.'
   }
