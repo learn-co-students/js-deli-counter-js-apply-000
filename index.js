@@ -1,47 +1,41 @@
-function takeANumber(variable, newName) {
-  variable.push(newName);
-  return `Welcome, ${newName}. You are number ${variable.length} in line.`;
+//Accepts two parameters
+//Pushes newName to end of lineArray
+//Returns welcome string with interpolated newName an  position in line
+function takeANumber(lineArray, newName) {
+  lineArray.push(newName);
+  return `Welcome, ${newName}. You are number ${lineArray.length} in line.`;
 }
 
-function nowServing(variable) {
+//Accepts current line
+//Creates local variable  
+//Sets conditionals to determine contents of local variable
+//Returns local variable 
+function nowServing(lineArray) {
   var deliWords = []; 
-  if (variable.length === 0) {
+  if (lineArray.length === 0) {
     deliWords = "There is nobody waiting to be served!";
   } else {
-    deliWords = `Currently serving ${variable[0]}.`; 
-    variable.shift();
+    deliWords = `Currently serving ${lineArray[0]}.`; 
+    lineArray.shift();
   }
-  return deliWords
+    return deliWords
 }
  
-
-//Create a function that takes a variable as an argument and returns an array 
- /* function currentLine(variable) {
-var newDeli = [];
- for (let i = 0; i < variable.length; i++) { 
-   newDeli.push(` ${i + 1}. ${variable[i]}`);
- } if (variable.length === 0) { 
-   return "The line is currently empty.";
- }  if (variable.length === 1) {
-   return `The line is currently:${newDeli}`;
-   } else {
-   return `The line is currently: ${newDeli}`;
- }
-   } */
-   
-   //Create a function that takes a variable as an argument and returns an array 
+//Accepts the lineArray as a parameter 
+//Creats a local variable newDeli 
+//Sets conditionals to determine contents of newDeli
+  // If the line isn't empty, it iterates over the lineArray 
+// Returns the local variable newDeli to tell people their place in line 
 function currentLine(lineArray) {
   var newDeli;
   if (lineArray.length === 0) { 
    return "The line is currently empty.";
   } else {
-    // set a variable here to say "The line is currently: "
-    // Then iterate over the line and add on to the variable above
     newDeli = "The line is currently: ";
-    for (let i = 0; i < lineArray.length; i++) { 
-      if (i === 0){ 
+      for (let i = 0; i < lineArray.length; i++) {
+        if (i === 0){ 
     newDeli = newDeli + (i + 1) + ". " + lineArray[i];
-      } else {
+  } else {
         newDeli = newDeli + ", " + (i + 1) + ". " + lineArray[i]; 
       }
     }
