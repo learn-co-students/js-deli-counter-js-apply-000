@@ -33,7 +33,7 @@ function currentLine(people) {
     //line is a string, so "line = line ..." will come out as a sentence
   
   for(let i = 0; i < people.length; i++) {
-  line = line + (i + 1) + ". " + people[i]; 
+  line += (i + 1) + ". " + people[i]; 
   
     //accessing the person at certain index in the array. loop stops and adds period when done
   
