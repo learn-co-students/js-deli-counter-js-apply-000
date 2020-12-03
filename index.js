@@ -6,7 +6,7 @@ function takeANumber(deli,name) {
 }
 
 function nowServing(deli) {
-    if (deli.length === 0 || deli === null) {
+    if (deli.length === 0) {
         console.log("There is nobody waiting to be served.");
     } else {
         console.log(`Now serving ${deli[0]}`);
@@ -15,7 +15,7 @@ function nowServing(deli) {
 }
 
 function currentLine(deli) {
-    if (deli.length === 0 || deli === null) {
+    if (deli.length === 0) {
         console.log("The line is currently empty.");
     } else {
         let msg = '';
