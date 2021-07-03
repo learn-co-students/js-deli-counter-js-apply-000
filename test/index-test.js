@@ -1,4 +1,8 @@
 /*global describe, it */
+/*
+*/
+
+var katzDeliLine = [];
 
 describe('deli', () => {
   describe('takeANumber', () => {
