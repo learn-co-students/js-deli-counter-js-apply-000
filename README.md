@@ -1,4 +1,40 @@
-# Deli Counter Lab
+var katzDeliLine = [];
+
+function takeANumber (katzDeliLine, customerName){
+katzDeliLine.push(customerName);
+return "Welcome, " + customerName + ". You are number " + katzDeliLine.length + " in line.";
+}
+
+function nowServing (katzDeliLine){
+  
+    let currentPerson;
+    if (katzDeliLine.length === 0) {
+      return "There is nobody waiting to be served!";
+    }
+    currentPerson = katzDeliLine[0];
+    katzDeliLine.shift();
+    return "Currently serving " + currentPerson + ".";
+}
+
+function currentLine(katzDeliLine){
+  
+  if (katzDeliLine.length === 0){
+    return "The line is currently empty."
+  }
+  
+  let outputString = "The line is currently: ";
+  
+  let i = 0;
+  while (i < katzDeliLine.length){
+     outputString = outputString + i + ". " + katzDeliLine[i];
+     if(i != katzDeliLine.length-1){
+       outputString = outputString + ", "
+     i++;
+     } 
+  }
+  return outputString;
+    
+}# Deli Counter Lab
 
 ## Objectives
 1. Add elements to an array
