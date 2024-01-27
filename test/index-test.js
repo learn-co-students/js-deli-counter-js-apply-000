@@ -30,7 +30,7 @@ describe('deli', () => {
   });
 
   describe('nowServing', () => {
-    it('returns the line is empty when no one is on line', () => {
+    it('returns "There is nobody waiting to be served!" when no one is on line', () => {
       expect(nowServing([])).toEqual("There is nobody waiting to be served!");
     });
 
@@ -41,7 +41,8 @@ describe('deli', () => {
     });
   });
 
-  describe('currentLine(line)', () => {
+  describe('currentLine', () => {
+
     it('returns "The line is currently empty." if no one is in line', () => {
       expect(currentLine([])).toEqual("The line is currently empty.");
     });
@@ -49,5 +50,20 @@ describe('deli', () => {
     it('says who is in line when there are people waiting', () => {
       expect(currentLine(["Bill", "Jane", "Ann"])).toEqual("The line is currently: 1. Bill, 2. Jane, 3. Ann");
     });
+ 
+    it('returns a different response programmatically given a different array of names', () => {
+      let customerArrays = [
+        ["Nicky", "Jared", "Katie"],
+        ["Ian", "Alex", "Matthew"],
+        ["Duke", "Brianna", "Sarah"],
+        ["Steve", "Susan", "Mike"]
+      ]
+
+      let newLine = customerArrays[Math.floor(Math.random()*4)]
+      let expectedOutput = `The line is currently: 1. ${newLine[0]}, 2. ${newLine[1]}, 3. ${newLine[2]}`
+      
+      expect(currentLine(newLine)).toEqual(expectedOutput);
+    });
+
   });
 })
